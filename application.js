@@ -44,7 +44,7 @@
         
         map.setMarks([{ xy: [coords["x"] - 15 + x_offset, coords["y"] - 55 + y_offset],
                   attrs: {
-                            src:  'http://assets.codecloudapp.com/sites/55ddf3f86e6f640775000000/image/png/1446760775000/pin.png'     // image for marker
+                            src:  'http://assets.codecloudapp.com/sites/55ddf3f86e6f640775000000/d8c14ddd5ad7b16b08a457f92431c96c/pin.png'     // image for marker
                           }
                 }
                 ])

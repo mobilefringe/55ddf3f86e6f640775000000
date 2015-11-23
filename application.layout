@@ -473,6 +473,7 @@
    });
    
    function appLink(){
+       console.log('inapplink');
         var isAndroid = /android/i.test(navigator.userAgent.toLowerCase());
         var isiPod = /ipod/i.test(navigator.userAgent.toLowerCase());
         var isiPhone = /iphone/i.test(navigator.userAgent.toLowerCase());

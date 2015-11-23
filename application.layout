@@ -294,7 +294,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <button onclick="window.location.href='/'">Download App</button>
+                                <button onclick="appLink();">Download App</button>
                             </li>
                             <li>
                                 <button onclick="window.location.href='/search'">search </button>

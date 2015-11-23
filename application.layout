@@ -478,6 +478,9 @@
         var isiPhone = /iphone/i.test(navigator.userAgent.toLowerCase());
         var isiPad = /ipad/i.test(navigator.userAgent.toLowerCase());
 
+        if (isAndroid){
+            window.location.href = "https://play.google.com/store/apps/details?id=com.mobilefringe.heartland";
+        }
        
    }
 </script>

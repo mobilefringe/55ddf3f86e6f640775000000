@@ -23,7 +23,7 @@
 
 <h1 class="pull-left">Centre Map</h1>
 
-<a class="pull-right hidden-md" href="http://assets.codecloudapp.com/sites/55ddf3f86e6f640775000000/application/pdf/1448292204000/htc_map2015_outlined_commercially (1).pdf">Download Map</a>
+<a class="pull-right visible-md-*" href="http://assets.codecloudapp.com/sites/55ddf3f86e6f640775000000/application/pdf/1448292204000/htc_map2015_outlined_commercially (1).pdf">Download Map</a>
 
 
 <div class="store_select">

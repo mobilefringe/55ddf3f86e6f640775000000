@@ -26,7 +26,7 @@
                 <input type="submit" value="SUBMIT" class="newsletter_submit_btn" id="newsletter_submit" /> 
                 <input id="agree_terms" type="checkbox" value="true" class="checkbox-custom" />
                 <label for="agree_terms" class="confirm_label checkbox-custom-label">
-                    I agree to receive email messages from Shop Central
+                    I agree to receive email messages from Heartland Town Centre
                 </label>
                 <p id="subscription_confirmed">Thank you for subscribing.</p>
             </form>

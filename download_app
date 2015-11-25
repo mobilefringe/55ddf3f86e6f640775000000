@@ -21,8 +21,7 @@
             <h4 class="newsletter_header">Sign up and save!</h4>
             <p class="newsletter_desc">Sign up for email and get great deals from Heartland Town Centre.</p>
             <form action="http://mobilefringe.createsend.com/t/d/s/dljtlh/" id="newsletter_form">
-                <input id="fieldthjup" name="cm-f-thjup" type="hidden" value="SC landing page" />
-                <input name="cm-dillir-dillir" type="text" class="newsletter_email" id="newsletter_email" placeholder="Enter Email" required="required" />
+                <input name="cm-dljtlh-dljtlh" type="text" class="newsletter_email" id="newsletter_email" placeholder="Enter Email" required="required" />
                 <input type="submit" value="SUBMIT" class="newsletter_submit_btn" id="newsletter_submit" /> 
                 <input id="agree_terms" type="checkbox" value="true" class="checkbox-custom" />
                 <label for="agree_terms" class="confirm_label checkbox-custom-label">

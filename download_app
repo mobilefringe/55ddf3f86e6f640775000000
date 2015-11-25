@@ -35,3 +35,26 @@
         <img src="http://assets.codecloudapp.com/sites/55ddf3f86e6f640775000000/image/png/1448470526000/main_img.png" class="sc_img" alt="main banner">
     </div>
 </div>
+<script>
+    $(document).ready(function(e){
+        $('#newsletter_form').submit(function(e){
+           e.preventDefault();
+           if($('#agree_terms').prop('checked') == false){
+                $('#agree_terms').focus();
+                alert("Please agree to receieve newsletters from Shop Central.")
+           }
+           else{
+               $.getJSON(
+                    this.action + "?callback=?",
+                    $(this).serialize(),
+                    function (data) {
+                        if (data.Status === 400) {
+                            alert("Please try again later.");
+                        } else { // 200
+                            $("#subscription_confirmed").fadeIn();
+                        }
+                });
+           }
+        });
+    });
+</script>

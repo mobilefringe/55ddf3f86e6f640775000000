@@ -14,7 +14,7 @@
         <a href="#">
             <img src="http://assets.codecloudapp.com/sites/564640e86e6f642e10020000/image/png/1447445068000/apple.png" class="download_app_btn" alt="Download for iOS">
         </a>
-        <a href="#">
+        <a href="https://play.google.com/store/apps/details?id=com.mobilefringe.heartland" target="_blank">
             <img src="http://assets.codecloudapp.com/sites/564640e86e6f642e10020000/image/png/1447445079000/google_play.png" class="last_child download_app_btn" alt="Download from play store">
         </a>
         <div class="newsletter_box">

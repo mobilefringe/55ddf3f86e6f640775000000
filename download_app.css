@@ -1,17 +1,5 @@
 /*Created 2015-02-28 by RKS*/
 
-@font-face {
-    font-family: sen;
-    src: url('http://assets.codecloudapp.com/sites/564640e86e6f642e10020000//1435781894000/sen-regular.otf') format('otf');
-    
-    font-weight: normal
-}
-
-@font-face {
-    font-family: sen;
-    src: url('http://assets.codecloudapp.com/sites/564640e86e6f642e10020000//1435781888000/sen-bold.otf') format('otf');
-    font-weight: bold
-}
 
 .margin_10{
     margin-bottom:10px;
@@ -51,7 +39,7 @@
 
 
 .main_container{
-    font-family: sen;
+    font-family: Maven Pro, sans-serif;
     max-width:1170px;
     margin:0 auto;
     position:relative;

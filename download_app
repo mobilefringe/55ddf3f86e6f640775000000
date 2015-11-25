@@ -19,7 +19,7 @@
         </a>
         <div class="newsletter_box">
             <h4 class="newsletter_header">Sign up and save!</h4>
-            <p class="newsletter_desc">Join us to stay in the know with your favourite shopping centers.</p>
+            <p class="newsletter_desc">Sign up for email and get great deals from Heartland Town Centre..</p>
             <form action="http://mobilefringe.createsend.com/t/d/s/dillir/" id="newsletter_form">
                 <input id="fieldthjup" name="cm-f-thjup" type="hidden" value="SC landing page" />
                 <input name="cm-dillir-dillir" type="text" class="newsletter_email" id="newsletter_email" placeholder="Enter Email" required="required" />

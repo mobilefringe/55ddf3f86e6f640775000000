@@ -132,11 +132,11 @@
 }
 
 .newsletter_email:focus{
-    outline:1px solid #19DDC5;;
+    outline:1px solid #000;;
 }
 
 .newsletter_submit_btn{
-    background:#19DDC5;
+    background:#000;
     border: none;
     width: 118px;
     height: 34px;

@@ -18,7 +18,7 @@
             <img src="http://assets.codecloudapp.com/sites/564640e86e6f642e10020000/image/png/1447445079000/google_play.png" class="last_child download_app_btn" alt="Download from play store">
         </a>
         <div class="newsletter_box">
-            <h4 class="newsletter_header">Get On The List</h4>
+            <h4 class="newsletter_header">Sign up and save!</h4>
             <p class="newsletter_desc">Join us to stay in the know with your favourite shopping centers.</p>
             <form action="http://mobilefringe.createsend.com/t/d/s/dillir/" id="newsletter_form">
                 <input id="fieldthjup" name="cm-f-thjup" type="hidden" value="SC landing page" />

@@ -80,7 +80,7 @@ $(document).ready(function() {
             });    
         }
         else if (slug == 'htc-heartland-town-centre-apps'){
-            $("#custom_page_header").html("Mobile Apps")
+            $("#custom_page_header").html("Download our App!")
             $("#custom_page_img").attr("src", "http://assets.codecloudapp.com/sites/55ddf3f86e6f640775000000/image/jpeg/1448656005000/app_banner.jpg");
             // $("#page_img").hide();
         }

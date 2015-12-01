@@ -1,0 +1,145 @@
+<style>
+    
+    .mobile_search{
+        display:none;
+    }
+    
+    @media (max-width: 767px){
+        .mobile_search{
+            display:block;
+        }
+        .list-group{
+            background:black;
+        }
+        .search_input_div{
+            text-align:center;
+            margin-bottom:20px;
+        }
+    }
+</style>
+ 
+ <div class='mobile_search'>
+    <div class='search_input_div'>
+        <label for='mobile_search_input'>Search Terms:</label><br>
+        <input type='text' id='mobile_search_input' placeholder='Type here to search'/>    
+    </div>
+        <div class="search-results" id="mobile_search_results" style="display:none">
+            <!-- START MUSTACHE TEMPLATE FOR EVENT ITEM WITH AN IMAGE-->
+            <script id="mobile_search_results_template" type="x-tmpl-mustache/text">
+                <h4 class="list-group-item search-results-count" id="mobile_stores_results_header" style="display:none;" data-i18n="nav.stores" onclick="javascript:show_results('mobile_store')"></h4>
+                <div class="results_div" id="mobile_store_results">
+                    {{#stores}}
+                    <a href="/stores/{{slug}}" class="list-group-item">
+                    <div class="result_container">
+                    <div class="name">{{name}}</div>
+                    <div class="description">{{description_trim}}</div>
+                    <div class="phone">{{phone}}</div>
+                    </div>
+                    </a>
+                    {{/stores}}
+                    </div>
+                    <h4 class="list-group-item search-results-count" id="mobile_promotions_results_header" style="display:none" data-i18n="nav.promotions" onclick="javascript:show_results('mobile_promo')"></h4>
+                    <div class="results_div" id="mobile_promo_results">
+                    {{#promotions}}
+                    <a href="/promotions/{{slug}}" class="list-group-item">
+                    <div class="result_container">
+                    <div class="name">{{name}}</div>
+                    <div class="description">{{description_trim}}</div>
+                    </div>
+                    </a>
+                    {{/promotions}}
+                    </div>
+                    <h4 class="list-group-item search-results-count" id="mobile_events_results_header" data-i18n="nav.events" onclick="javascript:show_results('mobile_event')"></h4>
+                    <div class="results_div" id="mobile_event_results">
+                    {{#events}}
+                    <a href="/events/{{slug}}" class="list-group-item">
+                    <div class="result_container">
+                    <div class="name">{{name}}</div>
+                    <div class="description">{{description_trim}}</div>
+                    </div>
+                    </a>
+                    {{/events}}
+                </div>
+            </script>
+            
+            <ul class="list-group" >
+            
+            <li>
+            <a  class="close-search list-group-item">
+            <small>
+            <span class="search-results-count">{{count}} results found.</span>&nbsp;<span data-i18n="general.results"></span> 
+            </small>
+            </a>
+            </li>
+            <li>
+            <div id="mobie_search_results_items" class="search-results-items" style="">
+            <!--RENDERED BY renderSearchResultsTemplate(..) -->
+            </div>
+            </li>
+            </ul>
+        </div>
+</div>
+
+
+<script>
+    
+    $('#mobile_search_input').keyup(function(e){
+        showMobileSearchResults();
+    });
+
+    $('#mobile_search_input').on('input', function() {
+        showMobileSearchResults();
+    });
+    
+    
+    
+    
+    function showMobileSearchResults(){
+            $('#mobile_search_results').show();
+            if($('#mobile_search_input').val().length === 0){
+                $('#mobile_search_results').hide();
+            }else{
+                var search_results = getSearchResults($('#mobile_search_input').val(),10,100);
+                $('.search-results-count').html("Total Results : "+search_results.summary.count);
+                renderSearchResultsTemplate('#mobile_search_results_template','#mobie_search_results_items',search_results);
+                if (search_results["stores"]){
+                    if (search_results["stores"].length > 0){
+                        $("#mobile_stores_results_header").html(search_results["stores"].length+" Stores <i id='mobile_store_arrow' class='fa fa-chevron-right pull-right search_arrow'></i>") ;
+                        $("#mobile_stores_results_header").show();
+                    }
+                    
+                } else {
+                    $("#mobile_store_results_header").hide();
+                }
+                if (search_results["promotions"]){
+                    if (search_results["promotions"].length > 0){
+                        $("#mobile_promotions_results_header").html(search_results["promotions"].length+" Promotions <i id='promo_arrow' class='fa fa-chevron-right search_arrow pull-right'></i>")    ;
+                        $("#mobile_promotions_results_header").show();
+                    }
+                    
+                } else {
+                    $("#mobile_promotions_results_header").hide();
+                }
+                if (search_results["events"]){
+                    if (search_results["events"].length > 0) {
+                        $("#mobile_events_results_header").html(search_results["events"].length+" Events <i id='event_arrow' class='fa fa-chevron-right pull-right search_arrow'></i>")    
+                        $("#mobile_events_results_header").show();
+                    }
+                    
+                } else {
+                    $("#mobile_events_results_header").hide();
+                }
+                // $(document).i18n();
+            }
+        }
+    
+   $(document).ready(function() {
+        function renderAll(){
+            $(".loading_overlay").hide();
+        }
+        loadMallDataCached(renderAll);  
+   })
+    
+    
+    
+</script>

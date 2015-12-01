@@ -1,0 +1,171 @@
+<style>
+    .main_content{
+        padding-right:15px;
+        margin-top:20px;
+    }
+</style>
+<div class="tabs" id='top'>
+    <div class="tab_title" id="alpha_tab" onclick="javascript:toggle_tabs('alpha')" tabindex='10' onkeypress='javascript:toggle_tabs("alpha")'>
+        Alphabetical
+    </div>
+    <div class="tab_triangle" id="alpha_triangle">
+        &nbsp;
+    </div>
+    <div class="tab_title" id="cat_tab" onclick="javascript:toggle_tabs('cat')" tabindex=11 onkeypress='javascript:toggle_tabs("cat")'>
+        Categories
+    </div>
+    <div class="tab_triangle" id="cat_triangle">
+        &nbsp;
+    </div>
+    <div class="tab_title_content" id="alpha_tab_title_content_container">
+        <script id="alpha_tab_title_content_template" type="x-tmpl-mustache/text">
+            <a href="#{{id}}">{{id}}</a>
+        </script>
+    </div>
+    <div class="tab_title_content" id="cat_tab_title_content_container">
+        <script id="cat_tab_title_content_template" type="x-tmpl-mustache/text">
+            <a href="#cat_{{id}}">{{name}}</a>
+        </script>
+    </div>
+</div>
+<div class='tab_content' id='alpha_content'>
+    <script id="alpha_content_template" type="x-tmpl-mustache/text">
+        <div class='alpha_content_header' id='{{id}}'>
+            <p class='content_header'>{{id}}<a href='#top'><i class="fa fa-arrow-up up_arrow"></i></a></p>
+            <table class='content_table' id='{{id}}_table'>
+            </table>
+        </div>
+    </script>
+</div>
+
+
+<div class='tab_content' id='cat_content'>
+    <script id="cat_content_template" type="x-tmpl-mustache/text">
+        <div class='cat_content_header' id='cat_{{id}}'>
+            <p class='content_header'>{{name}}<a href='#top'><i class="fa fa-arrow-up up_arrow"></i></a></p>
+            <table class='content_table' id='{{id}}_table'>
+            </table>
+        </div>
+    </script>
+</div>
+
+
+
+<script>
+    
+    $("#alpha_tab").css({"color":"black","background":"#f3f3f3"})
+    $("#alpha_triangle").css("border-bottom","39px solid #f3f3f3")
+    function toggle_tabs(id){
+        if (id == 'alpha') {
+            $("#cat_tab_title_content_container").hide()
+            $("#alpha_tab_title_content_container").show()
+            $("#alpha_tab").css({"color":"black","background":"#f3f3f3"})
+            $("#alpha_triangle").css("border-bottom","39px solid #f3f3f3")
+            $("#cat_tab").css({"color":"white","background":"black"})
+            $("#cat_triangle").css("border-bottom","39px solid black")
+            $("#alpha_content").show();
+            $("#cat_content").hide();
+        } else {
+            $("#cat_tab_title_content_container").show()
+            $("#alpha_tab_title_content_container").hide()
+            $("#cat_tab").css({"color":"black","background":"#f3f3f3"})
+            $("#cat_triangle").css("border-bottom","39px solid #f3f3f3")
+            $("#alpha_tab").css({"color":"white","background":"black"})
+            $("#alpha_triangle").css("border-bottom","39px solid black")
+            $("#alpha_content").hide();
+            $("#cat_content").show();
+            
+        }
+    }
+    $(document).ready(function() {
+        function renderAll(){
+            var alpha_stores = getStoresList();
+            var full_cat_array = getStoreCategories();
+            var alpha_array = generateAlphaStoreList(alpha_stores);
+            renderPageData("#alpha_tab_title_content_container", "#alpha_tab_title_content_template", alpha_array, "directory")
+            renderPageData("#alpha_content", "#alpha_content_template", alpha_array, "directory")
+            add_stores_to_table(alpha_stores, 'alpha', null)
+            renderPageData("#cat_tab_title_content_container", "#cat_tab_title_content_template", full_cat_array, "directory")
+            renderPageData("#cat_content", "#cat_content_template", full_cat_array, "directory")
+            $.each( full_cat_array , function( key, val ) {
+                store_array = getStoreDetailArrayByIDs(val.store_ids)
+                add_stores_to_table(store_array, 'cats', val.id)
+            })
+            $("#alpha_tab_title_content_container").show();
+            $("#alpha_content").show();
+            $(".loading_overlay").hide();
+        }
+        loadMallDataCached(renderAll);  
+        // loadMallData(renderAll);  
+        
+        
+        
+        
+        function add_stores_to_table(collection, type, id){
+            $.each( collection , function( key, val ) {
+                var jobs_icon = '';
+                if (val.jobs.length > 0) {
+                    jobs_icon = $('<img>').attr({
+                        'src' : "http://assets.codecloudapp.com/sites/565e0ca36e6f64738f020000/image/png/1446665017000/jobs.png",
+                        'class' : 'icon-jobs'
+                    }).prop('outerHTML');
+                }
+                
+                if(val.promotions.length > 0 ){
+                    promo_icon = '<img src="http://assets.codecloudapp.com/sites/55ddf3f86e6f640775000000/e2dc42990b2c6c3e7e2b3340558a00c6/tag32.png" class="" alt="promo_icon">'
+                } else {
+                    promo_icon = ''
+                }
+                
+                if (val.phone){
+                    phone = '<a href="tel:'+val.phone+'"><img src="http://assets.codecloudapp.com/sites/55ddf3f86e6f640775000000/e2dc42990b2c6c3e7e2b3340558a00c6/telephone66 2.png" class="phone_icon" alt="phone_icon"><p>'+val.phone+'</p></a>'
+                } else {
+                    phone = ''
+                }
+                if (type == 'alpha'){
+                    first_letter = (val.name).charAt(0)
+                    
+                } else {
+                    first_letter = id
+                }
+                
+                $("#"+first_letter+'_table').append('<tr><td class="dir_store_name"><a href="/stores/'+val.slug+'">'+val.name+'</a></td><td class="icon_td">'+promo_icon + jobs_icon + '</td><td class="dir_phone">'+phone+'</td></tr>')
+                
+              
+            })
+        }
+        
+        
+        function generateAlphaStoreList (collection){
+            alpha_list = new Array;
+            alpha_array = new Array;
+             $.each( collection , function( key, val ) {
+                 first_letter = (val.name).charAt(0)
+                 if (jQuery.inArray(first_letter, alpha_list)== -1){
+                    obj = {};
+                    obj.name = first_letter
+                    obj.id = first_letter   
+                    alpha_array.push(obj);
+                    alpha_list.push(first_letter)
+                 } else {
+                     
+                 }
+             })
+             
+           
+            
+            $.each( alpha_array , function( key, val ) {
+                var store_ids = []
+                  $.each( collection , function( key2, val2 ) {
+                      if (val.name == (val2.name).charAt(0)){
+                          store_ids.push(val2.id)
+                      }
+                  })
+                val.store_ids = store_ids
+             })
+            
+            return(alpha_array)
+        
+        }
+    })
+</script>

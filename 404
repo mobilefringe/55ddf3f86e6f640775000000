@@ -1,5 +1,6 @@
 <div class="error_page_img">
     <img src="http://assets.codecloudapp.com/sites/565e0ca36e6f64738f020000/image/png/1449169011000/404_error_msg.png" class="" alt="404 page">
+    <a href="/" class="go_to_home">Go to Homepage</a>
 </div>
 <script>
     $(".loading_overlay").hide();

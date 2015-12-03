@@ -36,6 +36,20 @@ h2 {
     display: block;
     margin: 0 auto;
 }
+
+.error_page_img a{
+    background: black;
+    color: white;
+    text-transform: uppercase;
+    border: none;
+    width: 100%;
+    height: 28px;
+    text-align: center;
+    line-height: 28px;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 6px 10px;
+}
 .right_block img{
     height:188px;
     

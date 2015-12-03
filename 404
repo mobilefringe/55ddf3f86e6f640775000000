@@ -1,0 +1,4 @@
+<img src="http://assets.codecloudapp.com/sites/565e0ca36e6f64738f020000/image/png/1449169011000/404_error_msg.png" class="" alt="404 page">
+<script>
+    $(".loading_overlay").hide();
+</script>

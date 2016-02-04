@@ -112,7 +112,7 @@
                 }
                 var promo_exist = false;
                 if(val.promotions.length > 0 ){
-                    var promos = getPromotionsForIds(val.promos)
+                    var promos = getPromotionsForIds(val.promotions)
                     $.each(val.promotions, function(i){
                         getPromotionDetailsBySlug()
                     })

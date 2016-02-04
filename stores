@@ -120,6 +120,7 @@
                             promo_exist = true;
                         }
                     })
+                    console.log(promo_exist)
                     if (promo_exist){
                         promo_icon = '<img src="http://assets.codecloudapp.com/sites/55ddf3f86e6f640775000000/e2dc42990b2c6c3e7e2b3340558a00c6/tag32.png" class="" alt="promo_icon">'
                     } else{

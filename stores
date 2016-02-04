@@ -114,7 +114,7 @@
                 if(val.promotions.length > 0 ){
                     var promos = getPromotionsForIds(val.promotions)
                     $.each(promos, function(i, v){
-                        
+                        console.log(v)
                     })
                     promo_icon = '<img src="http://assets.codecloudapp.com/sites/55ddf3f86e6f640775000000/e2dc42990b2c6c3e7e2b3340558a00c6/tag32.png" class="" alt="promo_icon">'
                 } else {

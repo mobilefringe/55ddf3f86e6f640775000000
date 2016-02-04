@@ -115,7 +115,7 @@
                     var promos = getPromotionsForIds(val.promotions)
                     $.each(promos, function(i, v){
                         var today = new Date();
-                        var p_date = new Date(val.show_on_web_date);
+                        var p_date = new Date(v.show_on_web_date);
                         if (p_date <= today){
                             promo_exist = true;
                         }

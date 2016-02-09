@@ -33,6 +33,7 @@
 <script>
     
     $(document).ready(function() {
+        $.fn.snow({flakeColor: '#EE0000', newOn: 200});
         function render_page_details(){
             var banners = getBanners();
             

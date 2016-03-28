@@ -61,7 +61,6 @@
         var slug = pathArray[pathArray.length-1];
         contest_details = getContestBySlug(slug);
         if(contest_details != undefined){
-            
             renderContest('#contest_container','#contest_template', contest_details);
         }
         else{

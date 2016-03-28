@@ -25,6 +25,7 @@
             
             collection.alt_photo_url = getImageURL(collection.photo_url);
             collection.property_id = getPropertyID();
+            console.log(collection)
             var rendered = Mustache.render(template_html,collection);
             item_rendered.push(rendered);
             

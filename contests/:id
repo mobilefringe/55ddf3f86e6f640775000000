@@ -12,7 +12,7 @@
             <input id="property_id" name="contest[property_id]" type="hidden" value="{{property_id}}"/>
             <input id="contest_id" name="contest[contest_id]" type="hidden"  value="{{id}}" />
             <div class="col-md-12">
-                <h1>{{title}}</h1>
+                <h1>{{name}}</h1>
                 <img alt="contest image" class="width_100" src="{{alt_photo_url}}" />
                 <br /><br />
                 {{{description}}}

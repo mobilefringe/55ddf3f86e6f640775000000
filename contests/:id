@@ -55,7 +55,7 @@
                     <input type="submit" class="btn btn-primary" />
                 </div>
                 <div class="col-md-10">
-                    <div id="success_subscribe" style="display:none">
+                    <div id="success_subscribe" style="display:none; margin-top:5px">
                         <p class="description">Thank you for your entry. Good luck!</p>
                     </div>
                 </div>

@@ -84,6 +84,7 @@
         $(container).show();
         $(container).html(item_rendered.join(''));
     }
+    
     function submit_contest(data) {
         var propertyDetails = getPropertyDetails();
         var host = propertyDetails.mm_host;

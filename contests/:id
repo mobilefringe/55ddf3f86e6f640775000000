@@ -70,7 +70,7 @@
                         <input type="checkbox" id="agree_contest" />
                         I have read and am in full compliance with the official contest rules and regulations.
                     </label>
-                    <br />
+                    <br /><br />
                 </div>
                 <div class="col-md-2">
                     <input type="submit" class="btn btn-primary" />

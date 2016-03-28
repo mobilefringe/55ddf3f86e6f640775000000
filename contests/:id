@@ -105,6 +105,7 @@
         $.ajax({
             url: host+"/newsletter_no_captcha",
             type: "POST",
+            dataType: "json",
             data: data,
             success: function(data) {
                 $("#success_subscribe").fadeIn();

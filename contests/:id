@@ -53,6 +53,10 @@
 <script>
     $(document).ready(function() {
         loadMallDataCached(renderAll); 
+        $('#contest_form').submit(function (e) {
+            e.preventDefault();
+            
+        });
     })
     
     
@@ -66,10 +70,6 @@
         else{
             $('#contest_ended').show()
         }
-        $('#contest_form').submit(function (e) {
-            e.preventDefault();
-            
-        });
         
         $(".loading_overlay").hide();    
     }

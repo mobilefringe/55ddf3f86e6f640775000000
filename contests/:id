@@ -95,7 +95,8 @@
                 submit_contest(data);
             }
             else{
-                alert("Please agree")
+                alert("Please agree");
+                $('#agree_contest').focus();
             }
         });
     })

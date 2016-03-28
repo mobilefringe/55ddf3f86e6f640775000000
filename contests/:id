@@ -32,8 +32,8 @@
                 <input class="form-control" id="phone_number" name="contest[phone]" type="text"  />
             </div>
             <div class="col-md-6">
-                <label for="postal_code">Address</label> 
-                <input class="form-control" id="postal_code" name="contest[postal_code]" type="text"  />
+                <label for="address">Address</label> 
+                <input class="form-control" id="address" name="contest[mailing_address]" type="text"  />
             </div>
             <div class="col-md-6">
                 <label for="postal_code">Postal Code</label> 

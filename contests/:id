@@ -3,8 +3,9 @@
         padding-right:15px;
     }
 </style>
-<div id="contest_container" class="row">
-    <script id="contest_template" type="x-tmpl-mustache/text">
+<form id="contest_form">
+    <div id="contest_container" class="row">
+        <script id="contest_template" type="x-tmpl-mustache/text">
             <input id="property_id" name="contest[property_id]" type="hidden" value="{{property_id}}"/>
             <input id="contest_id" name="contest[contest_id]" type="hidden"  value="{{id}}" />
             <div class="col-md-12">
@@ -15,8 +16,9 @@
             </div>
             <div class="col-md-6">
             </div>
-    </script>
-</div>
+        </script>
+    </div>
+</form>
 <script>
     $(document).ready(function() {
         loadMallDataCached(renderAll); 

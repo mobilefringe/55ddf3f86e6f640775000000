@@ -66,6 +66,10 @@
         else{
             $('#contest_ended').show()
         }
+        $('#contest_form').submit(function (e) {
+            e.preventDefault();
+            
+        })
         $(".loading_overlay").hide();    
     }
     

@@ -5,6 +5,7 @@
             var slug = pathArray[pathArray.length-1];
             contest_details = getPromotionDetailsBySlug(slug);
             
+            
             $(".loading_overlay").hide();    
         }
         loadMallDataCached(renderAll); 

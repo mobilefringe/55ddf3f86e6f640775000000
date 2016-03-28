@@ -15,6 +15,7 @@
                 <img alt="contest image" class="width_100" src="{{alt_photo_url}}" />
                 <br /><br />
                 {{{description}}}
+                <br /><br />
             </div>
             <div class="col-md-6">
                 <label for="first_name">First Name</label>

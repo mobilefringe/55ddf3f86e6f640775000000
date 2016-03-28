@@ -53,9 +53,10 @@
 <script>
     $(document).ready(function() {
         loadMallDataCached(renderAll); 
+        
         $('#contest_form').submit(function (e) {
             e.preventDefault();
-            
+                
         });
     })
     

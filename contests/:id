@@ -51,9 +51,10 @@
                     <label for="province">Province</label>  
                     <input class="form-control" id="province" name="contest[province]" type="text"  />
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-2">
                     <input type="submit" class="btn btn-primary" />
-                    <br /><br />
+                </div>
+                <div class="col-md-10">
                     <div id="success_subscribe" style="display:none">
                         <p class="description">Thank you for your entry. Good luck!</p>
                     </div>

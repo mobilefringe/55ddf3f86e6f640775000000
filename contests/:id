@@ -1,0 +1,16 @@
+<script>
+    $(document).ready(function() {
+        function renderAll(){
+            var pathArray = window.location.pathname.split( '/' );
+            var slug = pathArray[pathArray.length-1];
+            promo_details = getPromotionDetailsBySlug(slug);
+            
+            $(".loading_overlay").hide();    
+        }
+        
+        
+        
+        // loadMallDataCached(renderAll); 
+        loadMallData(renderAll); 
+    })
+</script>

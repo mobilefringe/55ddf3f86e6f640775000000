@@ -17,7 +17,7 @@
         $(".loading_overlay").hide();    
     }
     
-    function renderContest(container, template, contest){
+    function renderContest(container, template, collection){
         
     }
 </script>

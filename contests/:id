@@ -51,7 +51,7 @@
                 <input class="form-control" id="province" name="contest[province]" type="text"  />
             </div>
             <div class="col-md-6">
-                <input type="submit" class="btn btn-submit" />
+                <input type="submit" class="btn btn-primary" />
             </div>
         </script>
     </div>

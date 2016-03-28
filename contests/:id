@@ -56,7 +56,7 @@
         
         $('#contest_form').submit(function (e) {
             e.preventDefault();
-                
+            data = $(this).serialize();    
         });
     })
     

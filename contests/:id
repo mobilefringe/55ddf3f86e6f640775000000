@@ -7,7 +7,7 @@
     function renderAll(){
         var pathArray = window.location.pathname.split( '/' );
         var slug = pathArray[pathArray.length-1];
-        console.log(contest_details)
+        contest_details = getContestBySlug(slug);
         if(contest_details != undefined){
             
             renderContest('#contest_container','#contest_template', contest_details);

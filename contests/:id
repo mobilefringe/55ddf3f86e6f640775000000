@@ -2,11 +2,19 @@
     $(document).ready(function() {
         loadMallDataCached(renderAll); 
     })
+    
+    
     function renderAll(){
         var pathArray = window.location.pathname.split( '/' );
         var slug = pathArray[pathArray.length-1];
         contest_details = getPromotionDetailsBySlug(slug);
-        
+        if(contest_details != undefined){
+            renderContest('#form_div','#contest_template', contestDetails, 'contestDetails');
+            renderContest('#contest_image_container','#contest_image_template', contestDetails, 'contestDetails');
+        }
+        else{
+            $('#contest_ended').show()
+        }
         
         $(".loading_overlay").hide();    
     }

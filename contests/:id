@@ -3,7 +3,7 @@
         padding-right:15px;
     }
     .col-md-6{
-        margin-bottom:15px;
+        margin-bottom:20px;
     }
 </style>
 <form id="contest_form">

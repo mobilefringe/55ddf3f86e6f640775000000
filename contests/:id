@@ -49,7 +49,8 @@
                 </div>
                 <div class="col-md-6">
                     <label for="province">Province</label>  
-                    <input class="form-control" id="province" name="contest[province]" type="text"  />
+                    <select class="form-control" id="province" name="contest[province]">
+                    </select>
                 </div>
                 <div class="col-md-2">
                     <input type="submit" class="btn btn-primary" />

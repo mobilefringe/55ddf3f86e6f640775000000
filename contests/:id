@@ -27,8 +27,6 @@
             collection.property_id = getPropertyID();
             var rendered = Mustache.render(template_html,collection);
             item_rendered.push(rendered);
-        
-            });
             
             $(container).show();
             $(container).html(item_rendered.join(''));

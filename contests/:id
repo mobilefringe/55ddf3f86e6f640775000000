@@ -14,9 +14,7 @@
             <div class="col-md-12">
                 <img alt="contest image" class="width_100" src="{{alt_photo_url}}" />
                 <br /><br />
-                {%raw%}
-                    {{description}}
-                {%endraw%}
+                {{{description}}
             </div>
             <div class="col-md-6">
                 <label for="first_name">First Name</label>

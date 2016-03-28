@@ -12,7 +12,8 @@
                 <img alt="contest image" class="width_100" src="{{alt_photo_url}}" />
             </div>
             <div class="col-md-6">
-                <label for=""></label>
+                <label for="contest[first_name]"></label>
+                <input class="form-control" id="first_name" name="contest[first_name]" type="text" required />
             </div>
             <div class="col-md-6">
             </div>

@@ -8,8 +8,9 @@
         var pathArray = window.location.pathname.split( '/' );
         var slug = pathArray[pathArray.length-1];
         contest_details = getPromotionDetailsBySlug(slug);
+        console.log(contest_details)
         if(contest_details != undefined){
-            console.log(contest_details)
+            
             renderContest('#contest_container','#contest_template', contest_details);
         }
         else{

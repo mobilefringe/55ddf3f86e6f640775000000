@@ -6,56 +6,61 @@
         margin-bottom:20px;
     }
 </style>
-<form id="contest_form">
-    <div id="contest_container" class="row">
-        <script id="contest_template" type="x-tmpl-mustache/text">
-            <input id="property_id" name="contest[property_id]" type="hidden" value="{{property_id}}"/>
-            <input id="contest_id" name="contest[contest_id]" type="hidden"  value="{{id}}" />
-            <div class="col-md-12">
-                <h1>{{name}}</h1>
-                <img alt="contest image" class="width_100" src="{{alt_photo_url}}" />
-                <br /><br />
-                {{{description}}}
-                <br /><br />
-            </div>
-            <div class="col-md-6">
-                <label for="first_name">First Name</label>
-                <input class="form-control" id="first_name" name="contest[first_name]" type="text" required />
-            </div>
-            <div class="col-md-6">
-                <label for="last_name">Last Name *</label>  
-                <input class="form-control" id="last_name" name="contest[last_name]" type="text" required />
-            </div>
-            <div class="col-md-6">
-                <label for="email">Email *</label> 
-                <input class="form-control" id="email" name="contest[email]" type="email" required />
-            </div>
-            <div class="col-md-6">
-                <label for="phone_number">Phone Number</label>  
-                <input class="form-control" id="phone_number" name="contest[phone]" type="text"  />
-            </div>
-            <div class="col-md-6">
-                <label for="address">Address</label> 
-                <input class="form-control" id="address" name="contest[mailing_address]" type="text"  />
-            </div>
-            <div class="col-md-6">
-                <label for="city">City</label>  
-                <input class="form-control" id="city" name="contest[city]" type="text"  />
-            </div>
-            <div class="col-md-6">
-                <label for="postal_code">Postal Code</label> 
-                <input class="form-control" id="postal_code" name="contest[postal_code]" type="text"  />
-            </div>
-            <div class="col-md-6">
-                <label for="province">Province</label>  
-                <input class="form-control" id="province" name="contest[province]" type="text"  />
-            </div>
-            <div class="col-md-6">
-                <input type="submit" class="btn btn-primary" />
-            </div>
-        </script>
-    </div>
-</form>
+<div id="success_subscribe" style="display:none">
+    <p class="description">Thank you for your entry. Good luck!</p>
+</div>
+<div id="form_div">
+    <form id="contest_form">
+        <div id="contest_container" class="row">
+            <script id="contest_template" type="x-tmpl-mustache/text">
+                <input id="property_id" name="contest[property_id]" type="hidden" value="{{property_id}}"/>
+                <input id="contest_id" name="contest[contest_id]" type="hidden"  value="{{id}}" />
+                <div class="col-md-12">
+                    <h1>{{name}}</h1>
+                    <img alt="contest image" class="width_100" src="{{alt_photo_url}}" />
+                    <br /><br />
+                    {{{description}}}
+                    <br /><br />
+                </div>
+                <div class="col-md-6">
+                    <label for="first_name">First Name</label>
+                    <input class="form-control" id="first_name" name="contest[first_name]" type="text" required />
+                </div>
+                <div class="col-md-6">
+                    <label for="last_name">Last Name *</label>  
+                    <input class="form-control" id="last_name" name="contest[last_name]" type="text" required />
+                </div>
+                <div class="col-md-6">
+                    <label for="email">Email *</label> 
+                    <input class="form-control" id="email" name="contest[email]" type="email" required />
+                </div>
+                <div class="col-md-6">
+                    <label for="phone_number">Phone Number</label>  
+                    <input class="form-control" id="phone_number" name="contest[phone]" type="text"  />
+                </div>
+                <div class="col-md-6">
+                    <label for="address">Address</label> 
+                    <input class="form-control" id="address" name="contest[mailing_address]" type="text"  />
+                </div>
+                <div class="col-md-6">
+                    <label for="city">City</label>  
+                    <input class="form-control" id="city" name="contest[city]" type="text"  />
+                </div>
+                <div class="col-md-6">
+                    <label for="postal_code">Postal Code</label> 
+                    <input class="form-control" id="postal_code" name="contest[postal_code]" type="text"  />
+                </div>
+                <div class="col-md-6">
+                    <label for="province">Province</label>  
+                    <input class="form-control" id="province" name="contest[province]" type="text"  />
+                </div>
+                <div class="col-md-6">
+                    <input type="submit" class="btn btn-primary" />
+                </div>
+            </script>
+        </div>
+    </form>
+</div>
 <script>
     $(document).ready(function() {
         loadMallDataCached(renderAll); 

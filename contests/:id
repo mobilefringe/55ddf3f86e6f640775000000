@@ -6,9 +6,6 @@
         margin-bottom:20px;
     }
 </style>
-<div id="success_subscribe" style="display:none">
-    <p class="description">Thank you for your entry. Good luck!</p>
-</div>
 <div id="form_div">
     <form id="contest_form">
         <div id="contest_container" class="row">
@@ -56,6 +53,9 @@
                 </div>
                 <div class="col-md-6">
                     <input type="submit" class="btn btn-primary" />
+                    <div id="success_subscribe" style="display:none">
+                        <p class="description">Thank you for your entry. Good luck!</p>
+                    </div>
                 </div>
             </script>
         </div>

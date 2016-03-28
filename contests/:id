@@ -40,6 +40,10 @@
                 <input class="form-control" id="province" name="contest[province]" type="text"  />
             </div>
             <div class="col-md-6">
+                <label for="province">Province</label>  
+                <input class="form-control" id="province" name="contest[province]" type="text"  />
+            </div>
+            <div class="col-md-6">
                 <label for="postal_code">Postal Code</label> 
                 <input class="form-control" id="postal_code" name="contest[postal_code]" type="text"  />
             </div>

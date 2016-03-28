@@ -2,6 +2,9 @@
     .main_content{
         padding-right:15px;
     }
+    .col-md-6{
+        marging-bottom:15px;
+    }
 </style>
 <form id="contest_form">
     <div id="contest_container" class="row">

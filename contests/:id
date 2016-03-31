@@ -68,7 +68,7 @@
                 <div class="col-md-12">
                     <label>
                         <input type="checkbox" id="agree_contest" />
-                        I have read and am in full compliance with the official contest rules and regulations.
+                        I have read and am in full compliance with the official contest <a href="http://assets.codecloudapp.com/sites/565e0ca36e6f64738f020000/binary/octet-stream/1459460053000/HTC Rules & Regulations.pdf" target="_blank"><u>rules and regulations.</a></u>
                     </label>
                     <br /><br />
                 </div>

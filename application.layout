@@ -285,6 +285,8 @@
                             <li>
                                 <button onclick='toggle_mobile_submenu("promos_dd2")'>promotions <i id='about2_icon' class="fa fa-plus"></i></button>
                                 <ul class="mobile_submenu" id='promos_dd2'>
+                                    <li><a href="/promotions">promotions</a></li>
+                                    <li><a href="/contests/htc-enter-to-win">Contest</a></li>
                                 </ul>
                             </li>
                             <li>

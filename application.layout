@@ -278,13 +278,8 @@
                             <li>
                                 <button onclick="window.location.href='/map'">centre map</button>
                             </li>
-                           <li>
-                                <button onclick='toggle_mobile_submenu("promotions2")'>promotions us <i id='about2_icon' class="fa fa-plus"></i></button>
-                                <ul class="mobile_submenu" id='about2'>
-                                <a href='promotions'><li>Promotions</li></a>
-                                    <a href='/contests/htc-enter-to-win'><li>Contest</li></a>
-                                    
-                                </ul>
+                            <li>
+                                <button onclick="window.location.href='/promotions'">promotions </button>
                             </li>
                             <li>
                                 <button onclick="window.location.href='/pages/htc-centre-information'">location </button>

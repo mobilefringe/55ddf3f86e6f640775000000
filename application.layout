@@ -248,6 +248,8 @@
                                 <button onclick="window.location.href='/map'">centre map</button>
                             </li>
                             <li>
+                                <button onclick='toggle_menu("promos_dd")'>promotions</button>
+                                <ul class="submenu" id='promos_dd'>
                                 <button onclick="window.location.href='/promotions'">promotions </button>
                             </li>
                             <li>

@@ -283,7 +283,7 @@
                                 <button onclick="window.location.href='/map'">centre map</button>
                             </li>
                             <li>
-                                <button onclick="window.location.href='/promotions'">promotions </button>
+                                <button onclick='toggle_mobile_submenu("promos_dd2")'>promotions <i id='about2_icon' class="fa fa-plus"></i></button>
                             </li>
                             <li>
                                 <button onclick="window.location.href='/pages/htc-centre-information'">location </button>

@@ -250,7 +250,9 @@
                             <li>
                                 <button onclick='toggle_menu("promos_dd")'>promotions</button>
                                 <ul class="submenu" id='promos_dd'>
-                                <button onclick="window.location.href='/promotions'">promotions </button>
+                                    <li><a href="/promotions">promotions</a></li>
+                                    <li><a href="/contests/htc-enter-to-win">Contest</a></li>
+                                </ul>
                             </li>
                             <li>
                                 <button onclick="window.location.href='/pages/htc-centre-information'">location </button>

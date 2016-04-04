@@ -1078,6 +1078,9 @@ textarea:focus, input:focus{
     
     h1{
         font-size:25px;
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
     }
     
     .mobile_menu_btn{

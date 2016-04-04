@@ -925,7 +925,7 @@ textarea:focus, input:focus{
 }
 
 
- @media (max-width: 767px) {
+ @media (max-width: 768px) {
     #contest_form{
         padding: 0 15px;
     }

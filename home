@@ -12,10 +12,10 @@
    
    
 </style>
-<!--<div class="popup_home hidden_now">-->
-<!--    <a href="/contests/htc-enter-to-win"><img src="http://assets.codecloudapp.com/sites/565e0ca36e6f64738f020000/image/png/undefined/hm1.png" /></a>-->
-<!--    <i class="fa fa-remove close_popup"></i>-->
-<!--</div>-->
+<div class="popup_home hidden_now">
+    <a href="/contests/htc-enter-to-win"><img src="http://assets.codecloudapp.com/sites/565e0ca36e6f64738f020000/image/png/undefined/hm1.png" /></a>
+    <i class="fa fa-remove close_popup"></i>
+</div>
 <div class="flexslider" id="">
     <ul class="banner_slider_ul slides" id="banner_slider_ul">
         <script id="banner_slider_template" type="x-tmpl-mustache/text">
@@ -51,7 +51,7 @@
             renderPageData("#bottom_block_container", "#bottom_block_template", featureList, "bottom_block")
             $(".loading_overlay").hide();
                         if($.cookie("popup_viewed") != "true"){
-                $.cookie("popup_viewed", "true", { expires: 1 });
+                $.cookie("popup_viewed", "true", { expires: 0 });
                 $('<div class="modal-backdrop custom_backdrop"></div>').appendTo(document.body);
                 $('.popup_home').show()
             }

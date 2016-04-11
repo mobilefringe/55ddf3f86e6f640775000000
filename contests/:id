@@ -5,6 +5,9 @@
     .col-md-6{
         margin-bottom:20px;
     }
+    .contest_ended{
+        display:none;
+    }
 </style>
 <div id="form_div">
     <p id="contest_ended">This contest has ended. Good luck to the participants.<br />  Check back soon for future contests.</p>

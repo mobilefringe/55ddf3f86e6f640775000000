@@ -101,6 +101,8 @@
                         'class' : 'icon-jobs'
                     }).prop('outerHTML');
                 }
+                
+                    promo_icon = ''
                  val.cats = val.categories.join(',')
                 
                 if (val.phone){

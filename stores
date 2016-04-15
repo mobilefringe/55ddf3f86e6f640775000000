@@ -57,6 +57,7 @@
             $("#cat_tab").css({"color":"white","background":"black"})
             $("#cat_triangle").css("border-bottom","39px solid black")
             $('.content_header').show()
+            $('.data-rows').show()
         } else {
             $("#cat_tab_title_content_container").show()
             $("#alpha_tab_title_content_container").hide()

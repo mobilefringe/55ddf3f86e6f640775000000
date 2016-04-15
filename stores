@@ -113,13 +113,7 @@
                 var promo_exist = false;
                 var  promo_icon = ''
                 if(val.promotions.length > 0 ){
-                    if (promo_exist){
-                        promo_icon = '<img src="http://assets.codecloudapp.com/sites/55ddf3f86e6f640775000000/e2dc42990b2c6c3e7e2b3340558a00c6/tag32.png" class="" alt="promo_icon">'
-                    } else{
-                        promo_icon = ''
-                    }
-                } else {
-                    promo_icon = ''
+                    promo_icon = '<img src="http://assets.codecloudapp.com/sites/55ddf3f86e6f640775000000/e2dc42990b2c6c3e7e2b3340558a00c6/tag32.png" class="" alt="promo_icon">'
                 }
                 
                 if (val.phone){

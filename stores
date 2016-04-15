@@ -111,6 +111,7 @@
                     }).prop('outerHTML');
                 }
                 // var promo_exist = false;
+                var  promo_icon = ''
                 // if(val.promotions.length > 0 ){
                 //     var promos = getPromotionsForIds(val.promotions)
                 //     $.each(promos, function(i, v){

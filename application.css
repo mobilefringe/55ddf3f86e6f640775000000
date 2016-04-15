@@ -708,6 +708,7 @@ textarea:focus, input:focus{
     padding-left: 15px;
     padding-right: 15px;
     margin:0;
+    margin-bottom:30px;
 }
 .content_table{
     margin-top:0px;

@@ -52,7 +52,8 @@
         $('#cat_tab_title_content_container a').click(function(){
             var cats = $(this).attr('data-filter')
             $('.data-rows').hide();
-            $('.data-rows[data-cats*="' + cats + '"]').show()
+            $('.data-rows[data-cats*="' + cats + '"]').show();
+            $('#cat_name').text($(this).text).show()
         })
     }
     function toggle_tabs(id){

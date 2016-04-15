@@ -48,7 +48,7 @@
     
     $("#alpha_tab").css({"color":"black","background":"#f3f3f3"})
     $("#alpha_triangle").css("border-bottom","39px solid #f3f3f3")
-    function $('.data-rows[data-cats*="' +  + '"]').show()(){
+    function cat_toggler(){
         $('#cat_tab_title_content_container').click(function(){
             $('.data-rows').hide();
         })
@@ -91,6 +91,7 @@
             $("#alpha_tab_title_content_container").show();
             $("#alpha_content").show();
             $(".loading_overlay").hide();
+            cat_toggler
         }
         loadMallDataCached(renderAll);  
         // loadMallData(renderAll);  

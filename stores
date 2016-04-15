@@ -103,7 +103,7 @@
                 }
                 
                     promo_icon = ''
-                console.log(val)
+                var val.cats = val.categories.join(',')
                 
                 if (val.phone){
                     phone = '<a href="tel:'+val.phone+'"><img src="http://assets.codecloudapp.com/sites/55ddf3f86e6f640775000000/e2dc42990b2c6c3e7e2b3340558a00c6/telephone66 2.png" class="phone_icon" alt="phone_icon"><p>'+val.phone+'</p></a>'

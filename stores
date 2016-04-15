@@ -91,7 +91,7 @@
             $("#alpha_tab_title_content_container").show();
             $("#alpha_content").show();
             $(".loading_overlay").hide();
-            cat_toggler
+            cat_toggler();
         }
         loadMallDataCached(renderAll);  
         // loadMallData(renderAll);  

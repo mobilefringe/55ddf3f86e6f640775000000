@@ -78,6 +78,7 @@
         }
     }
     $(document).ready(function() {
+        $(".loading_overlay").hide();
         function renderAll(){
             var alpha_stores = getStoresList();
             var full_cat_array = getStoreCategories();
@@ -93,7 +94,7 @@
             })
             $("#alpha_tab_title_content_container").show();
             $("#alpha_content").show();
-            $(".loading_overlay").hide();
+            
         }
         loadMallDataCached(renderAll);  
         // loadMallData(renderAll);  

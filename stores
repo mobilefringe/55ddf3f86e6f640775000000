@@ -175,7 +175,7 @@
                   })
                 val.store_ids = store_ids
              })
-            conslole.log(alpha_array)
+            console.log(alpha_array)
             return(alpha_array)
         
         }

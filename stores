@@ -110,9 +110,23 @@
                         'class' : 'icon-jobs'
                     }).prop('outerHTML');
                 }
-                var  promo_icon = ''
-                if(getPublishedPromotionsForIds(val.promotions).length > 0 ){
-                    promo_icon = '<img src="http://assets.codecloudapp.com/sites/55ddf3f86e6f640775000000/e2dc42990b2c6c3e7e2b3340558a00c6/tag32.png" class="" alt="promo_icon">'
+                var promo_exist = false;
+                if(val.promotions.length > 0 ){
+                    var promos = getPromotionsForIds(val.promotions)
+                    $.each(promos, function(i, v){
+                        var today = new Date();
+                        var p_date = new Date(v.show_on_web_date);
+                        if (p_date <= today){
+                            promo_exist = true;
+                        }
+                    })
+                    if (promo_exist){
+                        promo_icon = '<img src="http://assets.codecloudapp.com/sites/55ddf3f86e6f640775000000/e2dc42990b2c6c3e7e2b3340558a00c6/tag32.png" class="" alt="promo_icon">'
+                    } else{
+                        promo_icon = ''
+                    }
+                } else {
+                    promo_icon = ''
                 }
                 
                 if (val.phone){
@@ -149,6 +163,19 @@
                      
                  }
              })
+             
+           
+            
+            $.each( alpha_array , function( key, val ) {
+                var store_ids = []
+                  $.each( collection , function( key2, val2 ) {
+                      if (val.name == (val2.name).charAt(0)){
+                          store_ids.push(val2.id)
+                      }
+                  })
+                val.store_ids = store_ids
+             })
+            
             return(alpha_array)
         
         }

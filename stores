@@ -163,11 +163,6 @@
                      
                  }
              })
-             
-           
-            
-            
-            console.log(alpha_array)
             return(alpha_array)
         
         }

@@ -166,15 +166,7 @@
              
            
             
-            $.each( alpha_array , function( key, val ) {
-                var store_ids = []
-                  $.each( collection , function( key2, val2 ) {
-                      if (val.name == (val2.name).charAt(0)){
-                          store_ids.push(val2.id)
-                      }
-                  })
-                val.store_ids = store_ids
-             })
+            
             console.log(alpha_array)
             return(alpha_array)
         

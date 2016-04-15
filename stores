@@ -72,11 +72,11 @@
             renderPageData("#alpha_content", "#alpha_content_template", alpha_array, "directory")
             add_stores_to_table(alpha_stores, 'alpha', null)
             renderPageData("#cat_tab_title_content_container", "#cat_tab_title_content_template", full_cat_array, "directory")
-            renderPageData("#cat_content", "#cat_content_template", full_cat_array, "directory")
-            $.each( full_cat_array , function( key, val ) {
-                store_array = getStoreDetailArrayByIDs(val.store_ids)
-                add_stores_to_table(store_array, 'cats', val.id)
-            })
+            // renderPageData("#cat_content", "#cat_content_template", full_cat_array, "directory")
+            // $.each( full_cat_array , function( key, val ) {
+            //     store_array = getStoreDetailArrayByIDs(val.store_ids)
+            //     add_stores_to_table(store_array, 'cats', val.id)
+            // })
             $("#alpha_tab_title_content_container").show();
             $("#alpha_content").show();
             $(".loading_overlay").hide();

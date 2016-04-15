@@ -50,6 +50,7 @@
     $("#alpha_triangle").css("border-bottom","39px solid #f3f3f3")
     function cat_toggler(){
         $('#cat_tab_title_content_container a').click(function(){
+            var cats = $(this).attr('data-filter')
             $('.data-rows').hide();
         })
     }

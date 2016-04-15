@@ -104,12 +104,12 @@
         function add_stores_to_table(collection, type, id){
             $.each( collection , function( key, val ) {
                 var jobs_icon = '';
-                // if (val.jobs.length > 0) {
-                //     jobs_icon = $('<img>').attr({
-                //         'src' : "http://assets.codecloudapp.com/sites/565e0ca36e6f64738f020000/image/png/1446665017000/jobs.png",
-                //         'class' : 'icon-jobs'
-                //     }).prop('outerHTML');
-                // }
+                if (val.jobs.length > 0) {
+                    jobs_icon = $('<img>').attr({
+                        'src' : "http://assets.codecloudapp.com/sites/565e0ca36e6f64738f020000/image/png/1446665017000/jobs.png",
+                        'class' : 'icon-jobs'
+                    }).prop('outerHTML');
+                }
                 // var promo_exist = false;
                 // if(val.promotions.length > 0 ){
                 //     var promos = getPromotionsForIds(val.promotions)

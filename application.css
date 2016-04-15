@@ -714,6 +714,10 @@ textarea:focus, input:focus{
     margin-top:0px;
     
 }
+
+#cat_name{
+    display:none;
+}
 .content_table a, h1 a{
     color:black !important;
 }

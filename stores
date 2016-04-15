@@ -113,14 +113,14 @@
                 // var promo_exist = false;
                 var  promo_icon = ''
                 if(val.promotions.length > 0 ){
-                    var promos = getPromotionsForIds(val.promotions)
-                    $.each(promos, function(i, v){
-                        var today = new Date();
-                        var p_date = new Date(v.show_on_web_date);
-                        if (p_date <= today){
-                            promo_exist = true;
-                        }
-                    })
+                    // var promos = getPromotionsForIds(val.promotions)
+                    // $.each(promos, function(i, v){
+                    //     var today = new Date();
+                    //     var p_date = new Date(v.show_on_web_date);
+                    //     if (p_date <= today){
+                    //         promo_exist = true;
+                    //     }
+                    // })
                     if (promo_exist){
                         promo_icon = '<img src="http://assets.codecloudapp.com/sites/55ddf3f86e6f640775000000/e2dc42990b2c6c3e7e2b3340558a00c6/tag32.png" class="" alt="promo_icon">'
                     } else{

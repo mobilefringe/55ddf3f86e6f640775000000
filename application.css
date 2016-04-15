@@ -720,6 +720,14 @@ textarea:focus, input:focus{
 
 #cat_name{
     display:none;
+        color: white;
+    background-color: black;
+    height: 36px;
+    line-height: 36px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0;
+    margin-bottom: 30px;
 }
 .content_table a, h1 a{
     color:black !important;

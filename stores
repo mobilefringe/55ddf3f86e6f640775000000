@@ -24,7 +24,7 @@
     </div>
     <div class="tab_title_content" id="cat_tab_title_content_container">
         <script id="cat_tab_title_content_template" type="x-tmpl-mustache/text">
-            <a href="#cat_{{id}}" data-filter="{{id}}>{{name}}</a>
+            <a href="#cat_{{id}}" data-filter="{{id}}">{{name}}</a>
         </script>
     </div>
 </div>

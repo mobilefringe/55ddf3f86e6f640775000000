@@ -117,7 +117,7 @@
                     first_letter = id
                 }
                 
-                $("#"+first_letter+'_table').append('<tr data-cats="' + val.cats +'"><td class="dir_store_name"><a href="/stores/'+val.slug+'">'+val.name+'</a></td><td class="icon_td">'+promo_icon + jobs_icon + '</td><td class="dir_phone">'+phone+'</td></tr>')
+                $("#"+first_letter+'_table').append('<tr class="data-rows" data-cats="' + val.cats +'"><td class="dir_store_name"><a href="/stores/'+val.slug+'">'+val.name+'</a></td><td class="icon_td">'+promo_icon + jobs_icon + '</td><td class="dir_phone">'+phone+'</td></tr>')
                 
               
             })

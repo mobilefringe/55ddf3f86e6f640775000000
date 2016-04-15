@@ -39,16 +39,6 @@
 </div>
 
 
-<div class='tab_content' id='cat_content'>
-    <script id="cat_content_template" type="x-tmpl-mustache/text">
-        <div class='cat_content_header' id='cat_{{id}}'>
-            <p class='content_header'>{{name}}<a href='#top'><i class="fa fa-arrow-up up_arrow"></i></a></p>
-            <table class='content_table' id='{{id}}_table'>
-            </table>
-        </div>
-    </script>
-</div>
-
 
 
 <script>

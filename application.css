@@ -86,7 +86,7 @@ a:hover{
     font-size: 14px;
     font-weight: bold;
     float:left;
-    font-color:#fff
+    color:#fff
 }
 .accessible{
     display:none;

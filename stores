@@ -56,6 +56,7 @@
             $("#alpha_triangle").css("border-bottom","39px solid #f3f3f3")
             $("#cat_tab").css({"color":"white","background":"black"})
             $("#cat_triangle").css("border-bottom","39px solid black")
+            $('.content_header').show()
         } else {
             $("#cat_tab_title_content_container").show()
             $("#alpha_tab_title_content_container").hide()
@@ -63,6 +64,7 @@
             $("#cat_triangle").css("border-bottom","39px solid #f3f3f3")
             $("#alpha_tab").css({"color":"white","background":"black"})
             $("#alpha_triangle").css("border-bottom","39px solid black")
+            $('.content_header').hide()
             
         }
     }

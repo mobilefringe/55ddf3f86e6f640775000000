@@ -51,7 +51,6 @@
     function(){
         $('#cat_tab_title_content_container').click(function(){
             $('.data-rows').hide();
-            
         })
     }
     function toggle_tabs(id){

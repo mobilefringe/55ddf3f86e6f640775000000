@@ -943,6 +943,9 @@ textarea:focus, input:focus{
 
 
  @media (max-width: 768px) {
+     #google_map{
+         float:none;
+     }
     #contest_form{
         padding: 0 15px;
     }

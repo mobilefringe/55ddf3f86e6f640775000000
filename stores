@@ -48,11 +48,11 @@
     
     $("#alpha_tab").css({"color":"black","background":"#f3f3f3"})
     $("#alpha_triangle").css("border-bottom","39px solid #f3f3f3")
-    $.(function(){
+    function toggler(){
         $('#cat_tab_title_content_container').click(function(){
             $('.data-rows').hide();
         })
-    })
+    }
     function toggle_tabs(id){
         if (id == 'alpha') {
             $("#cat_tab_title_content_container").hide()

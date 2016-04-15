@@ -19,6 +19,9 @@ p, ol, ul, td{
     width:100%;    
 }
 
+#cat_tab_title_content_container{
+    margin-bottom:30px;
+}
 
 
 .hidden_now{

@@ -76,17 +76,19 @@ a:hover{
 
 #google_map{
     background: black;
-    color: white;
     text-transform: uppercase;
     border: none;
-    width: 100%;
+    width: 150px;
     height: 28px;
     text-align: center;
     line-height: 28px;
     font-size: 14px;
     font-weight: bold;
-    float:left;
-    color:#fff
+    float: right;
+    color: #fff !important;
+    display: block;
+    margin-right: 20px;
+    margin-top: 10px;
 }
 .accessible{
     display:none;

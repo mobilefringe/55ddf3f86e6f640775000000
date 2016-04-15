@@ -85,6 +85,8 @@ a:hover{
     line-height: 28px;
     font-size: 14px;
     font-weight: bold;
+    float:left;
+    font-color:#fff
 }
 .accessible{
     display:none;

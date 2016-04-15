@@ -81,8 +81,8 @@
         $(".loading_overlay").hide();
         function renderAll(){
             var alpha_stores = getStoresList();
-            // var full_cat_array = getStoreCategories();
-            // var alpha_array = generateAlphaStoreList(alpha_stores);
+            var full_cat_array = getStoreCategories();
+            var alpha_array = generateAlphaStoreList(alpha_stores);
             renderPageData("#alpha_tab_title_content_container", "#alpha_tab_title_content_template", alpha_array, "directory")
             renderPageData("#alpha_content", "#alpha_content_template", alpha_array, "directory")
             // add_stores_to_table(alpha_stores, 'alpha', null)

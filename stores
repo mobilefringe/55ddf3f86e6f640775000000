@@ -112,7 +112,7 @@
                         'class' : 'icon-jobs'
                     }).prop('outerHTML');
                 }
-                
+                console.log(val)
                     promo_icon = ''
                  val.cats = val.categories.join(',')
                 

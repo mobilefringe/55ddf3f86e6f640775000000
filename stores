@@ -112,7 +112,9 @@
                         'class' : 'icon-jobs'
                     }).prop('outerHTML');
                 }
-                console.log(val)
+                if (total_published_promos > 0){
+                    promo_icon = '<img src="http://assets.codecloudapp.com/sites/55ddf3f86e6f640775000000/e2dc42990b2c6c3e7e2b3340558a00c6/tag32.png" class="" alt="promo_icon">'
+                }
                     promo_icon = ''
                  val.cats = val.categories.join(',')
                 

@@ -13,7 +13,7 @@
    
 </style>
 <div class="popup_home hidden_now">
-    <a href="/contests/htc-enter-to-win"><img src="http://assets.codecloudapp.com/sites/565e0ca36e6f64738f020000/image/png/undefined/hm1.png" /></a>
+    <a href="http://heartlandtown.com/promotions/htc-reebok-rockport-free-boks-summer-classes-for-kids"><img src="http://assets.codecloudapp.com/sites/565e0ca36e6f64738f020000/image/jpeg/undefined/boks.jpg" /></a>
     <i class="fa fa-remove close_popup"></i>
 </div>
 <div class="flexslider" id="">
@@ -50,15 +50,15 @@
             var featureList = getFeatureList();
             renderPageData("#bottom_block_container", "#bottom_block_template", featureList, "bottom_block")
             $(".loading_overlay").hide();
-        //                 if($.cookie("popup_viewed") != "true"){
-        //         $.cookie("popup_viewed", "true", { expires: 1 });
-        //         $('<div class="modal-backdrop custom_backdrop"></div>').appendTo(document.body);
-        //         $('.popup_home').show()
-        //     }
-        //     $('.close_popup, .custom_backdrop').click(function(){
-        //         $(".modal-backdrop").remove();
-		      //  $(".popup_home").remove();
-        //     })
+                        if($.cookie("popup_viewed") != "true"){
+                $.cookie("popup_viewed", "true", { expires: 1 });
+                $('<div class="modal-backdrop custom_backdrop"></div>').appendTo(document.body);
+                $('.popup_home').show()
+            }
+            $('.close_popup, .custom_backdrop').click(function(){
+                $(".modal-backdrop").remove();
+		        $(".popup_home").remove();
+            })
             
         }
         

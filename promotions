@@ -29,7 +29,7 @@
             </div>
             <div class="promo_right_block">
                 <a class='promo_name' href='/promotions/{{slug}}'>{{name}}</a>
-                <p class='promotionable_name'><a href='/{{store_slug}}'>{{store_name}}</a></p>
+                <p class='promotionable_name'>{{store_name}}</p>
                 <p class='promo_date_string'>{{date_string}}</p>
                 <p class='promo_desc_short'>{{description}}</p>
             </div>

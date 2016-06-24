@@ -35,12 +35,25 @@
     $(document).ready(function() {
         function render_page_details(){
             var banners = getBanners();
-            
+            var published_banners = []
             $.each( banners , function( key, val ){
+                today = new Date;
+                start = new Date (val.start_date);
                 if (val.url == null){
                     val.item = '<img class="banner_slide_img" src="'+val.image_url+'" alt="banner"/>'
                 } else {
                     val.item = '<a href="'+val.url+'"><img class="banner_slide_img" src="'+val.image_url+'" alt="banner"/></a>'
+                }
+                if (start <= today){
+                    if (val.end_date){
+                        end = new Date (val.end_date);
+                        end.setDate(end.getDate() + 1);
+                    if (end >= today){
+                        item_list.push(val);  
+                    }
+                    
+                } else {
+                    item_list.push(val);
                 }
             });
             

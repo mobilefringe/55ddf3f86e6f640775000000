@@ -49,15 +49,15 @@
                         end = new Date (val.end_date);
                         end.setDate(end.getDate() + 1);
                     if (end >= today){
-                        item_list.push(val);  
+                        published_banners.push(val);  
                     }
                     
                 } else {
-                    item_list.push(val);
+                    published_banners.push(val);
                 }
             });
             
-            renderPageData("#banner_slider_ul", "#banner_slider_template", banners, "banners")
+            renderPageData("#banner_slider_ul", "#banner_slider_template", published_banners, "banners")
             load_slider("flexslider");
             
             var featureList = getFeatureList();

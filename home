@@ -48,12 +48,13 @@
                     if (val.end_date){
                         end = new Date (val.end_date);
                         end.setDate(end.getDate() + 1);
-                    if (end >= today){
-                        published_banners.push(val);  
-                    }
+                        if (end >= today){
+                            published_banners.push(val);  
+                        }
                     
-                } else {
-                    published_banners.push(val);
+                    } else {
+                        published_banners.push(val);
+                    }
                 }
             });
             

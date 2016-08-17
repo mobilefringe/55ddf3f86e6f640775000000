@@ -72,7 +72,7 @@
                 <div class="col-md-12">
                     <label>
                         <input type="checkbox" id="add_to_newsletter" required />
-                        I agree to receive emails from Heartland Town Centre.
+                        *I agree to receive emails from Heartland Town Centre.
                     </label>
                     <label>
                         <input type="checkbox" id="agree_contest" required />

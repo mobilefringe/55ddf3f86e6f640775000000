@@ -100,7 +100,13 @@
             e.preventDefault();
             data = $(this).serialize();
             if ($('#agree_contest').prop('checked') == true){
-                submit_contest(data);
+                if($('#add_to_newsletter').prop('checked') == true){
+                    submit_contest(data);
+                }
+                else{
+                    alert("Please agree");
+                    $('#add_to_newsletter').focus();    
+                }
             }
             else{
                 alert("Please agree");

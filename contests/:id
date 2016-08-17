@@ -150,6 +150,8 @@
             dataType: "json",
             data: data,
             success: function(data) {
+                $.getJSON("http://mobilefringe.createsend.com/t/d/s/dljtlh/?callback=?",$(this).serialize()
+                });
                 $("#success_subscribe").fadeIn();
                 $('#contest_form').trigger('reset');
                 

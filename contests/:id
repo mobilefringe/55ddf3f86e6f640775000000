@@ -150,13 +150,13 @@
             dataType: "json",
             data: data,
             success: function(data) {
-                console.log($.getJSON("http://mobilefringe.createsend.com/t/d/s/dljtlh/?callback=?", "cm-dljtlh-dljtlh=" + email));
+                $.getJSON("http://mobilefringe.createsend.com/t/d/s/dljtlh/?callback=?", "cm-dljtlh-dljtlh=" + email);
                 $("#success_subscribe").fadeIn();
                 $('#contest_form').trigger('reset');
                 
             },
             error: function(data){
-                console.log($.getJSON("http://mobilefringe.createsend.com/t/d/s/dljtlh/?callback=?", "cm-dljtlh-dljtlh=" + email));
+                $.getJSON("http://mobilefringe.createsend.com/t/d/s/dljtlh/?callback=?", "cm-dljtlh-dljtlh=" + email);
                 $("#success_subscribe").fadeIn();
                 $('#contest_form').trigger('reset');
             }

@@ -104,12 +104,12 @@
                     submit_contest(data);
                 }
                 else{
-                    alert("Please agree");
+                    alert("Please agree to receive emails from Heartland Town Centre.");
                     $('#add_to_newsletter').focus();    
                 }
             }
             else{
-                alert("Please agree");
+                alert("Please agree to rules and regulations.");
                 $('#agree_contest').focus();
             }
         });

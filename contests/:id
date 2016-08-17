@@ -76,6 +76,7 @@
                     </label>
                     <label>
                         <input type="checkbox" id="add_to_newsletter" />
+                        I agree to receive emails from Heartland Town Centre.
                     </label>
                     <br /><br />
                 </div>

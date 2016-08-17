@@ -99,7 +99,7 @@
         $('#contest_form').submit(function (e) {
             e.preventDefault();
             data = $(this).serialize();
-            if($('#first_name').val() != "" || $('#last_name').val() != "" || $('#email').val() !=""){
+            if($('#first_name').val() != "" && $('#last_name').val() != "" && $('#email').val() !=""){
                 if ($('#agree_contest').prop('checked') == true){
                     if($('#add_to_newsletter').prop('checked') == true){
                         submit_contest(data);

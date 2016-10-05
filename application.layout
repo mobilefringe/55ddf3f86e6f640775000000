@@ -40,16 +40,16 @@
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.5.0/flexslider.css" rel="stylesheet">
         <link rel="stylesheet" href="/application.css">
-        <link href='http://fonts.googleapis.com/css?family=Maven+Pro:400,500,700,900' rel='stylesheet' type='text/css'>
+        <link href='//fonts.googleapis.com/css?family=Maven+Pro:400,500,700,900' rel='stylesheet' type='text/css'>
         <!-- js -->
         <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.2/jquery.xdomainrequest.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.2/jquery.xdomainrequest.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.3/moment.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
         <!--MallMaverick v1.0-->
-        <script src="http://mallmaverick.codecloudapp.com/mallmaverick.js?v=0.3"></script>
-        <script src="http://mallmaverick.codecloudapp.com/mustache_mallmaverick.js?v=0.3"></script>
+        <script src="//mallmaverick.codecloudapp.com/mallmaverick.js?v=0.3"></script>
+        <script src="//mallmaverick.codecloudapp.com/mustache_mallmaverick.js?v=0.3"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.5.0/jquery.flexslider.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
         <!--jReject is used to warn users certain browsers aren't compatible with this site-->
@@ -70,26 +70,26 @@
                             // Text below the icon  
                             text: 'Google Chrome',  
                             // URL For icon/text link  
-                            url: 'http://www.google.com/chrome/',  
+                            url: '//www.google.com/chrome/',  
                             // (Optional) Use "allow" to customized when to show this option  
                             // Example: to show chrome only for IE users  
                             // allow: { all: false, msie: true }  
                         },  
                         firefox: {  
                             text: 'Mozilla Firefox',  
-                            url: 'http://www.mozilla.com/firefox/'  
+                            url: '//www.mozilla.com/firefox/'  
                         },  
                         safari: {  
                             text: 'Safari',  
-                            url: 'http://www.apple.com/safari/download/'  
+                            url: '//www.apple.com/safari/download/'  
                         },  
                         opera: {  
                             text: 'Opera',  
-                            url: 'http://www.opera.com/download/'  
+                            url: '//www.opera.com/download/'  
                         },  
                         msie: {  
                             text: 'Internet Explorer',  
-                            url: 'http://www.microsoft.com/windows/Internet-explorer/'  
+                            url: '//www.microsoft.com/windows/Internet-explorer/'  
                         }  
                     },// Message below close window link  
                     imagePath: '//cdn.jsdelivr.net/jquery.jreject/1.0.2/images/'
@@ -99,7 +99,7 @@
             });
         
         
-            setEndPoint('http://htc.mallmaverick.com/api/v2/htc/all.json');
+            setEndPoint('//htc.mallmaverick.com/api/v2/htc/all.json');
             sessionStorage.setItem('primary_locale', 'en-CA');
             sessionStorage.setItem('secondary_locale', 'fr-CA');
         </script>
@@ -141,7 +141,7 @@
             </div>
         </div>
         <div class="loading_overlay">
-            <img alt="loading" src="http://kodekloud.s3.amazonaws.com/sites/5447ebb66e6f641987020000/3604f5c26997bea3de504de139debcec/loading.gif"/>
+            <img alt="loading" src="//kodekloud.s3.amazonaws.com/sites/5447ebb66e6f641987020000/3604f5c26997bea3de504de139debcec/loading.gif"/>
         </div>
         <div class='header_container' >
             
@@ -310,24 +310,24 @@
                             </li>
                         </ul>
                         <div class='mobile_menu_footer_icons'>
-                            <button onclick="window.open('https://www.facebook.com/heartlandtowncentre')"><img alt='facebook' src="http://assets.codecloudapp.com/sites/55ddf3f86e6f640775000000/ca1169dc611d37b7f705509f3b934a89/facebook.png" ></button>
-                            <button onclick="window.open('https://twitter.com/Heartland_TC')"><img alt='twitter' src="http://assets.codecloudapp.com/sites/55ddf3f86e6f640775000000/ca1169dc611d37b7f705509f3b934a89/twitter.png"></button>
-                             <button onclick="window.open('https://instagram.com/heartlandtowncentre')"><img alt='instagran' src="http://assets.codecloudapp.com/sites/55ddf3f86e6f640775000000/c2a94e71bb95d9d0362b66407da795cd/instagram.png"></button>
+                            <button onclick="window.open('https://www.facebook.com/heartlandtowncentre')"><img alt='facebook' src="//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/ca1169dc611d37b7f705509f3b934a89/facebook.png" ></button>
+                            <button onclick="window.open('https://twitter.com/Heartland_TC')"><img alt='twitter' src="//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/ca1169dc611d37b7f705509f3b934a89/twitter.png"></button>
+                             <button onclick="window.open('https://instagram.com/heartlandtowncentre')"><img alt='instagran' src="//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/c2a94e71bb95d9d0362b66407da795cd/instagram.png"></button>
                             
                             <form id="mobile_newsletter_form">
-                                <button type="submit"><img src="http://assets.codecloudapp.com/sites/55ddf3f86e6f640775000000/ca1169dc611d37b7f705509f3b934a89/subscribe.png" class="" alt="newsletter"></button>
+                                <button type="submit"><img src="//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/ca1169dc611d37b7f705509f3b934a89/subscribe.png" class="" alt="newsletter"></button>
                                 <label for='mobile_email' style="display:none">Email</label>
                                 <input type="text" id='mobile_email' placeholder="Subscribe to Newsletter" required/>
                             </form>
                         </div>
-                       
+                       /ass
                         
                         
                     </div>
                     
                     
                     
-                    <img alt='moble_menu' class="mobile_menu_btn" src="http://assets.codecloudapp.com/sites/55ddf3f86e6f640775000000/e4be771d6199b62e7e61a19dd287854c/mobilemenu.png" onclick="javascript:toggle_mobile_menu()" tabindex='10' onkeypress="javascript:toggle_mobile_menu()"/>
+                    <img alt='moble_menu' class="mobile_menu_btn" src="//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/e4be771d6199b62e7e61a19dd287854c/mobilemenu.png" onclick="javascript:toggle_mobile_menu()" tabindex='10' onkeypress="javascript:toggle_mobile_menu()"/>
                     
                     
                     
@@ -370,7 +370,7 @@
                 </div>
                 <div class='bottom_nav_column'>
                     <p class="bottom_nav_column_header">Location</p>
-                    <img alt='pin' class='bottom_nav_pin' src='http://assets.codecloudapp.com/sites/55ddf3f86e6f640775000000/d0af6b40cbc5a16b65d2614ff1f1744c/map25.png'/>
+                    <img alt='pin' class='bottom_nav_pin' src='//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/d0af6b40cbc5a16b65d2614ff1f1744c/map25.png'/>
                     <p class="bottom_nav_address">Corner of Mavis and Britannia,<br>Mississauga, ON L5R 4G6</p>
                 </div>
                 
@@ -397,7 +397,7 @@
             <div class='trim_screen'>
                 <a class="accessible" href="#main_content">[Skip]</a>
                 <p class="trim_left">&copy; 2015 Heartland Town Centre All rights reserved. <a href="/pages/htc-privacy-policy">Privacy Policy</a> | <a href="/pages/htc-accessibility">Accessibility</a> | <a href="/pages/htc-terms-and-conditions">Terms & Conditions</a> | <a href="/employment">Employment</a></p>
-                <p class='trim_right'>Powered by <a href="http://mallmaverick.com" target='_blank'>Mall Maverick</a></p>
+                <p class='trim_right'>Powered by <a href="//mallmaverick.com" target='_blank'>Mall Maverick</a></p>
                 
             </div>
         </div>
@@ -412,7 +412,7 @@
             if (check_email("fieldEmail") == true){
                 $("#fieldtydytu").val($("#agree_terms").attr("value"));
                 $.getJSON(
-                    "http://mobilefringe.createsend.com/t/d/s/dljtlh/?callback=?",
+                    "//mobilefringe.createsend.com/t/d/s/dljtlh/?callback=?",
                   $(this).serialize(),
                     function (data) {
                         if (data.Status === 400) {

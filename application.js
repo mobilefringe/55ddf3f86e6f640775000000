@@ -246,8 +246,11 @@
                 break;
             
         }
-        var open_time = new Date (open_time)
-        var close_time = new Date (close_time)
+        var open_time = moment(val.open_time).tx(getPropertyTimeZone());
+        var close_time = moment(val.close_time).tx(getPropertyTimeZone());
+        
+        // var open_time = new Date (open_time)
+        // var close_time = new Date (close_time)
         open_time = convert_hour(open_time);
         close_time = convert_hour(close_time);
         hour_string = {};

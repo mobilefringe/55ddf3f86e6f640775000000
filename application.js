@@ -77,29 +77,22 @@
     function get_date_string(start_date, end_date){
         var start = moment(val.start_date).tz(getPropertyTimeZone());
         var end = moment(val.end_date).tz(getPropertyTimeZone());
-        
-        if (start.format("DMY") == end.format("DMY")){
-            val.dates = start.format("MMM D");
-        }
-        else{
-            val.dates = start.format("MMM D") + " - " + end.format("MMM D");
-        }
 
-        // if (start.toDateString() == end.toDateString()) {
-        //     start_month = get_month(start.getMonth())
-        //     start_day = start.getDate()
+        if (start.toDateString() == end.toDateString()) {
+            start_month = get_month(start.getMonth())
+            start_day = start.getDate()
             
-        //     date_string = start_month + " " + start_day
+            date_string = start_month + " " + start_day
             
             
-        // } else {
-        //     start_month =get_month(start.getMonth())
-        //     start_day = start.getDate() 
-        //     end_month = get_month(end.getMonth())
-        //     end_day = end.getDate()
-        //     date_string = start_month + " " + start_day + " - " + end_month + " " +  end_day
-        // }
-        // return date_string
+        } else {
+            start_month =get_month(start.getMonth())
+            start_day = start.getDate() 
+            end_month = get_month(end.getMonth())
+            end_day = end.getDate()
+            date_string = start_month + " " + start_day + " - " + end_month + " " +  end_day
+        }
+        return date_string
     }
     
     

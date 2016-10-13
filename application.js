@@ -244,8 +244,7 @@
                 break;
             
         }
-        var open_time = moment(open_time).tz(getPropertyTimeZone());
-        var close_time = moment(close_time).tz(getPropertyTimeZone());
+      
         
        
         hour_string = {};

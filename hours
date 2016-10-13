@@ -1,0 +1,107 @@
+<style>
+     @media (max-width: 767px) {
+         h1, h2{
+             width:95%;
+             margin-left:auto;
+             margin-right:auto;
+         }
+         
+         .mobile_hol{
+             display:block;
+         }
+         .hour_col{
+             vertical-align: top;
+         }
+     }
+</style>
+
+<h1>Shopping Hours</h1>
+<br>
+<p>Due to the nature of the Heartland Town Centre being a non-enclosed Shopping Centre the hours of operation vary. Please check the store's specific web page for their designated hours.  Please be advised that the Landlord observes holidays according to the Retail Business Holidays Act and our offices will be closed. We ask that the Retailers observe these holidays and remain closed as well. </p><br>
+<h2>Regular Hours</h2>
+<table id="reg_table">
+    <script id="reg_template" type="x-tmpl-mustache/text">
+        <tr>
+            <td class='hour_col day_col'>
+                {{day}}
+            </td>
+            <td class='hour_col time_col'>
+                {{hour_string}}
+            </td>
+            <td class='hour_col'>
+                
+            </td>
+        </tr>
+    </script>
+</table>
+<br>
+
+<h2>Holiday Hours</h2>
+<table id="hol_table">
+    <script id="hol_template" type="x-tmpl-mustache/text">
+        <tr>
+            <td class='hour_col day_col'>
+                {{holiday_name}}
+                <p class='mobile_hol'>({{hol}})</p>
+            </td>
+            <td class='hour_col hol_col'>
+                {{hol}}
+            </td>
+            <td class='hour_col time_col'>
+                {{hour_string}}
+            </td>
+        </tr>
+    </script>
+</table>
+
+
+
+
+<script>
+    $(document).ready(function() {
+        function renderAll(){
+            var hours = getPropertyHours();
+            reg_hours = []
+            holiday_hours = []
+            $.each( hours , function( key, val ) {
+                if (val.day_of_week == 0){
+                    val.day_of_week = 7;
+                }
+                hour_string = get_hour_string(val.day_of_week, val.open_time, val.close_time, val.is_closed)
+                val.day = hour_string['day']
+                val.hour_string = hour_string['detail']
+                if (val.store_id == null && val.is_holiday == false){
+                    reg_hours.push(val)
+                }
+                if (val.store_id == null && val.is_holiday == true){
+                    // hol = new Date (val.holiday_date + "T05:00:00Z");
+                    var hol = moment(val.holiday_date).tz(getPropertyTimeZone());
+                    val.hol = (get_month(hol.getMonth()))+" "+(hol.getDate());   
+                    holiday_hours.push(val)
+                }
+            })
+            
+            reg_hours = reg_hours.sort(function(a,b){
+               if(a['day_of_week'] > b['day_of_week']){ return 1}
+                if(a['day_of_week'] < b['day_of_week']){ return -1}
+                  return 0;
+            });
+            
+            holiday_hours = holiday_hours.sort(function(a,b){
+               if(a['day_of_week'] > b['day_of_week']){ return 1}
+                if(a['day_of_week'] < b['day_of_week']){ return -1}
+                  return 0;
+            });
+             
+            
+            renderPageData("#reg_table", "#reg_template", reg_hours, "hours")
+            renderPageData("#hol_table", "#hol_template", holiday_hours, "hours")
+            $(".loading_overlay").hide();
+        }
+        
+        
+        loadMallDataCached(renderAll); 
+        // loadMallData(renderAll); 
+    });
+    
+</script>

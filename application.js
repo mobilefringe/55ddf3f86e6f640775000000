@@ -247,10 +247,7 @@
         var open_time = moment(open_time).tz(getPropertyTimeZone());
         var close_time = moment(close_time).tz(getPropertyTimeZone());
         
-        // var open_time = new Date (open_time)
-        // var close_time = new Date (close_time)
-        open_time = convert_hour(open_time);
-        close_time = convert_hour(close_time);
+       
         hour_string = {};
         hour_string["day"] = day
         if (is_closed == true){

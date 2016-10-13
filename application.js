@@ -244,8 +244,8 @@
                 break;
             
         }
-        var open_time = moment(val.open_time).tx(getPropertyTimeZone());
-        var close_time = moment(val.close_time).tx(getPropertyTimeZone());
+        var open_time = moment(open_time).tz(getPropertyTimeZone());
+        var close_time = moment(close_time).tz(getPropertyTimeZone());
         
         // var open_time = new Date (open_time)
         // var close_time = new Date (close_time)

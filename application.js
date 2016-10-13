@@ -74,7 +74,7 @@
     }
     
     
-    function get_date_string(start_date, end_date){
+    function get_date_string(val){
         var start = moment(val.start_date).tz(getPropertyTimeZone());
         var end = moment(val.end_date).tz(getPropertyTimeZone());
         

@@ -78,26 +78,13 @@
         var start = moment(start_date).tz(getPropertyTimeZone());
         var end = moment(end_date).tz(getPropertyTimeZone());
         
-        // if (start.format("DMY") == end.format("DMY")){
-        //     val.dates = start.format("MMM D");
-        // }
-        // else{
-	       // val.dates = start.format("MMM D") + " - " + end.format("MMM D");
-        // }
-        if (start.toDateString() == end.toDateString()) {
-            start_month = get_month(start.getMonth())
-            start_day = start.getDate()
-            
-            date_string = start_month + " " + start_day
-            
-            
-        } else {
-            start_month =get_month(start.getMonth())
-            start_day = start.getDate() 
-            end_month = get_month(end.getMonth())
-            end_day = end.getDate()
-            date_string = start_month + " " + start_day + " - " + end_month + " " +  end_day
+        if (start.format("DMY") == end.format("DMY")){
+            date_string = start.format("MMM D");
         }
+        else{
+	        date_string = start.format("MMM D") + " - " + end.format("MMM D");
+        }
+        
         return date_string
     }
     

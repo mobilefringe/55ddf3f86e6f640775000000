@@ -79,13 +79,11 @@
         var end = moment(val.end_date).tz(getPropertyTimeZone());
         
         if (start.format("DMY") == end.format("DMY")){
-            val.dates = start.format("MMM D");    
+            val.dates = start.format("MMM D");
         }
         else{
 	        val.dates = start.format("MMM D") + " - " + end.format("MMM D");
         }
-
-
         // if (start.toDateString() == end.toDateString()) {
         //     start_month = get_month(start.getMonth())
         //     start_day = start.getDate()

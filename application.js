@@ -219,7 +219,7 @@
         return month;
     }
     
-    function get_hour_string(day_of_week, open_time, close_time, is_closed, val){
+    function get_hour_string(day_of_week, open_time, close_time, is_closed){
         switch(day_of_week) {
             case 7:
                 day = "Sunday"

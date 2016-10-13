@@ -75,7 +75,7 @@
                 }
                 if (val.store_id == null && val.is_holiday == true){
                     // hol = new Date (val.holiday_date + "T05:00:00Z");
-                    var hol = moment(val.holiday_date).tz(getPropertyTimeZone());
+                    var hol = moment(val.holiday_date).tz(getPropertyTimeZone()).format("h:mm A");
                     // val.hol = (get_month(hol.getMonth()))+" "+(hol.getDate());   
                     holiday_hours.push(val)
                     

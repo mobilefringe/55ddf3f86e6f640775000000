@@ -75,8 +75,8 @@
     
     
     function get_date_string(start_date, end_date){
-        var start = moment(val.start_date).tz(getPropertyTimeZone());
-        // var end = moment(val.end_date).tz(getPropertyTimeZone());
+        var start = moment(start_date).tz(getPropertyTimeZone());
+        var end = moment(end_date).tz(getPropertyTimeZone());
         
         // if (start.format("DMY") == end.format("DMY")){
         //     val.dates = start.format("MMM D");

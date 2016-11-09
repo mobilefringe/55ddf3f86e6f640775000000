@@ -253,7 +253,7 @@
                                 <button onclick='toggle_menu("promos_dd")'>promotions</button>
                                 <ul class="submenu" id='promos_dd'>
                                     <li><a href="/promotions">promotions</a></li>
-                                    <li><a href="/contests/htc-enter-to-win">Contest</a></li>
+                                    <li><a href="/contests/htc-chatters-salon-contest">Contest</a></li>
                                 </ul>
                             </li>
                             <li>

@@ -101,7 +101,7 @@
             });
         
         
-            setEndPoint('https://twinpines.mallmaverickstaging.com/api/v3/twinpines/all.json');
+            setEndPoint('//htc.mallmaverick.com/api/v3/htc/all.json');
             sessionStorage.setItem('primary_locale', 'en-CA');
             sessionStorage.setItem('secondary_locale', 'fr-CA');
         </script>

@@ -322,17 +322,8 @@
                                 <input type="text" id='mobile_email' placeholder="Subscribe to Newsletter" required/>
                             </form>
                         </div>
-                       /ass
-                        
-                        
                     </div>
-                    
-                    
-                    
                     <img alt='moble_menu' class="mobile_menu_btn" src="//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/e4be771d6199b62e7e61a19dd287854c/mobilemenu.png" onclick="javascript:toggle_mobile_menu()" tabindex='10' onkeypress="javascript:toggle_mobile_menu()"/>
-                    
-                    
-                    
                 </div>
         </div>
         <div class='page_content'>

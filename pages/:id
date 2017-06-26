@@ -127,7 +127,7 @@ $(document).ready(function() {
         
            else if (slug == 'htc-summer-sidewalk-sale'){
             $("#custom_page_header").html("Summer Sidewalk Sale")    
-           $("#custom_page_img").attr("src", "//www.mallmaverick.com/sites/59401f726e6f6461641d0000/image/png/1498486837000/Sidewalk Sale Banner 60off.png");
+           $("#custom_page_img").attr("src", "//assets.codecloudapp.com/sites/59401f726e6f6461641d0000/image/png/1498486837000/Sidewalk Sale Banner 60off.png");
            }
         
         else {

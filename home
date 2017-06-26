@@ -1,0 +1,82 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+<style>
+    .main_content{
+        height:420px;
+    }
+   
+    @media (max-width: 767px) {
+        .main_content{
+            height:auto;
+        }  
+    }
+   
+
+</style>
+<div class="popup_home hidden_now">
+    <a href="/pages/htc-summer-sidewalk-sale"><img src="//codecloud.cdn.speedyrails.net/sites/59401f726e6f6461641d0000/image/png/1498486927000/pop up box 60off-01 (1).png" /></a>
+    <i class="fa fa-remove close_popup"></i>
+</div>
+<div class="flexslider" id="">
+    <ul class="banner_slider_ul slides" id="banner_slider_ul">
+        <script id="banner_slider_template" type="x-tmpl-mustache/text">
+            <li class="item">
+                {{{item}}}
+            </li>
+        </script>
+    </ul>
+</div>
+
+
+
+
+
+<script>
+    
+    $(document).ready(function() {
+        function render_page_details(){
+            var banners = getBanners();
+            var published_banners = []
+            $.each( banners , function( key, val ){
+                today = new Date;
+                start = new Date (val.start_date);
+                if (val.url == null){
+                    val.item = '<img class="banner_slide_img" src="'+val.image_url+'" alt="banner"/>'
+                } else {
+                    val.item = '<a href="'+val.url+'"><img class="banner_slide_img" src="'+val.image_url+'" alt="banner"/></a>'
+                }
+                if (start <= today){
+                    if (val.end_date){
+                        end = new Date (val.end_date);
+                        end.setDate(end.getDate() + 1);
+                        if (end >= today){
+                            published_banners.push(val);  
+                        }
+                    
+                    } else {
+                        published_banners.push(val);
+                    }
+                }
+            });
+            
+            renderPageData("#banner_slider_ul", "#banner_slider_template", published_banners, "banners")
+            load_slider("flexslider");
+            
+            var featureList = getFeatureList();
+            renderPageData("#bottom_block_container", "#bottom_block_template", featureList, "bottom_block")
+            $(".loading_overlay").hide();
+        //                 if($.cookie("popup_viewed") != "true"){
+        //         $.cookie("popup_viewed", "true", { expires: 1 });
+        //         $('<div class="modal-backdrop custom_backdrop"></div>').appendTo(document.body);
+        //         $('.popup_home').show()
+        //     }
+        //     $('.close_popup, .custom_backdrop').click(function(){
+        //         $(".modal-backdrop").remove();
+		      //  $(".popup_home").remove();
+        //     })
+            
+        }
+        
+        
+        loadMallData(render_page_details); 
+    })
+</script>

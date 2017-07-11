@@ -1,0 +1,283 @@
+<style>
+    h1{
+        margin-bottom:50px;
+    }
+    
+    .promotionable_name{
+        border-bottom: 1px solid black;
+        display:table;
+    }
+    .promo_name{
+        font-weight:bold;
+    }
+
+     @media (max-width: 767px) {
+         #promo_header, #job_header, #map_header{
+             width:95%;
+             margin-left:auto;
+             margin-right:auto;
+         }
+     }
+</style>
+
+
+
+<div class='main_container'>
+    <div id="name_block">
+        <script id="name_template" type="x-tmpl-mustache/text">
+            <h1><a href="/stores"><i class="fa fa-arrow-circle-left"></i></a> {{name}}</h1>
+        </script>
+    </div>
+    <div class="detail_left_block" id='detail_left_block'>
+        <script id="detail_left_block_template" type="x-tmpl-mustache/text">
+            <img src='{{store_front_url_abs}}'/>
+            <a href="//{{website}}" target='_blank' id='website'><p>website</p></a>
+            <a href="tel:{{phone}}" id='phone'><p>{{phone}}</p></a>
+            
+        </script>
+    </div>
+    <div class="detail_right_block">
+        <div class='desc_block' id='desc_block'>
+            <script id="desc_block_template" type="x-tmpl-mustache/text">
+                {{{rich_description}}}
+            </script>
+        </div>
+        <div id='hours_container'>
+        <script id="hours_content_template" type="x-tmpl-mustache/text">
+            <table class='hours_table'>
+            <tr>
+                <td class="day">{{hour_string.day}}</td>
+                <td class='detail'>{{hour_string.detail}}</td>
+            </tr>
+            </table>
+        </script>
+    </div>
+    </div>
+</div>
+
+
+<h1 id='map_header'>
+    Store Location
+    <a href="#" target='_blank' id='google_map'>Take me There</a>    
+</h1>
+
+<div class="map_div" id="mapsvg"></div>
+
+
+<h1 id="promo_header">Promotions</h1>
+<div id='promo_container'>
+    <script id="promo_template" type="x-tmpl-mustache/text">
+        <div class='promo_div'>
+            <div class='promo_left_block promo_center mobile_block'>
+                <a href="{{promo_img}}" target="_blank" rel="lightbox">
+                    <img alt="photo_{{name}}" src="{{promo_img}}"/>
+                </a>
+                
+            </div>
+            <div class="promo_right_block">
+                <a class='promo_name' href='/promotions/{{slug}}'>{{name}}</a>
+                <p class='promotionable_name'>{{store_name}}</p>
+                <p class='promo_date_string'>{{date_string}}</p>
+                <p class='promo_desc_short'>{{description}}</p>
+            </div>
+        </div>
+    </script>
+</div>
+
+
+
+<h1 id="job_header">Careers</h1>
+<div id='job_container'>
+    <script id="job_template" type="x-tmpl-mustache/text">
+        <div class='promo_div'>
+            <div class='promo_left_block promo_center mobile_block'>
+                <a href="{{promo_img}}" target="_blank" rel="lightbox">
+                    <img alt="photo_{{name}}" src="{{promo_img}}"/>
+                </a>
+            </div>
+            <div class="promo_right_block ">
+                <a class='promo_name' href='/employment/{{slug}}'>{{name}}</a>
+                <p class='promotionable_name'>{{job_type}}</p>
+                <p class='promo_date_string'>{{date_string}}</p>
+                <p class='promo_desc_short'>{{description}}</p>
+            </div>
+        </div>
+    </script>
+</div>
+
+
+
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.4/raphael-min.js"></script>
+<script type="text/javascript" src="//codecloud.cdn.speedyrails.net/sites/556628266e6f640eb3000000/138b043444ee6b5e381a27b2103d101a/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/d8c14ddd5ad7b16b08a457f92431c96c/heartland_svgmap.js"></script>
+
+
+
+
+<script>
+    $(document).ready(function() {
+        
+        function load_map(reg, store_details){
+            // stores_x5F_3_x5F_6_2_
+            this_region = {}
+            this_region = store_details.svgmap_region
+            map = $('#mapsvg').mapSvg({
+                source: getSVGMapURL(),    // Path to SVG map
+                colors: {stroke: '#aaaaaa', selected: '#CC00CC', hover: "#CC00CC"},
+                disableAll: true,
+                height:432,
+                width:700,
+                regions: reg,
+                tooltipsMode:'custom',
+                loadingText: "loading...",
+                zoom: true,
+                zoomButtons: {'show': true,'location': 'left' },
+                pan:true,
+                cursor:'pointer',
+                responsive:true,
+                zoomLimit: [0,10]
+            });
+            console.log(store_details.svgmap_region)
+            map.setViewBox(store_details.svgmap_region)
+            map.selectRegion(store_details.svgmap_region)
+            if (store_details.svgmap_region != null){
+                drop_pin(store_details.svgmap_region)    
+            }
+            
+        }
+        
+        
+        
+        function renderAll(){
+            var pathArray = window.location.pathname.split( '/' );
+            var slug = pathArray[pathArray.length-1];
+            var store_details = getStoreDetailsBySlug(slug);  
+            $('#google_map').attr('href', "//maps.google.com/?q=" + store_details.latitude + "," + store_details.longitude)
+            if (store_details.store_hours != ""){
+                var hours = (getHoursForIds(store_details.store_hours))
+            } else {
+                var hours = getPropertyHours();
+                prop_hours = []
+                $.each( hours , function( key, val ) {
+                    if (val.store_id == null && val.is_holiday == false){
+                        prop_hours.push(val)
+                    }
+                })
+                hours = prop_hours
+            }
+            
+            var store_promos = getPromotionsForIds(store_details.promotions);
+            promo_array = []
+             $.each( store_promos , function( key, val ){
+                if (val.description.length > 110) {
+                   val.description =  val.description.substring(0,100)+'...';
+                } 
+                 today = new Date();
+                 webDate = new Date(val.show_on_web_date);
+                 if (today >= webDate) {
+                    
+                    val.date_string = get_date_string(val.start_date, val.end_date)
+    
+                    if (!val.promo_image_url_abs ||  val.promo_image_url_abs.indexOf('missing.png') > -1 || val.promo_image_url_abs.length === 0){
+                        if(!store_details.store_front_url_abs ||  store_details.store_front_url_abs.indexOf('missing.png') > -1 || store_details.store_front_url_abs.length === 0){
+                        val.promo_img = '//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/a22fcf023d728855c6f575ba100806d7/default.jpg'
+                        } else {
+                            val.promo_img = store_details.store_front_url_abs
+                        }     
+                    } else {
+                        val.promo_img = val.promo_image_url_abs
+                    }
+                    
+                     promo_array.push(val)
+                 } 
+             });
+            store_promos = promo_array;
+            var jobs = getJobsForIds(store_details.jobs);
+            jobs = jobs.reverse();
+            jobs_array = []
+             $.each( jobs , function( key, val ){
+                 today = new Date();
+                 webDate = new Date(val.show_on_web_date);
+                 if (today >= webDate) {
+                     if(!store_details.store_front_url_abs ||  store_details.store_front_url_abs.indexOf('missing.png') > -1 || store_details.store_front_url_abs.length === 0){
+                        val.promo_img = '//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/a22fcf023d728855c6f575ba100806d7/default.jpg'
+                        } else {
+                            val.promo_img = store_details.store_front_url_abs
+                        }   
+                     if (val.description.length > 110) {
+                       val.description =  val.description.substring(0,100)+'...';
+                    } 
+                    val.date_string = get_date_string(val.start_date, val.end_date)
+                    jobs_array.push(val)
+                 } 
+             });
+            jobs = jobs_array;
+            
+            
+            store_details['hours'] = []
+             $.each( hours , function( key, val ){
+                 if (val.day_of_week == 0){
+                     val.day_of_week = 7;
+                 }
+                 val.hour_string = (get_hour_string(val.day_of_week, val.open_time, val.close_time, val.is_closed))
+             })
+             
+            hours = hours.sort(function(a,b){
+               if(a['day_of_week'] > b['day_of_week']){ return 1}
+                if(a['day_of_week'] < b['day_of_week']){ return -1}
+                  return 0;
+            });
+             
+            if(!store_details.store_front_url_abs ||  store_details.store_front_url_abs.indexOf('missing.png') > -1 || store_details.store_front_url_abs.length === 0){
+                store_details.store_front_url_abs = '//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/a22fcf023d728855c6f575ba100806d7/default.jpg'
+            }  
+            renderPageData("#name_block", "#name_template", store_details, "store_details")
+            renderPageData("#hours_container", "#hours_content_template", hours, "hours")
+            renderPageData("#detail_left_block", "#detail_left_block_template", store_details, "store_details")
+            if (store_details.phone == ''){
+                $("#phone").hide();
+            }
+            if (store_details.website == ''){
+                $("#website").hide();
+            }
+            renderPageData("#desc_block", "#desc_block_template", store_details, "store_details")
+            if (store_promos.length > 0){
+                renderPageData("#promo_container", "#promo_template", store_promos, "store_promos")
+            } else {
+                $("#promo_header").hide();
+            }
+            
+            if (jobs.length > 0 ){
+                renderPageData("#job_container", "#job_template", jobs, "store_jobs")
+            } else {
+                $("#job_header").hide();
+            }
+            
+            
+            
+            
+            
+            
+            var stores = getStoresList();
+            regions = {}
+            $.each( stores , function( key, val ) {
+                if(val.svgmap_region != null && typeof(val.svgmap_region)  != 'undefined'){
+                    obj = {};
+                    obj["tooltip"] = "<div class='tooltip_div'><p class='tooltip_name'>"+val.name+"</p></div>"
+                    obj["attr"] = {}
+                    obj["attr"]["href"] = "/stores/"+val.slug
+                    regions[val.svgmap_region] = obj
+                }
+            });
+            $.getScript("//cdn.jsdelivr.net/slimbox/2.0.5/js/slimbox2.js");
+            $('head').append('<link rel="stylesheet" href="//cdn.jsdelivr.net/slimbox/2.0.5/css/slimbox2.css" type="text/css" media="screen" />');
+            load_map(regions, store_details)
+            
+            $(".loading_overlay").hide();
+        }
+        
+        // loadMallDataCached(renderAll); 
+        loadMallData(renderAll); 
+    })
+</script>

@@ -61,8 +61,8 @@
     $(document).ready(function() {
         function renderAll(){
             var hours = getPropertyRegularHours();
-            // reg_hours = []
-            holiday_hours = []
+            reg_hours = []
+            
             $.each( hours , function( key, val ) {
                 if (val.day_of_week == 0){
                     val.day_of_week = 7;
@@ -76,6 +76,7 @@
             });
             
             var hol_hours = getPropertyHolidayHours();
+            holiday_hours = []
             $.each( hol_hours , function( key, val ) {
                 if (val.store_id == null && val.is_holiday == true){
                     var hol = moment(val.holiday_date).tz(getPropertyTimeZone()).format("h:mm A");

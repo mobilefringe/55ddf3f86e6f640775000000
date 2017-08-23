@@ -61,12 +61,11 @@
     $(document).ready(function() {
         function renderAll(){
             var hours = getPropertyRegularHours();
-            reg_hours = []
-            
+            reg_hours = [];
             $.each( hours , function( key, val ) {
-                if (val.day_of_week == 0){
-                    val.day_of_week = 7;
-                }
+                // if (val.day_of_week == 0){
+                //     val.day_of_week = 7;
+                // }
                 hour_string = get_hour_string(val.day_of_week, val.open_time, val.close_time, val.is_closed)
                 val.day = hour_string['day']
                 val.hour_string = hour_string['detail']

@@ -61,7 +61,7 @@
     $(document).ready(function() {
         function renderAll(){
             var hours = getPropertyRegularHours();
-            reg_hours = []
+            // reg_hours = []
             holiday_hours = []
             $.each( hours , function( key, val ) {
                 if (val.day_of_week == 0){
@@ -73,27 +73,27 @@
                 if (val.store_id == null && val.is_holiday == false){
                     reg_hours.push(val)
                 }
+            });
+            
+            var hol_hours = getPropertyHolidayHours();
+            $.each( hol_hours , function( key, val ) {
                 if (val.store_id == null && val.is_holiday == true){
-                    // hol = new Date (val.holiday_date + "T05:00:00Z");
                     var hol = moment(val.holiday_date).tz(getPropertyTimeZone()).format("h:mm A");
-                    // val.hol = (get_month(hol.getMonth()))+" "+(hol.getDate());   
                     holiday_hours.push(val)
-                    
-                    
                 }
-            })
-            
-            reg_hours = reg_hours.sort(function(a,b){
-               if(a['day_of_week'] > b['day_of_week']){ return 1}
-                if(a['day_of_week'] < b['day_of_week']){ return -1}
-                  return 0;
             });
             
-            holiday_hours = holiday_hours.sort(function(a,b){
-               if(a['day_of_week'] > b['day_of_week']){ return 1}
-                if(a['day_of_week'] < b['day_of_week']){ return -1}
-                  return 0;
-            });
+            // reg_hours = reg_hours.sort(function(a,b){
+            //   if(a['day_of_week'] > b['day_of_week']){ return 1}
+            //     if(a['day_of_week'] < b['day_of_week']){ return -1}
+            //       return 0;
+            // });
+            
+            // holiday_hours = holiday_hours.sort(function(a,b){
+            //   if(a['day_of_week'] > b['day_of_week']){ return 1}
+            //     if(a['day_of_week'] < b['day_of_week']){ return -1}
+            //       return 0;
+            // });
              
             
             renderPageData("#reg_table", "#reg_template", reg_hours, "hours")

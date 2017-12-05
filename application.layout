@@ -386,7 +386,7 @@
         <div class='footer_container'>
             <div class='trim_screen'>
                 <a class="accessible" href="#main_content">[Skip]</a>
-                <p class="trim_left">&copy; 2017 Heartland Town Centre All rights reserved. <a href="/pages/htc-privacy-policy">Privacy Policy</a> | <a href="/pages/htc-accessibility">Accessibility</a> | <a href="/pages/htc-terms-and-conditions">Terms & Conditions</a> | <a href="/employment">Employment</a></p>
+                <p class="trim_left">&copy;<span id="current_year"></span> Heartland Town Centre All rights reserved. <a href="/pages/htc-privacy-policy">Privacy Policy</a> | <a href="/pages/htc-accessibility">Accessibility</a> | <a href="/pages/htc-terms-and-conditions">Terms & Conditions</a> | <a href="/employment">Employment</a></p>
                 <p class='trim_right'>Powered by <a href="//mallmaverick.com" target='_blank'>Mall Maverick</a></p>
                 
             </div>
@@ -395,6 +395,8 @@
 </html>
 
 <script>
+    var current_year = moment().year();
+    $("#current_year").text(current_year);
 
     $("#popup_form").submit(function(e){
         e.preventDefault();

@@ -243,7 +243,7 @@
                                 <button onclick="window.location.href='/home'">Home</button>
                             </li>
                             <li>
-                                <button onclick="window.location.href='/stores'">Directory </button>
+                                <!--<button onclick="window.location.href='/stores'">Directory </button>-->
                                 <button onclick='toggle_menu("stores_dd")'>Directory</button>
                                 <ul class="submenu" id='stores_dd'>
                                     <li><a href="/promotions">Stores</a></li>

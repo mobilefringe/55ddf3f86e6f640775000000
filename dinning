@@ -110,7 +110,9 @@
             get_instagram("//htc.mallmaverick.com/api/v2/htc/social.json", 3, 'thumbnail', render_instagram)
         }
         var stores = getStoresList();
-        var restaurants = stores.filter(funtion(val){ })
+        var restaurants = stores.filter(funtion(val){
+            var cats = getCategoriesNamesByStoreSlug();
+        })
         // $('#home_newsletter_form').submit(function(e){
         //   e.preventDefault();
         //   console.log($('#agree_terms').prop('checked'));
@@ -134,6 +136,7 @@
         $(".loading_overlay").hide();
         loadMallData(render_page_details); 
     })
+    
     function renderFeatureItems(){
         var items = getFeatureList();
         var temp_features = [];

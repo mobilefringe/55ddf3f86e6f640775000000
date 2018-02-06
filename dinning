@@ -116,6 +116,7 @@
         var restaurants = stores.filter(function(val) {
             return _.includes(categories, rest_cat_id);
         });
+        console.log(restaurants);
         // stores.filter(function( val, index ) {
         //         // console.log($.isNumeric(val.name[0]), val.name[0]);
         //         return !$.isNumeric(val.name[0]);

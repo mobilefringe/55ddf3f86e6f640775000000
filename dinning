@@ -1,13 +1,17 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
 
-<div class="flexslider" id="">
-    <ul class="banner_slider_ul slides" id="banner_slider_ul">
-        <script id="banner_slider_template" type="x-tmpl-mustache/text">
-            <li class="item">
-                {{{item}}}
-            </li>
-        </script>
-    </ul>
+<div class="home_banner">   
+    <div class="flexslider">
+        <ul class="slides" id="home_banner">
+            <script id="banner_template" type="x-tmpl-mustache/text">
+                <li>
+                    <a href="{{url}}" {{css}} onclick="{{noLink}}">
+                        <div class="banner_img" style="background-image: url({{image_url}});"></div>
+                    </a>
+                </li>
+            </script>
+        </ul>
+    </div>
 </div>
 
 <div>

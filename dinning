@@ -122,6 +122,9 @@
         var restaurants = stores.filter(function(val) {
             return _.includes(val.categories, _.toNumber(rest_cat_id));
         });
+        _.forEach([1, 2], function(value) {
+            console.log(value);
+        });
         console.log(restaurants);
         // stores.filter(function( val, index ) {
         //         // console.log($.isNumeric(val.name[0]), val.name[0]);

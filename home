@@ -128,7 +128,7 @@
         
         $('#home_newsletter_form').submit(function(e){
            e.preventDefault();
-           console.log($('#agree_terms'));
+           console.log($('#agree_terms').prop('checked'));
            if($('#agree_terms').prop('checked') == false){
                 $('#agree_terms').focus();
                 alert("Please agree to receieve newsletters from Heartland Town Centre.")

@@ -85,7 +85,7 @@
             load_slider("flexslider");
             
             var featureList = getFeatureList();
-            renderPageData("#bottom_block_container", "#bottom_block_template", featureList, "bottom_block")
+            // renderPageData("#bottom_block_container", "#bottom_block_template", featureList, "bottom_block")
             $(".loading_overlay").hide();
         //                 if($.cookie("popup_viewed") != "true"){
         //         $.cookie("popup_viewed", "true", { expires: 1 });

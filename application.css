@@ -1028,6 +1028,7 @@ textarea:focus, input:focus{
         border-radius: 0;
         background: none;
         background-image: -webkit-linear-gradient(90deg,rgba(0,0,0,.7),transparent)!important;
+            border-radius: 0;
     }
     .ih-item.circle.effect19 .info .content h3,
     .ih-item.circle.effect19 .info .content h3:after {

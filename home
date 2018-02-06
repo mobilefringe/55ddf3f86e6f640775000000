@@ -66,7 +66,7 @@
         </div>
     </div>
     <div class="col-sm-6 text-center no_padding_left">
-        <h3> Instagram</h3>
+        <h3 class="caps"> Instagram</h3>
         <div id="instafeed"></div>
     </div>
 </div>

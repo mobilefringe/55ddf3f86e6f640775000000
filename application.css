@@ -29,7 +29,7 @@ p, ol, ul, td{
     padding-left:0;
 }
 .no_padding_right {
-    padding-left:0;
+    padding-right:0;
 }
 .show_phone{
     display:none;

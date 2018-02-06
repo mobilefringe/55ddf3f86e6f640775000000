@@ -1,8 +1,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
 
-<div id="dinning_banner">   
-    <div class="banner_img" style="background-image: url('http://via.placeholder.com/1920X400');"></div>
-</div>
+
 
 <div>
     <div class="grid grid_desktop hidden_phone">

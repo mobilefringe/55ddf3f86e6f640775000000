@@ -56,9 +56,6 @@
 <div>
     <div class="col-sm-6 text-center">
         <h3> Blog</h3>
-    </div>
-    <div class="col-sm-6 text-center">
-        <h3> Instagram</h3>
         <div class="" id="blog_container">
             <script id="blog_template" type="x-tmpl-mustache/text">
                 <div class="col-sm-4">
@@ -67,6 +64,10 @@
                 </div>
             </script>
         </div>
+    </div>
+    <div class="col-sm-6 text-center">
+        <h3> Instagram</h3>
+        
     </div>
 </div>
 

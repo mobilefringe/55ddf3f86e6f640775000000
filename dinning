@@ -1,6 +1,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
 
-<div class="home_banner">   
+<div class="dinning_banner">   
     <div class="flexslider">
         <ul class="slides" id="home_banner">
             <script id="banner_template" type="x-tmpl-mustache/text">

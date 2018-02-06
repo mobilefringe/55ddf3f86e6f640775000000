@@ -702,7 +702,9 @@ textarea:focus, input:focus{
     height:18px;    
     margin: 0 10px;
 }
-
+#blog_container {
+    
+}
 
 
 /*STORE DIRECTORY CSS*/

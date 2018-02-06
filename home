@@ -94,45 +94,6 @@
     
     $(document).ready(function() {
         function render_page_details(){
-            // var banners = getBanners();
-            // var published_banners = []
-            // $.each( banners , function( key, val ){
-            //     today = new Date;
-            //     start = new Date (val.start_date);
-            //     if (val.url == null){
-            //         val.item = '<img class="banner_slide_img" src="'+val.image_url+'" alt="banner"/>'
-            //     } else {
-            //         val.item = '<a href="'+val.url+'"><img class="banner_slide_img" src="'+val.image_url+'" alt="banner"/></a>'
-            //     }
-            //     if (start <= today){
-            //         if (val.end_date){
-            //             end = new Date (val.end_date);
-            //             end.setDate(end.getDate() + 1);
-            //             if (end >= today){
-            //                 published_banners.push(val);  
-            //             }
-                    
-            //         } else {
-            //             published_banners.push(val);
-            //         }
-            //     }
-            // });
-            
-            // renderPageData("#banner_slider_ul", "#banner_slider_template", published_banners, "banners")
-            // load_slider("flexslider");
-            
-            // var featureList = getFeatureList();
-            // renderPageData("#bottom_block_container", "#bottom_block_template", featureList, "bottom_block")
-            
-        //                 if($.cookie("popup_viewed") != "true"){
-        //         $.cookie("popup_viewed", "true", { expires: 1 });
-        //         $('<div class="modal-backdrop custom_backdrop"></div>').appendTo(document.body);
-        //         $('.popup_home').show()
-        //     }
-        //     $('.close_popup, .custom_backdrop').click(function(){
-        //         $(".modal-backdrop").remove();
-		      //  $(".popup_home").remove();
-        //     })
             renderFeatureItems();
             
             // init Masonry

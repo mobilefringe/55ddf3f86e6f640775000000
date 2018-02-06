@@ -53,7 +53,7 @@
 
 <hr>
 
-<div>
+<div class="featured_items">
     <div class="col-sm-6 text-center no_padding_left">
         <h3 class="caps"> Blog</h3>
         <div class="" id="blog_container">

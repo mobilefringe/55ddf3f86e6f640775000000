@@ -129,11 +129,11 @@
         $('#home_newsletter_form').submit(function(e){
            e.preventDefault();
            console.log($('#agree_terms').prop('checked'));
-           if($('#agree_terms').prop('checked') == false){
-                $('#agree_terms').focus();
-                alert("Please agree to receieve newsletters from Heartland Town Centre.")
-           }
-           else{
+        //   if($('#agree_terms').prop('checked') == false){
+        //         $('#agree_terms').focus();
+        //         alert("Please agree to receieve newsletters from Heartland Town Centre.")
+        //   }
+        //   else{
                $.getJSON(
                     this.action + "?callback=?",
                     $(this).serialize(),
@@ -144,7 +144,7 @@
                             $("#subscription_confirmed").fadeIn();
                         }
                 });
-           }
+        //   }
         });
         $(".loading_overlay").hide();
         loadMallData(render_page_details); 

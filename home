@@ -129,7 +129,8 @@
     function renderFeatureItems(){
         var items = getFeatureList();
         for (var i = 0; i < 7; i++ ) {
-            
+            var temp_val = {};
+            temp_val.name = "Stores"
         }
         console.log(items);
         $.each(items, function(i, val){

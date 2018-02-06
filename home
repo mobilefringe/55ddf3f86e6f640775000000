@@ -133,7 +133,6 @@
             var temp_val = {};
             temp_val.name = "Stores"
             if( i == 0) {
-                console.log(i);
                 temp_val.image_url = "//codecloud.cdn.speedyrails.net/sites/5a79cd486e6f646156310000/image/png/1517937671949/placeholder_640x1280.png";
             }
             else if(i == 1 || i== 3 || i == 5|| i == 6) {

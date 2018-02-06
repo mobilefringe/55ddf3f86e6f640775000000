@@ -406,7 +406,8 @@ function renderPosts(container, template, collection){
 
 function get_instagram(url, total, size, callback){
     // var html = '<div class="insta_container"><a target="_blank" href="{{{link}}}"><img src="{{{image}}}" alt="{{caption}}"/></a></div>'
-    var html = '<div style="background-image:url({{image}})" class="blog_image_div"></div>'
+    var html = '<div class="col-sm-4 no_padding_left"><div style="background-image:url({{image}})" class="blog_image_div"></div>
+    </div>'
     
     var item_rendered = [];
     Mustache.parse(html); 

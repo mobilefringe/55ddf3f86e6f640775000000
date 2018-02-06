@@ -126,7 +126,7 @@
             get_instagram("//htc.mallmaverick.com/api/v2/htc/social.json", 3, 'thumbnail', render_instagram)
         }
         
-        $('#newsletter_form').submit(function(e){
+        $('#home_newsletter_form').submit(function(e){
            e.preventDefault();
            if($('#agree_terms').prop('checked') == false){
                 $('#agree_terms').focus();

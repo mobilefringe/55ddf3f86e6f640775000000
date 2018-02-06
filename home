@@ -63,6 +63,7 @@
             <script id="blog_template" type="x-tmpl-mustache/text">
                 <div class="col-sm-4">
                     <img src="{{image_url}}" class="" alt="">
+                    <h5>{{name}}</h5>
                 </div>
             </script>
         </div>

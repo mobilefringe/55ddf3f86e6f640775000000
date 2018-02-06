@@ -118,18 +118,18 @@
             
             
             var stores = getStoresList();
-        rest_cat_id = _.filter(getStoreCategories(), function(o) { return _.includes(o.name,'Restaurant')})[0].id;
-        console.log(rest_cat_id);
-        var restaurants = stores.filter(function(val) {
-            return _.includes(val.categories, _.toNumber(rest_cat_id));
-        });
-        _.forEach(restaurants, function(value) {
-            console.log("value.assets", value.assets);
-            if(value.assets != null ) {
-                console.log(value.assets[0]);
-            }
-        });
-        console.log(restaurants);
+            rest_cat_id = _.filter(getStoreCategories(), function(o) { return _.includes(o.name,'Restaurant')})[0].id;
+            console.log(rest_cat_id);
+            var restaurants = stores.filter(function(val) {
+                return _.includes(val.categories, _.toNumber(rest_cat_id));
+            });
+            _.forEach(restaurants, function(value) {
+                console.log("value.assets", value.assets);
+                if(value.assets != null ) {
+                    console.log(value.assets[0]);
+                }
+            });
+            console.log(restaurants);
         
         }
         

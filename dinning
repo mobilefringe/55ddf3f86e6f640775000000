@@ -1,6 +1,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
 
-<div class="dinning_banner">   
+<div ID="dinning_banner">   
     <div class="banner_img" style="background-image: url('http://via.placeholder.com/1920X400');"></div>
 </div>
 

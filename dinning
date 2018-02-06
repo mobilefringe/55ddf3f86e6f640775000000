@@ -123,6 +123,7 @@
             return _.includes(val.categories, _.toNumber(rest_cat_id));
         });
         _.forEach(restaurants, function(value) {
+            console.log("value.assets", value.assets)
             if(value.assets != null ) {
                 console.log(value.assets[0]);
             }

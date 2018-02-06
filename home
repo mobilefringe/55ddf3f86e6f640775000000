@@ -140,7 +140,7 @@
             
             
             var blog_posts = getBlogByName("HTC Blog").sortBy(function(o){return o.publish_date;}).reverse().slice(0, 3);
-            renderPosts('#home_blog_container','#home_blog_template', blog_posts);
+            renderPosts('#blog_container','#blog_template', blog_posts);
             
         }
         

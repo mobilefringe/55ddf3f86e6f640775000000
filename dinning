@@ -115,7 +115,7 @@
         console.log(rest_cat_id)
         var restaurants = stores.filter(function(val) {
             // var cats = getCategoriesNamesByStoreSlug(val.slug);
-            console.log(cats);
+            // console.log(cats);
         });
         // stores.filter(function( val, index ) {
         //         // console.log($.isNumeric(val.name[0]), val.name[0]);

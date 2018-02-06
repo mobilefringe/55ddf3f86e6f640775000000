@@ -59,7 +59,7 @@
         <div class="" id="blog_container">
             <script id="blog_template" type="x-tmpl-mustache/text">
                 <div class="col-sm-4 no_padding_left">
-                    <img src="{{image_url}}" class="image" alt="">
+                    <img src="{{image_url}}" class="image blog_image" alt="">
                     <h5 class="blog_title">{{title}}</h5>
                 </div>
             </script>

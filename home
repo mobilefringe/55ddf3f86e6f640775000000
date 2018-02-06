@@ -61,9 +61,9 @@
         <h3> Instagram</h3>
         <div class="" id="blog_container">
             <script id="blog_template" type="x-tmpl-mustache/text">
-                <li class="item">
-                    {{{item}}}
-                </li>
+                <div class="col-sm-4">
+                
+                </div>
             </script>
         </div>
     </div>

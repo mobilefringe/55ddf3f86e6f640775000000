@@ -110,7 +110,7 @@
             get_instagram("//htc.mallmaverick.com/api/v2/htc/social.json", 3, 'thumbnail', render_instagram)
         }
         var stores = getStoresList();
-        var restaurants = stores.filter(funtion(){})
+        var restaurants = stores.filter(funtion(val){})
         // $('#home_newsletter_form').submit(function(e){
         //   e.preventDefault();
         //   console.log($('#agree_terms').prop('checked'));

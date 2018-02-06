@@ -116,6 +116,7 @@
         var restaurants = stores.filter(function(val) {
             // var cats = getCategoriesNamesByStoreSlug(val.slug);
             // console.log(cats);
+            return _.includes(categories, 1);
         });
         // stores.filter(function( val, index ) {
         //         // console.log($.isNumeric(val.name[0]), val.name[0]);

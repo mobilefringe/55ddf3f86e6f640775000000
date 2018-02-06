@@ -10,7 +10,7 @@
 <div id="restaurant_list_container">
     <script id="restaurant_list_template" type="x-tmpl-mustache/text">
         <div class="col-sm-6">
-            
+            <img src="{{store_image_url}}" class="" alt="">
         </div>
     </script>
 </div>

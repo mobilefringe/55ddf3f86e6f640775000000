@@ -403,3 +403,28 @@ function renderPosts(container, template, collection){
     });
     $(container).html(item_rendered.join(''));
 }
+
+function get_instagram(url, total, size, callback){
+    // var html = '<div class="insta_container"><a target="_blank" href="{{{link}}}"><img src="{{{image}}}" alt="{{caption}}"/></a></div>'
+    var html = '<div class="insta_container"><a target="_blank" href="{{{link}}}"><img src="http://via.placeholder.com/150x150" alt="{{caption}}"/></a></div>'
+    
+    var item_rendered = [];
+    Mustache.parse(html); 
+    log('fetching instagram data from: ' + url);
+    $.getJSON(url).done(function(data) {
+        var insta_feed = data.social.instagram
+        if(insta_feed != null){
+            main_feed = insta_feed.splice(0,total);
+            $.each(main_feed, function(i,v){
+                var feed_obj = {}
+                feed_obj.image = v.images[size].url
+                feed_obj.link = v.link
+                if (i < total){
+                    var ig_rendered =  Mustache.render(html,feed_obj);
+                    item_rendered.push(ig_rendered.trim());
+                }
+            })
+            callback(item_rendered.join(''))
+        }
+    });
+}

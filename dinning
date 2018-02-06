@@ -2,9 +2,9 @@
 
 <div class="sort_bar">
     <div class="row">
-        <div class="col-sm-2"> Dinning</div>
-        <div class="col-sm-2"> Fast Food</div>
-        <div class="col-sm-2"> Bakeries</div>
+        <span class=""> Dinning</span>
+        <span class=""> Fast Food</span>
+        <span class=""> Bakeries</span>
     </div>
 </div>
 

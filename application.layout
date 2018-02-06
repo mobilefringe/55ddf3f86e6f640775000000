@@ -244,7 +244,7 @@
                             </li>
                             <li>
                                 <button onclick="window.location.href='/stores'">Directory </button>
-                                <button onclick='toggle_menu("promos_dd")'>promotions</button>
+                                <button onclick='toggle_menu("stores_dd")'>promotions</button>
                                 <ul class="submenu" id='stores_dd'>
                                     <li><a href="/promotions">Stores</a></li>
                                     <li><a href="/contests/htc-chatters-salon-contest">Dinning</a></li>

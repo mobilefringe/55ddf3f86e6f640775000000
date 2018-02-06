@@ -19,6 +19,9 @@ p, ol, ul, td{
     width:100%;    
 }
 
+.show_phone{
+    display:none;
+}
 /* --- MASONRY GRID --- */
 .grid {
     margin: 0 auto;

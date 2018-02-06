@@ -125,8 +125,6 @@
             });
             _.forEach(restaurants, function(value) {
                 if(value.assets != null ) {
-                    console.log(value.assets[0]);
-                    var store_front_image = getAssetURL(value.id);
                     console.log("store_front_image",store_front_image);
                     value.store_image_url = "//mallmaverick.com"+store_front_image;
                 }

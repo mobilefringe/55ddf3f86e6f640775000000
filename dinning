@@ -130,7 +130,7 @@
                 }
             });
             console.log(restaurants);
-            renderPageData("#restaurant_list_container", "#restaurant_list_template", alpha_array, "directory")
+            renderPageData("#restaurant_list_container", "#restaurant_list_template", restaurants, "directory")
         }
         
         

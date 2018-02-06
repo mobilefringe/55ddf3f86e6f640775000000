@@ -60,7 +60,7 @@
             <script id="blog_template" type="x-tmpl-mustache/text">
                 <div class="col-sm-4 no_padding_left">
                     <div style="background-image:url({{image_url}})" class="blog_image_div"></div>
-                    <h5 class="blog_title">{{title}}</h5>
+                    <h4 class="blog_title">{{title}}</h4>
                 </div>
             </script>
         </div>

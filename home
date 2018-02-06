@@ -78,7 +78,11 @@
         <h2> Subscribe to our newsletter</h2>
         <h4>Blog updates, Promotions, Events & Contests!</h4>
     </div>
-    <div class="col-sm-6"></div>
+    <div class="col-sm-6">
+        <form>
+            
+        </form>
+    </div>
 </div>
 <script>
     

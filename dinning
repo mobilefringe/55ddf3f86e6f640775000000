@@ -1,7 +1,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
 
 <div class="sort_bar">
-    <div class="row"></div>
+    <div class="row">
+        <div class="col-sm-3"></div>
+    </div>
 </div>
 
 <!--<div>-->

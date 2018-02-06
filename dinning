@@ -130,7 +130,7 @@
                 }
             });
             console.log(restaurants);
-        
+            
         }
         
         

@@ -1,8 +1,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
 <style>
-    .main_content{
-        height:420px;
-    }
+    /*.main_content{*/
+    /*    height:420px;*/
+    /*}*/
    
     @media (max-width: 767px) {
         .main_content{

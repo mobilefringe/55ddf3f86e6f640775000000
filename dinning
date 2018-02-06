@@ -127,6 +127,7 @@
                 if(value.assets != null ) {
                     console.log(value.assets[0]);
                     var store_front_image = getAssetURL(value.id);
+                    console.log("store_front_image",store_front_image);
                 }
             });
             console.log(restaurants);

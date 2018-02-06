@@ -1001,7 +1001,7 @@ textarea:focus, input:focus{
         display: none !important;
     }
     .show_phone{
-        display:inline-block;
+        display:block;
     }
     
     .grid-sizer, .grid-item { 

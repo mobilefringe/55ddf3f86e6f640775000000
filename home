@@ -74,7 +74,9 @@
 <hr>
 
 <div class="home_subscription">
-    <div class="col-sm-6"></div>
+    <div class="col-sm-6">
+        <h2> Subscribe to our newsletter</h2>
+    </div>
     <div class="col-sm-6"></div>
 </div>
 <script>

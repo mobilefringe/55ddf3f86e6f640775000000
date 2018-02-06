@@ -113,10 +113,10 @@
         var restaurants = stores.filter(funtion(val) {
             var cats = getCategoriesNamesByStoreSlug(val.id);
         });
-        stores.filter(function( val, index ) {
-                // console.log($.isNumeric(val.name[0]), val.name[0]);
-                return !$.isNumeric(val.name[0]);
-            });
+        // stores.filter(function( val, index ) {
+        //         // console.log($.isNumeric(val.name[0]), val.name[0]);
+        //         return !$.isNumeric(val.name[0]);
+        //     });
         // $('#home_newsletter_form').submit(function(e){
         //   e.preventDefault();
         //   console.log($('#agree_terms').prop('checked'));

@@ -132,9 +132,9 @@
             var temp_val = {};
             temp_val.name = "Stores"
             if( i == 0) {
-                
+                temp_val.image_url = ""
             }
-            temp_val.image_url = ""
+            // temp_val.image_url = ""
         }
         console.log(items);
         $.each(items, function(i, val){

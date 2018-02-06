@@ -47,8 +47,7 @@ p, ol, ul, td{
     width:  40%; 
 }
 .grid-item--height2 { 
-    min-height: 768px; 
-    height: 768px;
+    min-height: 640px; 
 }
 .grid-item img {
     display: block;

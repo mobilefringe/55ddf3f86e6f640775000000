@@ -114,7 +114,7 @@
         rest_cat_id = _.filter(getStoreCategories(), function(o) { return _.includes(o.name,'Restaurant')  });
         console.log(rest_cat_id);
         var restaurants = stores.filter(function(val) {
-            return _.includes(categories, rest_cat_id);
+            return _.includes(val.categories, rest_cat_id);
         });
         console.log(restaurants);
         // stores.filter(function( val, index ) {

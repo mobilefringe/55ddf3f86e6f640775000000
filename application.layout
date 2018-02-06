@@ -332,26 +332,26 @@
             
             <div class='main_content' id='main_content'>{{yield}}</div>
             
-            <div class="right_block" id="right_block_container">
-                <script id="right_block_template" type="x-tmpl-mustache/text">
-                    {% raw %}
-                        {{#url}}
-                            <a href='{{url}}'><img alt='feature_item' src='{{image_url}}'/></a>
-                        {{/url}}
-                        {{^url}}
-                            <img alt='feature_item' src='{{image_url}}'/>
-                        {{/url}}
-                    {% endraw %}
-                </script>
-            </div>
+            <!--<div class="right_block" id="right_block_container">-->
+            <!--    <script id="right_block_template" type="x-tmpl-mustache/text">-->
+            <!--        {% raw %}-->
+            <!--            {{#url}}-->
+            <!--                <a href='{{url}}'><img alt='feature_item' src='{{image_url}}'/></a>-->
+            <!--            {{/url}}-->
+            <!--            {{^url}}-->
+            <!--                <img alt='feature_item' src='{{image_url}}'/>-->
+            <!--            {{/url}}-->
+            <!--        {% endraw %}-->
+            <!--    </script>-->
+            <!--</div>-->
             
-            <div class="bottom_block" id="bottom_block_container">
-                <script id="bottom_block_template" type="x-tmpl-mustache/text">
-                    {% raw %}
-                        <a href='{{url}}'><img alt='feature_item' class='bottom_block_img' src='{{image_url}}'/></a>
-                    {% endraw %}
-                </script>
-            </div>
+            <!--<div class="bottom_block" id="bottom_block_container">-->
+            <!--    <script id="bottom_block_template" type="x-tmpl-mustache/text">-->
+            <!--        {% raw %}-->
+            <!--            <a href='{{url}}'><img alt='feature_item' class='bottom_block_img' src='{{image_url}}'/></a>-->
+            <!--        {% endraw %}-->
+            <!--    </script>-->
+            <!--</div>-->
         </div>
         <div class='bottom_nav'>
             <div class='trim_screen'>

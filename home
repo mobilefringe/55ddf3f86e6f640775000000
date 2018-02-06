@@ -132,7 +132,7 @@
             var temp_val = {};
             temp_val.name = "Stores"
             if( i == 0) {
-                temp_val.image_url = ""
+                temp_val.image_url = "//codecloud.cdn.speedyrails.net/sites/5a79cd486e6f646156310000/image/png/1517337612656/placeholder_570x1140.png";
             }
             // temp_val.image_url = ""
         }

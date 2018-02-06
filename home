@@ -59,7 +59,7 @@
     </div>
     <div class="col-sm-6 text-center">
         <h3> Instagram</h3>
-        <div class="banner_slider_ul slides" id="banner_slider_ul">
+        <div class="" id="banner_slider_ul">
             <script id="banner_slider_template" type="x-tmpl-mustache/text">
                 <li class="item">
                     {{{item}}}

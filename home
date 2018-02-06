@@ -75,7 +75,7 @@
 
 <div class="home_subscription">
     <div class="col-sm-6">
-        <h2> Subscribe to our newsletter</h2>
+        <h2 class="caps"> Subscribe to our newsletter</h2>
         <h4>Blog updates, Promotions, Events & Contests!</h4>
     </div>
     <div class="col-sm-6">

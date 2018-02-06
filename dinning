@@ -111,7 +111,7 @@
         }
         var stores = getStoresList();
         var restaurants = stores.filter(funtion(val){
-            var cats = getCategoriesNamesByStoreSlug();
+            var cats = getCategoriesNamesByStoreSlug(val.id);
         })
         // $('#home_newsletter_form').submit(function(e){
         //   e.preventDefault();

@@ -111,7 +111,7 @@
         }
         var stores = getStoresList();
         var restaurants = stores.filter(function(val) {
-            var cats = getCategoriesNamesByStoreSlug(val.slug);
+            // var cats = getCategoriesNamesByStoreSlug(val.slug);
             console.log(cats);
         });
         // stores.filter(function( val, index ) {

@@ -60,7 +60,7 @@
     <div class="col-sm-6 text-center">
         <h3> Instagram</h3>
         <div class="" id="blog_container">
-            <script id="banner_slider_template" type="x-tmpl-mustache/text">
+            <script id="blog_template" type="x-tmpl-mustache/text">
                 <li class="item">
                     {{{item}}}
                 </li>

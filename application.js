@@ -428,3 +428,7 @@ function get_instagram(url, total, size, callback){
         }
     });
 }
+
+function render_instagram(data){
+    $('#instafeed').html(data);
+}

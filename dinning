@@ -130,7 +130,7 @@
                 }
             });
             console.log(restaurants);
-            
+            renderPageData("#alpha_tab_title_content_container", "#alpha_tab_title_content_template", alpha_array, "directory")
         }
         
         

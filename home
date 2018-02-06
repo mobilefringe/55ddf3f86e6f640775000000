@@ -84,7 +84,7 @@
             renderPageData("#banner_slider_ul", "#banner_slider_template", published_banners, "banners")
             load_slider("flexslider");
             
-            var featureList = getFeatureList();
+            // var featureList = getFeatureList();
             // renderPageData("#bottom_block_container", "#bottom_block_template", featureList, "bottom_block")
             $(".loading_overlay").hide();
         //                 if($.cookie("popup_viewed") != "true"){

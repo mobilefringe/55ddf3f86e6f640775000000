@@ -2,7 +2,7 @@
 
 <div class="sort_bar">
     <div class="row">
-        <span class="sort_cat"> Dinning</span>
+        <span class="sort_cat"> Restaurant</span>
         <span class="sort_cat"> Fast Food</span>
         <span class="sort_cat"> Bakeries</span>
     </div>

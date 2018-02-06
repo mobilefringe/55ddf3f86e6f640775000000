@@ -73,6 +73,9 @@
 
 <hr>
 
+<div class="home_subscription">
+    
+</div>
 <script>
     
     $(document).ready(function() {

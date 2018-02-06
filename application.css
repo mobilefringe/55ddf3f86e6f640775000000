@@ -703,7 +703,8 @@ textarea:focus, input:focus{
     margin: 0 10px;
 }
 #blog_container {
-    
+    overflow:hidden;
+    margin: auto;
 }
 
 

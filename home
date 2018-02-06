@@ -74,7 +74,7 @@
 <hr>
 
 <div class="home_subscription">
-    
+    <div class="col-sm-6"></div>
 </div>
 <script>
     

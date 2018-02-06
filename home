@@ -78,7 +78,7 @@
         <h2 class="caps"> Subscribe to our newsletter</h2>
         <h4>Blog updates, Promotions, Events & Contests!</h4>
     </div>
-    <div class="col-sm-6">
+    <div class="col-sm-6 text-center no_padding_right">
         <form action="//mobilefringe.createsend.com/t/d/s/dljtlh/" id="newsletter_form">
             <input name="cm-dljtlh-dljtlh" type="text" class="newsletter_email" id="newsletter_email" placeholder="Enter Email" required="required" />
             <input type="submit" value="SUBMIT" class="newsletter_submit_btn" id="newsletter_submit" /> 

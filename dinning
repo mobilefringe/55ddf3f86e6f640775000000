@@ -109,7 +109,10 @@
             renderPosts('#blog_container','#blog_template', blog_posts);
             get_instagram("//htc.mallmaverick.com/api/v2/htc/social.json", 3, 'thumbnail', render_instagram)
         }
+        
         var stores = getStoresList();
+        rest_cat_id = getStoreCategories().filter(function(val) { return val.name.includes('Restaurant')
+        });
         var restaurants = stores.filter(function(val) {
             // var cats = getCategoriesNamesByStoreSlug(val.slug);
             console.log(cats);

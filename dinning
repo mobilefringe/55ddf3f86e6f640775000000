@@ -123,7 +123,7 @@
             return _.includes(val.categories, _.toNumber(rest_cat_id));
         });
         _.forEach(restaurants, function(value) {
-            console.log(value.asset[0]);
+            console.log(value.assets[0]);
         });
         console.log(restaurants);
         // stores.filter(function( val, index ) {

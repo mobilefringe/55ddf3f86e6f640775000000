@@ -139,7 +139,7 @@
             });
             
             
-            var blog_posts = getBlogByName("main").sortBy(function(o){return o.publish_date;}).reverse().slice(0, 4);
+            var blog_posts = getBlogByName("HTC Blog").sortBy(function(o){return o.publish_date;}).reverse().slice(0, 4);
             blog_posts[0].latest_post = "/ NEW POST!";
             renderPosts('#home_blog_container','#home_blog_template', blog_posts);
             

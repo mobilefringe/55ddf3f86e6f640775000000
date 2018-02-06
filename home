@@ -126,6 +126,24 @@
             get_instagram("//htc.mallmaverick.com/api/v2/htc/social.json", 3, 'thumbnail', render_instagram)
         }
         
+        $('#newsletter_form').submit(function(e){
+           e.preventDefault();
+           if($('#agree_terms').prop('checked') == false){
+                $('#agree_terms').focus();
+                alert("Please agree to receieve newsletters from Shop Central.")
+           }
+           else{
+               $.getJSON(
+                    this.action + "?callback=?",
+                    $(this).serialize(),
+                    function (data) {
+                        if (data.Status === 400) {
+                            alert("Please try again later.");
+                        } else { // 200
+                            $("#subscription_confirmed").fadeIn();
+                        }
+                });
+           }
         $(".loading_overlay").hide();
         loadMallData(render_page_details); 
     })

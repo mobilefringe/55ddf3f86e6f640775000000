@@ -28,6 +28,9 @@ p, ol, ul, td{
 .no_padding_left {
     padding-left:0;
 }
+.no_padding_right {
+    padding-left:0;
+}
 .show_phone{
     display:none;
 }

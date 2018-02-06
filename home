@@ -86,7 +86,7 @@
             
             // var featureList = getFeatureList();
             // renderPageData("#bottom_block_container", "#bottom_block_template", featureList, "bottom_block")
-            $(".loading_overlay").hide();
+            
         //                 if($.cookie("popup_viewed") != "true"){
         //         $.cookie("popup_viewed", "true", { expires: 1 });
         //         $('<div class="modal-backdrop custom_backdrop"></div>').appendTo(document.body);
@@ -123,7 +123,7 @@
             
         }
         
-        
+        $(".loading_overlay").hide();
         loadMallData(render_page_details); 
     })
     function renderFeatureItems(){

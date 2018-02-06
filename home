@@ -74,7 +74,7 @@
 <hr>
 
 <div class="home_subscription">
-    <div class="col-sm-6">
+    <div class="col-sm-6 text-center no_padding_left">
         <h2 class="caps"> Subscribe to our newsletter</h2>
         <h4>Blog updates, Promotions, Events & Contests!</h4>
     </div>

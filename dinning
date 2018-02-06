@@ -111,8 +111,7 @@
         }
         
         var stores = getStoresList();
-        rest_cat_id = getStoreCategories().filter(function(val) { return val.name.includes('Restaurant')
-        });
+        rest_cat_id = getStoreCategories().filter(function(val) { return val.name.includes('Restaurant') > -1 });
         var restaurants = stores.filter(function(val) {
             // var cats = getCategoriesNamesByStoreSlug(val.slug);
             console.log(cats);

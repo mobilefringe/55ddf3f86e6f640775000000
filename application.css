@@ -1366,7 +1366,7 @@ textarea:focus, input:focus{
     outline: 2px solid #007CBA;
     outline-offset: -10px;
     transition: all 0.35s linear;
-        border-radius: 0;
+    border-radius: 0;
 }
 .ih-item.circle.effect19 .info .content {
     margin: auto;

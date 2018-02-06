@@ -112,7 +112,7 @@
         
         var stores = getStoresList();
         rest_cat_id = getStoreCategories().filter(function(val) {return val.name.indexOf('Restaurant') > -1 })[0].id;
-        console.log(rest_cat_id)
+        console.log(rest_cat_id);
         var restaurants = stores.filter(function(val) {
             return _.includes(categories, rest_cat_id);
         });

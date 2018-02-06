@@ -79,9 +79,15 @@
         <h4>Blog updates, Promotions, Events & Contests!</h4>
     </div>
     <div class="col-sm-6">
-        <form>
-            
-        </form>
+        <form action="//mobilefringe.createsend.com/t/d/s/dljtlh/" id="newsletter_form">
+                <input name="cm-dljtlh-dljtlh" type="text" class="newsletter_email" id="newsletter_email" placeholder="Enter Email" required="required" />
+                <input type="submit" value="SUBMIT" class="newsletter_submit_btn" id="newsletter_submit" /> 
+                <input id="agree_terms" type="checkbox" value="true" class="checkbox-custom" />
+                <label for="agree_terms" class="confirm_label checkbox-custom-label">
+                    I agree to receive emails from Heartland Town Centre
+                </label>
+                <p id="subscription_confirmed">Thank you for subscribing.</p>
+            </form>
     </div>
 </div>
 <script>

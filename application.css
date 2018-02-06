@@ -1355,26 +1355,7 @@ textarea:focus, input:focus{
     visibility: visible;
     opacity: 1;
 }
-// .ih-item.circle.effect19 .info h3:after {
-//     content: " ";
-//     height: 1px;
-//     width: 84px;
-//     visibility: hidden;
-//     opacity: 0;
-//     background: #FFF;
-//     position: absolute;
-//     left: 50%;
-//     bottom: -10px;
-//     -webkit-transform: translate(-50%, 0%);
-//     -ms-transform: translate(-50%, 0%);
-//     transform: translate(-50%, 0%);
-//     transition: opacity 0.2s ease-in;
-//     transition-delay: 0.45s;
-// }
-// .ih-item.circle.effect19 a:hover h3:after {
-//     visibility: visible;
-//     opacity: 1;
-// }
+
 .ih-item.circle.effect19 .info hr {
     margin-top: 10px;
     margin-bottom: 10px;

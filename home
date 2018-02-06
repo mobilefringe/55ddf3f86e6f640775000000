@@ -134,13 +134,13 @@
             temp_val.name = "Stores"
             if( i == 0) {
                 console.log(i);
-                temp_val.image_url = "//codecloud.cdn.speedyrails.net/sites/5a79cd486e6f646156310000/image/png/1517337612656/placeholder_570x1140.png";
+                temp_val.image_url = "//codecloud.cdn.speedyrails.net/sites/5a79cd486e6f646156310000/image/png/1517937671949/placeholder_640x1280.png";
             }
             else if(i == 1 || i== 3 || i == 5|| i == 6) {
-                temp_val.image_url = "//codecloud.cdn.speedyrails.net/sites/5a79cd486e6f646156310000/image/png/1517337597211/placeholder_570x570.png";
+                temp_val.image_url = "//codecloud.cdn.speedyrails.net/sites/5a79cd486e6f646156310000/image/png/1517937657169/placeholder_640x640.png";
             }
             else {
-                 temp_val.image_url = "//codecloud.cdn.speedyrails.net/sites/5a79cd486e6f646156310000/image/png/1517337630625/placeholder_1140x570.png";
+                 temp_val.image_url = "//codecloud.cdn.speedyrails.net/sites/5a79cd486e6f646156310000/image/png/1517937626731/placeholder_1280x640.png";
             }
             // temp_val.image_url = ""
             temp_features.push(temp_val);

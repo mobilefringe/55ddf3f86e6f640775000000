@@ -71,7 +71,7 @@
     $(document).ready(function() {
         function render_page_details(){
             
-            $("#dinning_banner").show()
+            $("#dinning_banner").show();
             renderFeatureItems();
             
             // init Masonry

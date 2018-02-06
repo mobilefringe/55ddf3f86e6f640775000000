@@ -9,6 +9,7 @@
 </div>
 <div id="dinning_list_container">
     <script id="blog_template" type="x-tmpl-mustache/text">
+        
     </script>
 </div>
 <!--<div>-->

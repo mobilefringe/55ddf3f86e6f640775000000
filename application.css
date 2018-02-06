@@ -584,7 +584,7 @@ textarea:focus, input:focus{
 }
 
 .main_content{
-    /*width:75%;*/
+    width:100%;
     display:inline-block;
     z-index:1;
 }

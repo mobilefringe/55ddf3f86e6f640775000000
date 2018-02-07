@@ -125,6 +125,7 @@
             });
             
             _.forEach(restaurants, function(value) {
+                var store_front_image = null;
                 if(value.assets != null ) {
                     var store_front_image = getAssetURL(value.id);
                     console.log(store_front_image,  store_front_image.indexOf('missing') > -1)

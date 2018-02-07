@@ -68,6 +68,9 @@
 </div>
 <div class="margin_60"></div>
 <style>
+    .row {
+        margin: auto;
+    }
     @media (max-width: 768px) {
         .page_content {
             padding:0;

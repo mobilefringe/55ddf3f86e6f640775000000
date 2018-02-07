@@ -27,6 +27,7 @@
                             </a>
                             <a href="https://twitter.com/home?status={{twitter_title}} https://www.shopthegateway.com/{{slug}}" target="_blank">
                                 <img class="post_icon" src="//codecloud.cdn.speedyrails.net/sites/5808c7e76e6f6414b30c0000/image/jpeg/1490794359000/tw.jpg" class="" alt="">
+                                <i class="fa fa-twitter"><i/>
                             </a>
                         </div>
                     </div>

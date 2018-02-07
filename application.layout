@@ -299,7 +299,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <button onclick="window.location.href='/pages/htc-centre-information'">location </button>
+                                <button onclick="window.location.href='/pages/htc-centre-information'">Blog </button>
                             </li>
                             
                             <li>

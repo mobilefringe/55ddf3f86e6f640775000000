@@ -158,6 +158,7 @@
             $(".sort_cat").removeClass("active");
             $(this).addClass("active");
             
+            $(".store_lists").hide();
             if($(this))
         });
         

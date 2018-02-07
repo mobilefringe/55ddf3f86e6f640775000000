@@ -59,7 +59,7 @@
             <script id="blog_template" type="x-tmpl-mustache/text">
                 <div class="col-sm-4 col-xs-6 no_padding_left">
                     <div style="background-image:url({{image_url}})" class="blog_image_div"></div>
-                    <a href="/posts/{{slug}}"><h4 class="blog_title">{{title}}</h4>
+                    <a href="/posts/{{slug}}"><h4 class="blog_title">{{title}}</h4></a>
                 </div>
             </script>
         </div>

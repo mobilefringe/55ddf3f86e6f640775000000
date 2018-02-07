@@ -149,27 +149,5 @@
         $(".loading_overlay").hide();
         loadMallData(render_page_details); 
     })
-    function renderFeatureItems(){
-        var items = getFeatureList();
-        var temp_features = [];
-        for (var i = 0; i < 7; i++ ) {
-            var temp_val = {};
-            temp_val.name = "Stores"
-            if( i == 0) {
-                temp_val.image_url = "//codecloud.cdn.speedyrails.net/sites/5a79cd486e6f646156310000/image/png/1517932473306/height2x.png";
-            }
-            else if(i == 2 || i== 3 || i == 4|| i == 6) {
-                temp_val.image_url = "//codecloud.cdn.speedyrails.net/sites/5a79cd486e6f646156310000/image/png/1517932491460/square.png";
-            }
-            else {
-                 temp_val.image_url = "//codecloud.cdn.speedyrails.net/sites/5a79cd486e6f646156310000/image/png/1517937829931/width2x.png";
-            }
-            // temp_val.image_url = ""
-            temp_features.push(temp_val);
-        }
-        console.log(temp_features);
-        $.each(temp_features, function(i, val){
-            $('.feature_' + i).html('<div class="ih-item circle effect19"><a href="'+ val.url +'"><img src="'+ val.image_url +'"alt="'+ val.name +'"><div class="info"><div class="content"><h3>'+ val.name +'</h3></div></div></a></div>')
-        })
-    }
+    
 </script>

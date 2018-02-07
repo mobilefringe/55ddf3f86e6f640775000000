@@ -130,9 +130,9 @@
                         
                     }
                     else {
-                        
+                        value.store_image_url = "//mallmaverick.com"+store_front_image;
                     }
-                    value.store_image_url = "//mallmaverick.com"+store_front_image;
+                    
                 }
             });
             console.log(restaurants);

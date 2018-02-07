@@ -2,7 +2,7 @@
 
 <div class="sort_bar">
     <div class="row">
-        <span id="restaurant" class="sort_cat active"> Restaurant </span> <span> | </span>
+        <span value="restaurant" class="sort_cat active"> Restaurant </span> <span> | </span>
         <!--<span class="sort_cat"> Fast Food</span>-->
         <span value="bakery" class="sort_cat"> Bakeries</span>
     </div>

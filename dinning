@@ -154,7 +154,7 @@
             $("#restaurant_list_container").show();
         }
         $(".sort_cat").click(function(){
-                // value
+            // value
             $(".sort_cat").removeClass("active");
             $(this).addClass("active");
             

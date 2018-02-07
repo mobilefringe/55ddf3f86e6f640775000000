@@ -1,4 +1,4 @@
-<div class="row">
+<div class="col-sm-12">
     <div id="main_post_container">
         <script id="main_post_template" type="x-tmpl-mustache">
             <div class="main_post_container">

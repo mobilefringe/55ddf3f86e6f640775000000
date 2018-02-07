@@ -162,6 +162,9 @@
             if($(this).attr("value") == "restaurant") {
                 
             }
+            else {
+                
+            }
         });
         
         // stores.filter(function( val, index ) {

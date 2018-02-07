@@ -31,9 +31,12 @@
         </div>
     </script>
 </div>
-<style>.row {
+<style>
+    .row {
         margin: auto;
-    }</style>
+    }
+</style>
+
 <script>
     
     $(document).ready(function() {

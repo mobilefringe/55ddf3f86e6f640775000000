@@ -2,6 +2,9 @@
     <div id="main_post_container">
         <script id="main_post_template" type="x-tmpl-mustache">
             <div class="main_post_container">
+                <div class="col-sm-8 main_post_image_wrapper hidden_now">
+                    <div class="main_post_image_container" style="background-image: url({{post_image}});"></div>
+                </div>
                 <div class="main_post_content col-sm-4">
                     <a href="{{slug}}"><h4 class="main_post_header caps">{{title_short}}</h4></a>
                     <div class="blog_date">{{publish_date}}</div>

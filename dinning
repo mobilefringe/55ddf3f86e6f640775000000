@@ -19,8 +19,8 @@
         </div>
     </script>
 </div>
-<div id="restaurant_list_container" class="store_lists">
-    <script id="restaurant_list_template" type="x-tmpl-mustache/text">
+<div id="bakery_list_container" class="store_lists">
+    <script id="bakery_list_template" type="x-tmpl-mustache/text">
         <div class="col-sm-6">
             <div style="background-image:url({{store_image_url}})" class="dinning_logo_image"></div>
             <div class="dinning_dets text-center">

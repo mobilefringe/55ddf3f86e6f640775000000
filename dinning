@@ -128,8 +128,6 @@
                 var store_front_image = null;
                 if(value.assets != null ) {
                     store_front_image = getAssetURL(value.id);
-                    
-                    
                 }
             });
             console.log(restaurants);

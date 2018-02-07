@@ -154,7 +154,7 @@
             $("#restaurant_list_container").show();
         }
         $("#restaurant").click(function(){
-            
+                
         });
         
         // stores.filter(function( val, index ) {

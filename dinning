@@ -127,7 +127,7 @@
             _.forEach(restaurants, function(value) {
                 var store_front_image = null;
                 if(value.assets != null ) {
-                    var store_front_image = getAssetURL(value.id);
+                    store_front_image = getAssetURL(value.id);
                     
                     
                 }

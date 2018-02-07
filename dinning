@@ -155,6 +155,7 @@
         }
         $("#restaurant").click(function(){
                 // value
+            
         });
         
         // stores.filter(function( val, index ) {

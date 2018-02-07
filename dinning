@@ -179,7 +179,7 @@
                 
             });
             console.log(bakeries);
-            renderPageData("#bakery_list_container", "#bakery_list_template", restaurants, "directory");
+            renderPageData("#bakery_list_container", "#bakery_list_template", bakeries, "directory");
             
             $("#restaurant_list_container").show();
         }

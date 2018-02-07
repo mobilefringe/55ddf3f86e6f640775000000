@@ -83,18 +83,18 @@ $(document).ready(function(e){
         console.log("blog_posts",blog_posts);
         var sorted_posts = blog_posts.sortBy(function(o){ return o.publish_date }).reverse();
         console.log("sorted_posts",sorted_posts);
-        var main_post = sorted_posts[0];
-        renderSinglePost('#main_post_container', "#main_post_template", main_post);
+        // var main_post = sorted_posts[0];
+        // renderSinglePost('#main_post_container', "#main_post_template", main_post);
 
-        var posts = sorted_posts.splice(1);
+        // var posts = sorted_posts.splice(1);
         
-        renderPosts('#posts_container', '#posts_template', posts);
-        console.log("posts", posts);
-        $(".nav_container").addClass("border_bottom");
+        // renderPosts('#posts_container', '#posts_template', posts);
+        // console.log("posts", posts);
+        // $(".nav_container").addClass("border_bottom");
         
-        // show_content();
+        // // show_content();
         
-        load_more(1);
+        // load_more(1);
             
         $('#load_more_posts').click(function(e){
             var i = $('#num_loaded').val();

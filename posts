@@ -28,11 +28,7 @@
     </div>
 </div>
 <div class="margin_30 hidden_phone"></div>
-<div class="row hidden_phone">
-    <div class="col-md-10 col-md-offset-1">
-        <h4 class="previous_title caps">Previous</h4>
-    </div>
-</div>
+
 <div class="row">
     <div id="posts_container">
         <script id="posts_template" type="x-tmpl-mustache">

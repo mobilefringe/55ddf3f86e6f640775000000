@@ -17,7 +17,7 @@
                         <div class="post_text">{{description_short}}</div>
                         <a class="main_read_more link" href="{{slug}}">Read More</a>
                     </div>
-                    <div>
+                    <div class="">
                         <div class="main_post_image_container">
                             <img src="{{post_image}}" alt="{{title}}">
                         </div>

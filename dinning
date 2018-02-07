@@ -155,7 +155,7 @@
         }
         $(".sort_cat").click(function(){
                 // value
-            $(".sort_cat").removeClass("active")
+            $(".sort_cat").removeClass("active");
         });
         
         // stores.filter(function( val, index ) {

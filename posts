@@ -103,7 +103,7 @@ $(document).ready(function(e){
         
         $(".nav_container").addClass("border_bottom");
         
-        show_content();
+        // show_content();
         
         load_more(1);
             

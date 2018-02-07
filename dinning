@@ -154,7 +154,7 @@
             
             bakery_cat_id = _.filter(getStoreCategories(), function(o) { return _.includes(o.name,'Bakeries')})[0].id;
             console.log(bakery_cat_id);
-            var restaurants = stores.filter(function(val) {
+            var bakeries = stores.filter(function(val) {
                 return _.includes(val.categories, _.toNumber(bakery_cat_id));
             });
             

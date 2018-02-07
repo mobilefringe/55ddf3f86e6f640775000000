@@ -1,37 +1,36 @@
 <div class="row">
-    <!--<div class="col-md-10 col-md-offset-1">-->
-        <div id="main_post_container">
-            <script id="main_post_template" type="x-tmpl-mustache">
-                <div class="main_post_container">
+    <div id="main_post_container">
+        <script id="main_post_template" type="x-tmpl-mustache">
+            <div class="main_post_container">
+                
+                <div class="main_post_content col-sm-4">
                     
-                    <div class="main_post_content col-sm-4">
+                    <a href="{{slug}}"><h4 class="main_post_header caps">{{title_short}}</h4></a>
+                    <div class="blog_date">{{publish_date}}</div>
+                    <div class="post_text">{{description_short}}</div>
+                    
+                </div>
+                <div class="col-sm-8 main_post_image_wrapper">
+                    <div class="main_post_image_container" style="background-image: url({{post_image}});">
                         
-                        <a href="{{slug}}"><h4 class="main_post_header caps">{{title_short}}</h4></a>
-                        <div class="blog_date">{{publish_date}}</div>
-                        <div class="post_text">{{description_short}}</div>
-                        
-                    </div>
-                    <div class="col-sm-8 main_post_image_wrapper">
-                        <div class="main_post_image_container" style="background-image: url({{post_image}});">
-                            
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <a class="read_more" href="{{slug}}">Read More &gt;</a>
-                    </div>
-                    <div class="col-sm-8">
-                        <div class="main_post_share_icons  text-center"">
-                            <a href="https://www.facebook.com/sharer.php?u=https://www.heartlandtown.com/{{slug}}" target="_blank">
-                                <i class="fa fa-facebook-f"><i/>
-                            </a>
-                            <a href="https://twitter.com/home?status={{twitter_title}} https://www.heartlandtown.com/{{slug}}" target="_blank">
-                                <i class="fa fa-twitter"><i/>
-                            </a>
-                        </div>
                     </div>
                 </div>
-            </script>
-        </div>
+                <div class="col-sm-4">
+                    <a class="read_more" href="{{slug}}">Read More &gt;</a>
+                </div>
+                <div class="col-sm-8">
+                    <div class="main_post_share_icons  text-center"">
+                        <a href="https://www.facebook.com/sharer.php?u=https://www.heartlandtown.com/{{slug}}" target="_blank">
+                            <i class="fa fa-facebook-f"><i/>
+                        </a>
+                        <a href="https://twitter.com/home?status={{twitter_title}} https://www.heartlandtown.com/{{slug}}" target="_blank">
+                            <i class="fa fa-twitter"><i/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </script>
+    </div>
     <!--</div>-->
 </div>
 <div class="margin_30 hidden_phone"></div>

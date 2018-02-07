@@ -160,7 +160,7 @@
             
             $(".store_lists").hide();
             if($(this).attr("value") == "restaurant") {
-                
+                $("#restaurant_list_container").show();
             }
             else {
                 

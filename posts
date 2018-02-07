@@ -11,7 +11,7 @@
                         <div class="post_text">{{description_short}}</div>
                         
                     </div>
-                    <div class="col-sm-8">
+                    <div class="col-sm-8 main_post_image_wrapper">
                         <div class="main_post_image_container" style="background-image: url({{post_image}});">
                             
                         </div>

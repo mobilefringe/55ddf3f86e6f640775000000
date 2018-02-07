@@ -11,7 +11,6 @@
     <script id="restaurant_list_template" type="x-tmpl-mustache/text">
         <div class="col-sm-6">
             <div style="background-image:url({{store_image_url}})" class="dinning_logo_image"></div>
-            // <img src="{{store_image_url}}" class="" alt="">
         </div>
     </script>
 </div>

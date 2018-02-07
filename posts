@@ -76,7 +76,7 @@
 
 <script>
 $(document).ready(function(e){
-    init(e);
+    // init(e);
     
     function renderAll(){
         var prefix = get_prefix();

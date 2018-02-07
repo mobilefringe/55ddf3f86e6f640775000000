@@ -123,6 +123,7 @@
             var restaurants = stores.filter(function(val) {
                 return _.includes(val.categories, _.toNumber(rest_cat_id));
             });
+            
             _.forEach(restaurants, function(value) {
                 if(value.assets != null ) {
                     var store_front_image = getAssetURL(value.id);

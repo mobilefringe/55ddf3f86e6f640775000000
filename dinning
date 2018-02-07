@@ -157,6 +157,7 @@
                 // value
             $(".sort_cat").removeClass("active");
             $(this).addClass("active");
+            
         });
         
         // stores.filter(function( val, index ) {

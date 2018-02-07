@@ -138,6 +138,9 @@
                         value.store_image_url = "//mallmaverick.com"+store_front_image;
                     }
                 }
+                else {
+                    
+                }
                 
             });
             console.log(restaurants);

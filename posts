@@ -69,7 +69,7 @@
 <div class="margin_60"></div>
 <style>
     .page_content {
-        
+        padding:0;
     }
 </style>
 <script>

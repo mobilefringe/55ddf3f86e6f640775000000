@@ -3,9 +3,7 @@
         <div id="main_post_container">
             <script id="main_post_template" type="x-tmpl-mustache">
                 <div class="main_post_container">
-                    <div class="main_post_image_container">
-                        <img src="{{post_image}}" alt="{{title}}">
-                    </div>
+                    
                     <div class="main_post_content">
                         <div class="main_post_share_icons">
                             <a href="https://www.facebook.com/sharer.php?u=https://www.shopthegateway.com/{{slug}}" target="_blank">

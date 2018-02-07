@@ -114,6 +114,6 @@ $(document).ready(function(e){
         });
     }
     $(".loading_overlay").hide();
-    loadMallDataCached(renderAll);
+    loadMallData(renderAll); 
 });
 </script>

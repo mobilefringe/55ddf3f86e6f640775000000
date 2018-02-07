@@ -92,7 +92,7 @@ $(document).ready(function(e){
         //     }
         // });
             
-        var blog_posts = getBlogByName("HTC Blog").posts;
+        var blog_posts = getBlogByName("HTC Blog");//.posts;
         console.log("blog_posts",blog_posts);
         var sorted_posts = blog_posts.sortBy(function(o){ return o.publish_date }).reverse();
         var main_post = sorted_posts[0];

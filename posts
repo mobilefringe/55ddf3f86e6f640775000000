@@ -71,6 +71,9 @@
     .page_content {
         padding:0;
     }
+    .main_content {
+            margin: auto;
+    }
 </style>
 <script>
 $(document).ready(function(e){

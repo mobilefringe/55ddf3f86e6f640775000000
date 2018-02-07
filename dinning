@@ -152,7 +152,7 @@
             console.log(restaurants);
             renderPageData("#restaurant_list_container", "#restaurant_list_template", restaurants, "directory");
             
-            bakery_cat_id = _.filter(getStoreCategories(), function(o) { return _.includes(o.name,'Restaurant')})[0].id;
+            bakery_cat_id = _.filter(getStoreCategories(), function(o) { return _.includes(o.name,'Bakeries')})[0].id;
             console.log(bakery_cat_id);
             var restaurants = stores.filter(function(val) {
                 return _.includes(val.categories, _.toNumber(rest_cat_id));

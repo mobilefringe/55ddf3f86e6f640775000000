@@ -68,7 +68,9 @@
 </div>
 <div class="margin_60"></div>
 <style>
-    
+    .page_content {
+        
+    }
 </style>
 <script>
 $(document).ready(function(e){

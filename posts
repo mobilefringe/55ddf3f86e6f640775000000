@@ -37,7 +37,7 @@
     <div id="posts_container">
         <script id="posts_template" type="x-tmpl-mustache">
             <div class="col-sm-4 post_container hidden_now" id="show_{{counter}}">
-                <div class="post_image_container">
+                <div class="post_image_container"  style="background-image: url({{post_image}});">
                     <img src="{{post_image}}" alt="{{title}}">
                 </div>
                 <div class="post_content">

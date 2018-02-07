@@ -129,6 +129,13 @@
                 if(value.assets != null ) {
                     store_front_image = getAssetURL(value.id);
                 }
+                console.log(store_front_image,  store_front_image.indexOf('missing') > -1)
+                if( store_front_image.indexOf('missing') > -1) {
+                    value.store_image_url = "//mallmaverick.com"+val.store_front_url;
+                }
+                else {
+                    value.store_image_url = "//mallmaverick.com"+store_front_image;
+                }
             });
             console.log(restaurants);
             renderPageData("#restaurant_list_container", "#restaurant_list_template", restaurants, "directory");

@@ -153,7 +153,9 @@
             renderPageData("#restaurant_list_container", "#restaurant_list_template", restaurants, "directory");
             $("#restaurant_list_container").show();
         }
-        
+        $("#restaurant").click(function(){
+                
+        });
         
         // stores.filter(function( val, index ) {
         //         // console.log($.isNumeric(val.name[0]), val.name[0]);

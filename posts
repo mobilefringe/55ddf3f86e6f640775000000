@@ -40,7 +40,7 @@
                     <div class="blog_date">{{publish_date}}</div>
                     <div class="post_text">{{description_short}}</div>
                     <div style="overflow: hidden; margin: auto;">
-                        <a class="read_more pull-left" href="{{slug}}">Read More &gt;</a>
+                        <a class="read_more pull-left" href="/posts/{{slug}}">Read More &gt;</a>
                         <div class="post_share_icons pull-right">
                             <a href="https://twitter.com/home?status={{twitter_title}} https://www.heartlandtown.com/{{slug}}" target="_blank">
                                 <i class="fa fa-twitter"></i>

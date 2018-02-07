@@ -287,6 +287,11 @@
                             <li>
                                 <button onclick="window.location.href='/stores'">directory <i id='promos_dd2_icon' class="fa fa-plus"></i></button>
                                 <li><a href="/dinning">Dinning</a></li>
+                                <ul class="mobile_submenu" id='stores_dd2'>
+                                    <li><a href="/promotions">promotions</a></li>
+                                    <li><a href="/contests/htc-enter-to-win">Contest</a></li>
+                                     <!--<li><a href="/pages/htc-summer-sidewalk-sale">Summer Sidewalk Sale</a></li>-->
+                                </ul>
                             </li>
                             <li>
                                 <button onclick="window.location.href='/map'">centre map</button>

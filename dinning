@@ -14,7 +14,7 @@
             <div class="dinning_dets">
                 <div class="dinning_store_name">{{name}}</div>
                 <div class="dinning_store_dets">{{description_short}}</div>
-                <a href="/stores/{{slug}}"></a>
+                <a href="/stores/{{slug}}">Read More &gt;</a>
             </div>
         </div>
     </script>

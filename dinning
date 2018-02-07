@@ -159,7 +159,7 @@
             $(this).addClass("active");
             
             $(".store_lists").hide();
-            if($(this))
+            if($(this).attr("value") == "restaurant")
         });
         
         // stores.filter(function( val, index ) {

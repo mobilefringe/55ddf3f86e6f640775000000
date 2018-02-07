@@ -68,11 +68,13 @@
 </div>
 <div class="margin_60"></div>
 <style>
-    .page_content {
-        padding:0;
-    }
-    .main_content {
-        margin: auto;
+    @media (max-width: 768px) {
+        .page_content {
+            padding:0;
+        }
+        .main_content {
+            margin: auto;
+        }
     }
 </style>
 <script>

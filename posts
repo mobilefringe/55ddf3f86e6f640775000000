@@ -36,11 +36,11 @@
                 <div class="post_image_container"  style="background-image: url({{post_image}});">
                 </div>
                 <div class="post_content">
-                    <
+                    
                     <a href="{{slug}}"><h4 class="post_header caps">{{title_short}}</h4></a>
                     <div class="post_text">{{description_short}}</div>
                     <a class="read_more" href="{{slug}}">Read More &gt;</a>
-                    div class="post_share_icons">
+                    <div class="post_share_icons">
                         <a href="https://twitter.com/home?status={{twitter_title}} https://www.heartlandtown.com/{{slug}}" target="_blank">
                             <i class="fa fa-twitter"></i>
                         </a>

@@ -12,7 +12,7 @@
         <div class="col-sm-6">
             <div style="background-image:url({{store_image_url}})" class="dinning_logo_image"></div>
             <div class="dinning_dets">
-                
+                <div>{{name}}
             </div>
         </div>
     </script>

@@ -129,6 +129,9 @@
                     if( store_front_image.indexOf('missing') > -1) {
                         
                     }
+                    else {
+                        
+                    }
                     value.store_image_url = "//mallmaverick.com"+store_front_image;
                 }
             });

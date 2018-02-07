@@ -16,10 +16,10 @@
                 <div class="col-sm-8">
                     <div class="main_post_share_icons  text-center"">
                         <a href="https://www.facebook.com/sharer.php?u=https://www.heartlandtown.com/{{slug}}" target="_blank">
-                            <i class="fa fa-facebook-f"><i/>
+                            <i class="fa fa-facebook-f"></i>
                         </a>
                         <a href="https://twitter.com/home?status={{twitter_title}} https://www.heartlandtown.com/{{slug}}" target="_blank">
-                            <i class="fa fa-twitter"><i/>
+                            <i class="fa fa-twitter"></i>
                         </a>
                     </div>
                 </div>

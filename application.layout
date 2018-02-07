@@ -286,8 +286,6 @@
                             </li>
                             <li>
                                 <button onclick="window.location.href='/stores'">directory <i id='promos_dd2_icon' class="fa fa-plus"></i></button>
-                                window.location.href='/stores'
-                                
                                 <ul class="mobile_submenu" id='stores_dd2'>
                                     <li><a href="/stores">Stores</a></li>
                                     <li><a href="/dinning">Dinning</a></li>

@@ -163,7 +163,7 @@
                 $("#restaurant_list_container").show();
             }
             else {
-                $("#bakeery_list_container").show();
+                $("#bakery_list_container").show();
             }
         });
         

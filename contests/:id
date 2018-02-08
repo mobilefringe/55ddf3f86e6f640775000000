@@ -1,0 +1,186 @@
+<style>
+    .main_content{
+        padding-right:15px;
+    }
+    .col-md-6{
+        margin-bottom:20px;
+    }
+    #contest_ended{
+        display:none;
+    }
+</style>
+<div id="form_div">
+    <p id="contest_ended">This contest has ended. Good luck to the participants.<br />  Check back soon for future contests.</p>
+    <form id="contest_form">
+        <div id="contest_container" class="row">
+            <script id="contest_template" type="x-tmpl-mustache/text">
+                <input id="property_id" name="contest[property_id]" type="hidden" value="{{property_id}}"/>
+                <input id="contest_id" name="contest[contest_id]" type="hidden"  value="{{id}}" />
+                <div class="col-md-12">
+                    <img alt="contest image" class="width_100" src="{{alt_photo_url}}" />
+                    <br /><br />
+                    <h1>{{name}}</h1>
+                    {{{rich_description}}}
+                    <br /><br />
+                </div>
+                <div class="col-md-6">
+                    <label for="first_name">First Name*</label>
+                    <input class="form-control" id="first_name" name="contest[first_name]" type="text" required />
+                </div>
+                <div class="col-md-6">
+                    <label for="last_name">Last Name *</label>  
+                    <input class="form-control" id="last_name" name="contest[last_name]" type="text" required />
+                </div>
+                <div class="col-md-6">
+                    <label for="email">Email *</label> 
+                    <input class="form-control" id="email" name="contest[email]" type="email" required />
+                </div>
+                <div class="col-md-6">
+                    <label for="phone_number">Phone Number</label>  
+                    <input class="form-control" id="phone_number" name="contest[phone]" type="text"  />
+                </div>
+                <div class="col-md-6">
+                    <label for="address">Address</label> 
+                    <input class="form-control" id="address" name="contest[mailing_address]" type="text"  />
+                </div>
+                <div class="col-md-6">
+                    <label for="city">City</label>  
+                    <input class="form-control" id="city" name="contest[city]" type="text"  />
+                </div>
+                <div class="col-md-6">
+                    <label for="postal_code">Postal Code</label> 
+                    <input class="form-control" id="postal_code" name="contest[postal_code]" type="text"  />
+                </div>
+                <div class="col-md-6">
+                    <label for="province">Province</label>  
+                    <select class="form-control" id="province" name="contest[province]">
+                        <option value="AB">Alberta</option>
+                        <option value="BC">British Columbia</option>
+                        <option value="MB">Manitoba</option>
+                        <option value="NB">New Brunswick</option>
+                        <option value="NL">Newfoundland and Labrador</option>
+                        <option value="NS">Nova Scotia</option>
+                        <option value="ON">Ontario</option>
+                        <option value="PE">Prince Edward Island</option>
+                        <option value="QC">Quebec</option>
+                        <option value="SK">Saskatchewan</option>
+                        <option value="NT">Northwest Territories</option>
+                        <option value="NU">Nunavut</option>
+                        <option value="YT">Yukon</option>
+                    </select>
+                </div>
+                <div class="col-md-12">
+                    <label>
+                        <input type="checkbox" id="add_to_newsletter" required />
+                        *I agree to receive emails from Heartland Town Centre.
+                    </label>
+                    <label>
+                        <input type="checkbox" id="agree_contest" required />
+                        I have read and am in full compliance with the official contest <a href="//codecloud.cdn.speedyrails.net/sites/57ffc0596e6f64183d050000/binary/octet-stream/1478708391000/Rules and Regulations_Chatters Salon.pdf" target="_blank"><u>rules and regulations.</a></u>
+                    </label>
+                    <br /><br />
+                </div>
+                <div class="col-md-2">
+                    <input type="submit" value="Submit" class="btn btn-primary" />
+                </div>
+                <div class="col-md-10">
+                    <div id="success_subscribe" style="display:none; margin-top:5px">
+                        <p class="description">Thank you for your entry. Good luck!</p>
+                    </div>
+                </div>
+            </script>
+        </div>
+    </form>
+</div>
+<script>
+    $(document).ready(function() {
+        loadMallDataCached(renderAll); 
+        
+        $('#contest_form').submit(function (e) {
+            e.preventDefault();
+            data = $(this).serialize();
+            if($('#first_name').val() != "" && $('#last_name').val() != "" && $('#email').val() !=""){
+                if ($('#agree_contest').prop('checked') == true){
+                    if($('#add_to_newsletter').prop('checked') == true){
+                        submit_contest(data);
+                    }
+                    else{
+                        alert("Please agree to receive emails from Heartland Town Centre.");
+                        $('#add_to_newsletter').focus();    
+                    }
+                }
+                else{
+                    alert("Please agree to rules and regulations.");
+                    $('#agree_contest').focus();
+                }
+            }else{
+                alert("Please fill out the required fields.");
+            }
+        });
+    })
+    
+    
+    function renderAll(){
+        $(".right_block, .bottom_block").show();
+        var pathArray = window.location.pathname.split( '/' );
+        var slug = pathArray[pathArray.length-1];
+        contest_details = getContestBySlug(slug);
+        if(contest_details != undefined){
+            renderContest('#contest_container','#contest_template', contest_details);
+        }
+        else{
+            $('#contest_ended').show()
+        }
+        
+        $(".loading_overlay").hide();    
+    }
+    
+    function renderContest(container, template, collection){
+        var item_list = [];
+        var item_rendered = [];
+        var template_html = $(template).html();
+        Mustache.parse(template_html);   // optional, speeds up future uses
+        
+        collection.alt_photo_url = getImageURL(collection.photo_url);
+        collection.property_id = getPropertyID();
+        var rendered = Mustache.render(template_html,collection);
+        item_rendered.push(rendered);
+        
+        $(container).show();
+        $(container).html(item_rendered.join(''));
+    }
+    
+    function submit_contest(data) {
+        var propertyDetails = getPropertyDetails();
+        var host = propertyDetails.mm_host;
+        var email = $("#email").val();
+        var name = $("#first_name").val() + " " + $("#last_name").val();
+        $.ajax({
+            url: host+"/newsletter_no_captcha",
+            type: "POST",
+            dataType: "json",
+            data: data,
+            success: function(data) {
+                $.getJSON("//mobilefringe.createsend.com/t/d/s/dljtlh/?callback=?", "cm-dljtlh-dljtlh=" + email);
+                $("#success_subscribe").fadeIn();
+                $('#contest_form').trigger('reset');
+                
+            },
+            error: function(data){
+                $.getJSON("//mobilefringe.createsend.com/t/d/s/dljtlh/?callback=?", "cm-dljtlh-dljtlh=" + email);
+                $("#success_subscribe").fadeIn();
+                $('#contest_form').trigger('reset');
+            }
+        });
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</script>

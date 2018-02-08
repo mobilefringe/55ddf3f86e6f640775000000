@@ -98,7 +98,7 @@
             // var pathArray = window.location.pathname.split( '/' );
             // var slug = pathArray[pathArray.length-1];
             // console.log(pathArray, slug)
-            $("#main_content").addClass("main_content_full_width")
+            $("#main_content").addClass("main_content_full_width");
             // main_content_full_width
             renderFeatureItems();
             

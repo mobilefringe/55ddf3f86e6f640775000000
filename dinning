@@ -42,6 +42,7 @@
     
     $(document).ready(function() {
         function render_page_details(){
+            $(".loading_overlay").show();
             $("#main_content").addClass("main_content_full_width");
             $(".right_block, .bottom_block").hide();
             

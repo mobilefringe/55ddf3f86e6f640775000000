@@ -85,6 +85,7 @@ $(document).ready(function(e){
     // init(e);
     
     function renderAll(){
+        $(".loading_overlay").show();
         $("#main_content").addClass("main_content_full_width");
         $(".right_block, .bottom_block").hide();
             

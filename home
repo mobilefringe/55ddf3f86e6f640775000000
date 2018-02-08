@@ -104,7 +104,8 @@
             var $grid_desktop = $('.grid_desktop').masonry({
                 columnWidth: '.grid-sizer',
                 itemSelector: '.grid-item',
-                percentPosition: true
+                percentPosition: true,
+                initLayout: false,
             });
             // layout Masonry after each image loads
             $grid_desktop.imagesLoaded().done( function() {

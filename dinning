@@ -208,5 +208,6 @@
     }
     $(window).load(function(){
         $(".loading_overlay").hide();
+        console.log("hello");
     })
 </script>

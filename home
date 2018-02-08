@@ -95,7 +95,8 @@
     
     $(document).ready(function() {
         function render_page_details(){
-            
+            var pathArray = window.location.pathname.split( '/' );
+            var slug = pathArray[pathArray.length-1];
             // main_content_full_width
             renderFeatureItems();
             

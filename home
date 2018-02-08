@@ -87,9 +87,9 @@
             </label>
             <p id="subscription_confirmed">Thank you for subscribing.</p>
         </form>
-        <div>
+        <!--<div>-->
             
-        </div>
+        <!--</div>-->
     </div>
 </div>
 <script>

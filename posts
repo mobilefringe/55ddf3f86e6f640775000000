@@ -85,18 +85,8 @@ $(document).ready(function(e){
     // init(e);
     
     function renderAll(){
-        var prefix = get_prefix();
-        // var pages_json = prefix + "/pages/thegateway-press-page.json"
-        // $.getJSON(pages_json).done(function(data) {
-        //     if(data.body != ""){
-        //         $('#mm_page_content').html(data.body);
-        //         $('#mm_page_content').show();
-        //     }
-        // }).fail(function(jqXHR) {
-        //     if (jqXHR.status == 404) {
-        //         $("#404_msg").fadeIn("fast");
-        //     }
-        // });
+        $("#main_content").addClass("main_content_full_width");
+            $(".right_block, .bottom_block").hide();
             
         var blog_posts = getBlogByName("HTC Blog");//.posts;
         console.log("blog_posts",blog_posts);

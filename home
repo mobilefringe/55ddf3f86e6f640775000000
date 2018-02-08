@@ -133,7 +133,6 @@
             get_instagram("//htc.mallmaverick.com/api/v2/htc/social.json", 3, 'thumbnail', render_instagram)
             
             $(".loading_overlay").hide();
-            console.log("loading_overlay", $(".loading_overlay"));
         }
         
         $('#home_newsletter_form').submit(function(e){

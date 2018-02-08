@@ -105,7 +105,6 @@
                 columnWidth: '.grid-sizer',
                 itemSelector: '.grid-item',
                 percentPosition: true,
-                initLayout: false,
             });
             // layout Masonry after each image loads
             $grid_desktop.imagesLoaded().done( function() {

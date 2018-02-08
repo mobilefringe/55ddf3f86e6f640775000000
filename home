@@ -107,7 +107,7 @@
                 percentPosition: true
             });
             // layout Masonry after each image loads
-            $grid_desktop.imagesLoaded().progress( function() {
+            $grid_desktop.imagesLoaded().done( function() {
                 $grid_desktop.masonry('layout');
             });
             
@@ -119,7 +119,7 @@
                 percentPosition: true
             });
             // layout Masonry after each image loads
-            $grid_mobile.imagesLoaded().progress( function() {
+            $grid_mobile.imagesLoaded().done( function() {
                 $grid_mobile.masonry('layout');
             });
             

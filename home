@@ -153,10 +153,7 @@
             });
         //   }
         });
-        
-        loadMallData(render_page_details); 
-    })
-    $(window).load(function(){
         $(".loading_overlay").hide();
-    })
+        loadMallData(render_page_details); 
+    });
 </script>

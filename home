@@ -86,6 +86,9 @@
                 I agree to receive emails from Heartland Town Centre
             </label>
         </form>
+         <div>
+            <p id="subscription_confirmed">Thank you for subscribing.</p>
+        </div>
     </div>
 </div>
 <script>

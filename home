@@ -100,7 +100,6 @@
             // console.log(pathArray, slug)
             $("#main_content").addClass("main_content_full_width");
             $(".right_block, .bottom_block").hide();
-            // main_content_full_width
             renderFeatureItems();
             
             // init Masonry

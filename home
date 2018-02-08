@@ -85,10 +85,11 @@
             <label for="agree_terms" class="confirm_label checkbox-custom-label col-xs-11">
                 I agree to receive emails from Heartland Town Centre
             </label>
+            <div>
+                <p id="subscription_confirmed">Thank you for subscribing.</p>
+            </div>
+            
         </form>
-         <div>
-            <p id="subscription_confirmed">Thank you for subscribing.</p>
-        </div>
     </div>
 </div>
 <script>

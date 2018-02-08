@@ -95,6 +95,8 @@
     
     $(document).ready(function() {
         function render_page_details(){
+            
+            // main_content_full_width
             renderFeatureItems();
             
             // init Masonry

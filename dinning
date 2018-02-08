@@ -140,6 +140,7 @@
             renderPageData("#bakery_list_container", "#bakery_list_template", bakeries, "directory");
             
             $("#restaurant_list_container").show();
+            $(".loading_overlay").hide();
         }
         $(".sort_cat").click(function(){
             // value

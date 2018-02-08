@@ -206,8 +206,4 @@
             $('.feature_' + i).html('<div class="ih-item circle effect19"><a href="'+ val.url +'"><img src="'+ val.image_url +'"alt="'+ val.name +'"><div class="info"><div class="content"><h3>'+ val.name +'</h3></div></div></a></div>')
         })
     }
-    $(window).load(function(){
-        $(".loading_overlay").hide();
-        console.log("hello");
-    })
 </script>

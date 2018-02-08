@@ -110,8 +110,9 @@ $(document).ready(function(e){
             load_more(i);
             e.preventDefault();
         });
-    }
+        
     $(".loading_overlay").hide();
+    }
     loadMallData(renderAll); 
 });
 </script>

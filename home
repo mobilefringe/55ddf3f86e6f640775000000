@@ -154,6 +154,7 @@
         //   }
         });
         $(".loading_overlay").hide();
+        console.log($(".loading_overlay"));
         loadMallData(render_page_details); 
     });
 </script>

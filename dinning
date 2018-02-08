@@ -179,7 +179,6 @@
         //     });
         // //   }
         // });
-        $(".loading_overlay").hide();
         loadMallData(render_page_details); 
     })
     

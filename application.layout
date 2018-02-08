@@ -377,7 +377,7 @@
                 </div>
                 <div class='bottom_nav_column'>
                     <p class="bottom_nav_column_header">Location</p>
-                    <img alt='pin' class='bottom_nav_pin' src='//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/d0af6b40cbc5a16b65d2614ff1f1744c/map25.png'/>
+                    <a href="https://www.google.com/maps/place/Heartland+Town+Centre,+6075+Mavis+Rd,+Mississauga,+ON+L5R+4G6/@43.6129381,-79.6973997,16z/data=!4m13!1m7!3m6!1s0x882b4061e70901d9:0x61718c68f9882235!2sHeartland+Town+Centre,+6075+Mavis+Rd,+Mississauga,+ON+L5R+4G6!3b1!8m2!3d43.6102178!4d-79.6937075!3m4!1s0x882b4061e70901d9:0x61718c68f9882235!8m2!3d43.6102178!4d-79.6937075" target="_blank"></a><img alt='pin' class='bottom_nav_pin' src='//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/d0af6b40cbc5a16b65d2614ff1f1744c/map25.png'/>
                     <p class="bottom_nav_address">Corner of Mavis and Britannia,<br>Mississauga, ON L5R 4G6</p>
                 </div>
                 

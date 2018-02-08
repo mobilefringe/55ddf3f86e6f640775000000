@@ -1,0 +1,61 @@
+<div class="row main_content">
+    <div class="col-md-5">
+        <a href="#">
+        <img src="//codecloud.cdn.speedyrails.net/sites/57f5246e6e6f644418020000/image/png/1448470540000/main_logo.png" class="sc_logo" alt="logo"></a>
+        <p class="main_caption">
+            Lorem ipsum
+            <span class="margin_10"></span>
+            Lorem ipsum
+            <span class="margin_10"></span>
+            Lorem ipsum
+            <span class="margin_10"></span>
+            Lorem ipsum
+        </p>
+        <a href="https://itunes.apple.com/ca/app/heartland-town-centre/id1036907331?mt=8"  target="_blank">
+            <img src="//codecloud.cdn.speedyrails.net/sites/564640e86e6f642e10020000/image/png/1447445068000/apple.png" class="download_app_btn" alt="Download for iOS">
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.mobilefringe.heartland" target="_blank">
+            <img src="//codecloud.cdn.speedyrails.net/sites/564640e86e6f642e10020000/image/png/1447445079000/google_play.png" class="last_child download_app_btn" alt="Download from play store">
+        </a>
+        <div class="newsletter_box">
+            <h4 class="newsletter_header">Sign up and save!</h4>
+            <p class="newsletter_desc">Sign up for email and get great deals from Heartland Town Centre.</p>
+            <form action="//mobilefringe.createsend.com/t/d/s/dljtlh/" id="newsletter_form">
+                <input name="cm-dljtlh-dljtlh" type="text" class="newsletter_email" id="newsletter_email" placeholder="Enter Email" required="required" />
+                <input type="submit" value="SUBMIT" class="newsletter_submit_btn" id="newsletter_submit" /> 
+                <input id="agree_terms" type="checkbox" value="true" class="checkbox-custom" />
+                <label for="agree_terms" class="confirm_label checkbox-custom-label">
+                    I agree to receive emails from Heartland Town Centre
+                </label>
+                <p id="subscription_confirmed">Thank you for subscribing.</p>
+            </form>
+        </div>
+    </div>
+    <div class="col-md-7 text-center">
+        <img src="//codecloud.cdn.speedyrails.net/sites/57f5246e6e6f644418020000/image/png/1448470526000/main_img.png" class="sc_img" alt="main banner">
+    </div>
+</div>
+<script>
+    $(document).ready(function(e){
+        $(".right_block, .bottom_block").show();
+        $('#newsletter_form').submit(function(e){
+           e.preventDefault();
+           if($('#agree_terms').prop('checked') == false){
+                $('#agree_terms').focus();
+                alert("Please agree to receieve newsletters from Shop Central.")
+           }
+           else{
+               $.getJSON(
+                    this.action + "?callback=?",
+                    $(this).serialize(),
+                    function (data) {
+                        if (data.Status === 400) {
+                            alert("Please try again later.");
+                        } else { // 200
+                            $("#subscription_confirmed").fadeIn();
+                        }
+                });
+           }
+        });
+    });
+</script>

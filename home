@@ -99,6 +99,7 @@
             // var slug = pathArray[pathArray.length-1];
             // console.log(pathArray, slug)
             $("#main_content").addClass("main_content_full_width");
+            $(".right_block").hide();
             // main_content_full_width
             renderFeatureItems();
             

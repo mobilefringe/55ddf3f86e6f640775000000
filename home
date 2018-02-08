@@ -109,6 +109,7 @@
             // layout Masonry after each image loads
             $grid_desktop.imagesLoaded().done( function() {
                 $grid_desktop.masonry('layout');
+                $(".grid_desktop").show();
             });
             
             //init Masonry

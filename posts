@@ -89,7 +89,7 @@ $(document).ready(function(e){
         $("#main_content").addClass("main_content_full_width");
         $(".right_block, .bottom_block").hide();
             
-        var blog_posts = getBlogDataBySlug("htc-htc-blog").posts;
+        var blog_posts =  getBlogDataBySlug("htc-htc-blog").posts
         console.log("blog_posts",blog_posts);
         var sorted_posts = blog_posts.sortBy(function(o){ return o.publish_date }).reverse();
         var main_post = sorted_posts[0];

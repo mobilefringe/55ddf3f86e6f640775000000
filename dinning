@@ -73,7 +73,7 @@
             });
             
             
-            var blog_posts = getBlogByName("HTC Blog").sortBy(function(o){return o.publish_date;}).reverse().slice(0, 3);
+            var blog_posts = getBlogDataBySlug("htc-htc-blog").posts;.sortBy(function(o){return o.publish_date;}).reverse().slice(0, 3);
             console.log(blog_posts);
             renderPosts('#blog_container','#blog_template', blog_posts);
             get_instagram("//htc.mallmaverick.com/api/v2/htc/social.json", 3, 'thumbnail', render_instagram)

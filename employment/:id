@@ -71,7 +71,7 @@
                 promo_details.store_name = "Heartland Town Centre"
                 promo_details.store_slug = 'home'
             }
-            console.log(promo_details)
+
             if (promo_details.jobable_type == 'Store'){
                if(!store_details.store_front_url_abs ||  store_details.store_front_url_abs.indexOf('missing.png') > -1 || store_details.store_front_url_abs.length === 0){
                     promo_details.store_logo = '//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/a22fcf023d728855c6f575ba100806d7/default.jpg'

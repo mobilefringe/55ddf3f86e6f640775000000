@@ -1,0 +1,118 @@
+<style>
+    .desc_block{
+        border-bottom:none;
+    }
+    #promo_image img {
+        max-width:100%;
+    }
+    
+    .promotionable_name{
+        border-bottom: 1px solid black;
+        display:table;
+    }
+    .promo_name{
+        font-weight:bold;
+    }
+    .promo_desc_short, .promo_date_string,  .promo_desc_short p,  .promo_desc_short span{
+        font-size:15px!important;
+        color:#4a4a4a!important;
+        font-family: Maven Pro, sans-serif !important;
+    }
+    .hidden_contact{
+        display:none;
+        
+    }
+    .hidden_contact a {
+        color:#4a4a4a !important;
+    }
+</style>
+<div class='main_container' id ='main_container'>
+    <script id="main_container_template" type="x-tmpl-mustache/text">
+        <div id="name_block">
+            <h1><a href="/employment"><i class="fa fa-arrow-circle-left"></i></a> Back to Employment</h1>
+        </div>
+        <div class='promo_left_block'>
+            <a href="{{store_logo}}" target="_blank" rel="lightbox">
+                <img alt="photo_{{name}}" src="{{store_logo}}"/>
+            </a>
+        </div>
+        <div class="promo_right_block">
+            <a class='promo_name' href='/promotions/{{slug}}'>{{name}}</a>
+            <p class='promotionable_name'><a href='/{{store_slug}}'>{{store_name}}</a></p>
+            <p class='promo_date_string'>{{job_type}}</p>
+            <p class='promo_date_string'>{{date_string}}</p>
+            <div class='promo_desc_short'>{{{rich_description}}}</div>
+            <p class='promo_date_string hidden_contact' id='contact_name'>Contact Name: {{contact_name}}</p>
+            <p class='promo_date_string hidden_contact' id='contact_email'>Contact Email: <a href='mailto:{{contact_email}}'>{{contact_email}}</a></p>
+            <p class='promo_date_string hidden_contact' id='contact_website'>Contact Website: <a href='//{{contact_website}}'>{{contact_website}}</a></p>
+            <p class='promo_date_string hidden_contact' id='contact_phone'>Contact Phone: {{contact_phone}}</p>
+            <p class='promo_date_string hidden_contact' id='message'>Additional Information: {{message}}</p>
+        </div>
+    </script>
+</div>
+
+
+<script>
+    $(document).ready(function() {
+        function renderAll(){
+            var pathArray = window.location.pathname.split( '/' );
+            var slug = pathArray[pathArray.length-1];
+            promo_details = getJobDetailsBySlug(slug);
+            
+            promo_details.date_string = get_date_string(promo_details.start_date, promo_details.end_date)
+            var closing_date = promo_details.date_string.split('-')
+            promo_details.date_string = "Closing Date - "+ closing_date[1]
+            
+            if (promo_details.jobable_type == 'Store'){
+                var store_details = getStoreDetailsByID(promo_details.jobable_id)
+                promo_details.store_slug = 'stores/' + store_details.slug;
+                promo_details.store_name = store_details.name;
+            } else {
+                promo_details.store_name = "Heartland Town Centre"
+                promo_details.store_slug = 'home'
+            }
+            console.log(promo_details)
+            if (promo_details.promotionable_type == 'Store'){
+               if(!store_details.store_front_url_abs ||  store_details.store_front_url_abs.indexOf('missing.png') > -1 || store_details.store_front_url_abs.length === 0){
+                    promo_details.store_logo = '//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/a22fcf023d728855c6f575ba100806d7/default.jpg'
+                } else {
+                    promo_details.store_logo = store_details.store_front_url_abs
+                }   
+            } else {
+                promo_details.store_logo = '//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/a22fcf023d728855c6f575ba100806d7/default.jpg'
+            }
+            
+
+            renderPageData("#main_container", "#main_container_template", promo_details, "promo_details")
+            $.getScript("//cdn.jsdelivr.net/slimbox/2.0.5/js/slimbox2.js");
+            $('head').append('<link rel="stylesheet" href="//cdn.jsdelivr.net/slimbox/2.0.5/css/slimbox2.css" type="text/css" media="screen" />');
+            if(!promo_details.promo_image_url_abs ||  promo_details.promo_image_url_abs.indexOf('missing.png') > -1 || promo_details.promo_image_url_abs.length === 0){     
+                $("#promo_image").hide();
+            }
+            
+            if (promo_details.contact_name != ''){
+            $("#contact_name").show();
+            }
+            if (promo_details.contact_email != ''){
+                $("#contact_email").show();
+            }
+            if (promo_details.contact_website != ''){
+                $("#contact_website").show();
+            }
+            if (promo_details.contact_phone != ''){
+                $("#contact_phone").show();
+            }
+            if (promo_details.message != ''){
+                $("#message").show();
+            }
+            $(".loading_overlay").hide();    
+        }
+        
+        
+        
+        
+        
+        // loadMallDataCached(renderAll); 
+        loadMallData(renderAll); 
+    })
+</script>

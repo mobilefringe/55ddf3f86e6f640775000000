@@ -29,7 +29,7 @@
 <div class='main_container' id ='main_container'>
     <script id="main_container_template" type="x-tmpl-mustache/text">
         <div id="name_block">
-            <h1><a href="/employment"><i class="fa fa-arrow-circle-left"></i></a> Back to Employment</h1>
+            <h1><a href="/employment"><i class="fa fa-arrow-circle-left"></i> Back to Employment</a></h1>
         </div>
         <div class='promo_left_block'>
             <a href="{{store_logo}}" target="_blank" rel="lightbox">

@@ -248,7 +248,7 @@
                                 <button onclick='toggle_menu("stores_dd")'>Directory</button>
                                 <ul class="submenu" id='stores_dd'>
                                     <li><a href="/stores">Stores</a></li>
-                                    <li><a href="/dinning">Dining</a></li>
+                                    <li><a href="/dining">Dining</a></li>
                                 </ul>
                             </li>
                             <li>

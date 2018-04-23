@@ -269,7 +269,7 @@
                             <li>
                                 <button onclick='toggle_menu("about")'>about us</button>
                                 <ul class="submenu" id='about'>
-                                <a href='/pages/htc-hours'><li>shopping hours</li></a>
+                                    <a href='/pages/htc-hours'><li>shopping hours</li></a>
                                     <a href='/leasing'><li>Leasing</li></a>
                                     <a href='/pages/htc-electric-vehicle-charging-stations'><li>EVC Stations</li></a>
                                     <a href='/pages/htc-contact-us'><li>Contact Us</li></a>

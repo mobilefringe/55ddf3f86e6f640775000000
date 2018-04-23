@@ -288,7 +288,7 @@
                                 <button onclick='toggle_mobile_submenu("stores_dd2")'>directory <i id='promos_dd2_icon' class="fa fa-plus"></i></button>
                                 <ul class="mobile_submenu" id='stores_dd2'>
                                     <li><a href="/stores">Stores</a></li>
-                                    <li><a href="/dinning">Dining</a></li>
+                                    <li><a href="/dining">Dining</a></li>
                                 </ul>
                             </li>
                             <li>

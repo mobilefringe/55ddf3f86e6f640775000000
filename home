@@ -94,7 +94,7 @@
 </div>
 <style>
     .grid-item--height2 img {
-        
+            width: 103%;
     }
 </style>
 <script>

@@ -92,6 +92,11 @@
         <!--</div>-->
     </div>
 </div>
+<style>
+    .grid-item--height2 img {
+        
+    }
+</style>
 <script>
     
     $(document).ready(function() {

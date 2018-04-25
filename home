@@ -94,7 +94,7 @@
 </div>
 <style>
     .grid-item--height2 img {
-        width: 103%;
+        width: 100%;
     }
     .feature_0.grid-item.grid-item--height2 .ih-item.circle {
         width: 103%;

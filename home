@@ -114,7 +114,7 @@
                 columnWidth: '.grid-sizer',
                 itemSelector: '.grid-item',
                 percentPosition: true,
-                gutter: '5',
+                gutter: 5,
                 initLayout: false,
             });
             // layout Masonry after each image loads

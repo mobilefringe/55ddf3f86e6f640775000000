@@ -1,0 +1,209 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+
+<div class="sort_bar">
+    <div class="row">
+        <span value="restaurant" class="sort_cat active"> Restaurants </span> <span> | </span>
+        <!--<span class="sort_cat"> Fast Food</span>-->
+        <!--<span value="bakery" class="sort_cat"> Bakeries</span>-->
+    </div>
+</div>
+<div id="restaurant_list_container" class="store_lists">
+    <script id="restaurant_list_template" type="x-tmpl-mustache/text">
+        <div class="col-sm-6">
+            <div style="background-image:url({{store_image_url}})" class="dinning_logo_image"></div>
+            <div class="dinning_dets text-center">
+                <div class="dinning_store_name">{{name}}</div>
+                <div class="dinning_store_dets">{{description_short}}</div>
+                <a href="/stores/{{slug}}" class="dinning_read_more">Read More &gt;</a>
+            </div>
+        </div>
+    </script>
+</div>
+<div id="bakery_list_container" class="store_lists">
+    <script id="bakery_list_template" type="x-tmpl-mustache/text">
+        <div class="col-sm-6">
+            <div style="background-image:url({{store_image_url}})" class="dinning_logo_image"></div>
+            <div class="dinning_dets text-center">
+                <div class="dinning_store_name">{{name}}</div>
+                <div class="dinning_store_dets">{{description_short}}</div>
+                <a href="/stores/{{slug}}" class="dinning_read_more">Read More &gt;</a>
+            </div>
+        </div>
+    </script>
+</div>
+
+<style>
+    .row {
+        margin: auto;
+    }
+</style>
+
+<script>
+    
+    $(document).ready(function() {
+        function render_page_details(){
+            $(".loading_overlay").show();
+            $("#main_content").addClass("main_content_full_width");
+            $(".right_block, .bottom_block").hide();
+            
+            $("#dinning_banner").show();
+            renderFeatureItems();
+            
+            // init Masonry
+            var $grid_desktop = $('.grid_desktop').masonry({
+                columnWidth: '.grid-sizer',
+                itemSelector: '.grid-item',
+                percentPosition: true
+            });
+            // layout Masonry after each image loads
+            $grid_desktop.imagesLoaded().progress( function() {
+                $grid_desktop.masonry('layout');
+            });
+            
+            //init Masonry
+            var $grid_mobile = $('.grid_mobile').masonry({
+                columnWidth: '.grid-sizer',
+                itemSelector: '.grid-item',
+                originLeft: false,
+                percentPosition: true
+            });
+            // layout Masonry after each image loads
+            $grid_mobile.imagesLoaded().progress( function() {
+                $grid_mobile.masonry('layout');
+            });
+            
+            
+            var blog_posts = getBlogDataBySlug("htc-htc-blog").posts.sortBy(function(o){return o.publish_date;}).reverse().slice(0, 3);
+            console.log(blog_posts);
+            renderPosts('#blog_container','#blog_template', blog_posts);
+            get_instagram("//htc.mallmaverick.com/api/v2/htc/social.json", 3, 'thumbnail', render_instagram)
+            
+            
+            
+            var stores = getStoresList();
+            rest_cat_id = _.filter(getStoreCategories(), function(o) { return _.includes(o.name,'Restaurant')})[0].id;
+            console.log(rest_cat_id);
+            var restaurants = stores.filter(function(val) {
+                return _.includes(val.categories, _.toNumber(rest_cat_id));
+            });
+            
+            _.forEach(restaurants, function(value) {
+                var store_front_image = null;
+                if(value.assets != null ) {
+                    store_front_image = getAssetURL(value.id);
+                }
+                
+                if(store_front_image !== null && store_front_image !== undefined) {
+                    if(store_front_image.indexOf('missing') > -1) {
+                        value.store_image_url = "//mallmaverick.com"+value.store_front_url;
+                        console.log(store_front_image,  store_front_image.indexOf('missing') > -1)
+                    }
+                    else {
+                        value.store_image_url = "//mallmaverick.com"+store_front_image;
+                    }
+                }
+                else {
+                    value.store_image_url = "//mallmaverick.com"+value.store_front_url;
+                }
+                
+            });
+            console.log(restaurants);
+            renderPageData("#restaurant_list_container", "#restaurant_list_template", restaurants, "directory");
+            
+            bakery_cat_id = _.filter(getStoreCategories(), function(o) { return _.includes(o.name,'Bakeries')})[0].id;
+            console.log(bakery_cat_id);
+            var bakeries = stores.filter(function(val) {
+                return _.includes(val.categories, _.toNumber(bakery_cat_id));
+            });
+            
+            _.forEach(bakeries, function(value) {
+                var store_front_image = null;
+                if(value.assets != null ) {
+                    store_front_image = getAssetURL(value.id);
+                }
+                
+                if(store_front_image !== null && store_front_image !== undefined) {
+                    if(store_front_image.indexOf('missing') > -1) {
+                        value.store_image_url = "//mallmaverick.com"+value.store_front_url;
+                        console.log(store_front_image,  store_front_image.indexOf('missing') > -1)
+                    }
+                    else {
+                        value.store_image_url = "//mallmaverick.com"+store_front_image;
+                    }
+                }
+                else {
+                    value.store_image_url = "//mallmaverick.com"+value.store_front_url;
+                }
+                
+            });
+            console.log(bakeries);
+            renderPageData("#bakery_list_container", "#bakery_list_template", bakeries, "directory");
+            
+            $("#restaurant_list_container").show();
+            $(".loading_overlay").hide();
+        }
+        $(".sort_cat").click(function(){
+            // value
+            $(".sort_cat").removeClass("active");
+            $(this).addClass("active");
+            
+            $(".store_lists").hide();
+            if($(this).attr("value") == "restaurant") {
+                $("#restaurant_list_container").show();
+            }
+            else {
+                $("#bakery_list_container").show();
+            }
+        });
+        
+        // stores.filter(function( val, index ) {
+        //         // console.log($.isNumeric(val.name[0]), val.name[0]);
+        //         return !$.isNumeric(val.name[0]);
+        //     });
+        // $('#home_newsletter_form').submit(function(e){
+        //   e.preventDefault();
+        //   console.log($('#agree_terms').prop('checked'));
+        // //   if($('#agree_terms').prop('checked') == false){
+        // //         $('#agree_terms').focus();
+        // //         alert("Please agree to receieve newsletters from Heartland Town Centre.")
+        // //   }
+        // //   else{
+        //   $.getJSON(
+        //         this.action + "?callback=?",
+        //         $(this).serialize(),
+        //         function (data) {
+        //             if (data.Status === 400) {
+        //                 alert("Please try again later.");
+        //             } else { // 200
+        //                 $("#subscription_confirmed").fadeIn();
+        //             }
+        //     });
+        // //   }
+        // });
+        loadMallData(render_page_details); 
+    })
+    
+    function renderFeatureItems(){
+        var items = getFeatureList();
+        var temp_features = [];
+        for (var i = 0; i < 7; i++ ) {
+            var temp_val = {};
+            temp_val.name = "Stores"
+            if( i == 0) {
+                temp_val.image_url = "//codecloud.cdn.speedyrails.net/sites/5a79cd486e6f646156310000/image/png/1517932473306/height2x.png";
+            }
+            else if(i == 2 || i== 3 || i == 4|| i == 6) {
+                temp_val.image_url = "//codecloud.cdn.speedyrails.net/sites/5a79cd486e6f646156310000/image/png/1517932491460/square.png";
+            }
+            else {
+                 temp_val.image_url = "//codecloud.cdn.speedyrails.net/sites/5a79cd486e6f646156310000/image/png/1517937829931/width2x.png";
+            }
+            // temp_val.image_url = ""
+            temp_features.push(temp_val);
+        }
+        console.log(temp_features);
+        $.each(temp_features, function(i, val){
+            $('.feature_' + i).html('<div class="ih-item circle effect19"><a href="'+ val.url +'"><img src="'+ val.image_url +'"alt="'+ val.name +'"><div class="info"><div class="content"><h3>'+ val.name +'</h3></div></div></a></div>')
+        })
+    }
+</script>

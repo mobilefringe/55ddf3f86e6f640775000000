@@ -45,10 +45,10 @@
                     <div style="overflow: hidden; margin: auto;">
                         <a class="read_more pull-left" href="/posts/{{slug}}">Read More &gt;</a>
                         <div class="post_share_icons pull-right">
-                            <a href="https://twitter.com/home?status={{twitter_title}} https://www.heartlandtown.com/{{slug}}" target="_blank">
+                            <a href="https://twitter.com/home?status={{twitter_title}} https://www.heartlandtown.com/posts/{{slug}}" target="_blank">
                                 <i class="fa fa-twitter"></i>
                             </a>
-                            <a href="https://www.facebook.com/sharer.php?u=https://www.heartlandtown.com/{{slug}}" target="_blank">
+                            <a href="https://www.facebook.com/sharer.php?u=https://www.heartlandtown.com/posts/{{slug}}" target="_blank">
                                 <i class="fa fa-facebook-f"></i>
                             </a>
                         </div>

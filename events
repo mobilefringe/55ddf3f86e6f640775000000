@@ -1,5 +1,4 @@
 <style>
-
     .promotionable_name{
         border-bottom: 1px solid black;
         display:table;
@@ -7,25 +6,21 @@
     .promo_name{
         font-weight:bold;
     }
-     @media (max-width: 767px) {
-         #promo_header{
-             width:95%;
-             margin-left:auto;
-             margin-right:auto;
-         }
-     }
+    @media (max-width: 767px) {
+        #promo_header{
+            width:95%;
+            margin-left:auto;
+            margin-right:auto;
+        }
+    }
 </style>
 
-
-
-<h1 id="promo_header">Promotions</h1>
+<h1 id="promo_header">Events</h1>
 <div id='promo_container'>
     <script id="promo_template" type="x-tmpl-mustache/text">
         <div class='promo_div'>
             <div class='promo_left_block promo_center mobile_block'>
-               
                 <a href='/promotions/{{slug}}'><img alt="photo_{{name}}" src="{{promo_img}}"/></a>
-             
             </div>
             <div class="promo_right_block">
                 <a class='promo_name' href='/promotions/{{slug}}'>{{name}}</a>
@@ -38,9 +33,8 @@
 </div>
 
 <div class="no_promos">
-    There are currently no promotions. Please check back at a later date!
+    <p>There are currently no Events. Please check back at a later date!</p>
 </div>
-
 
 <script>
     $(document).ready(function() {

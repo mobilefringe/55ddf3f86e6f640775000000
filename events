@@ -66,7 +66,7 @@
                         val.store_slug = 'home'
                     }
                     
-                    if (val.promotionable_type == 'Store'){
+                    if (val.eventable_type == 'Store'){
                         if(!store_details.store_front_url_abs ||  store_details.store_front_url_abs.indexOf('missing.png') > -1 || store_details.store_front_url_abs.length === 0){
                         val.promo_img = '//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/a22fcf023d728855c6f575ba100806d7/default.jpg'
                         } else {

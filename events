@@ -20,10 +20,10 @@
     <script id="promo_template" type="x-tmpl-mustache/text">
         <div class='promo_div'>
             <div class='promo_left_block promo_center mobile_block'>
-                <a href='/promotions/{{slug}}'><img alt="photo_{{name}}" src="{{promo_img}}"/></a>
+                <a href='/events/{{slug}}'><img alt="photo_{{name}}" src="{{promo_img}}"/></a>
             </div>
             <div class="promo_right_block">
-                <a class='promo_name' href='/promotions/{{slug}}'>{{name}}</a>
+                <a class='promo_name' href='/events/{{slug}}'>{{name}}</a>
                 <p class='promotionable_name'>{{store_name}}</p>
                 <p class='promo_date_string'>{{date_string}}</p>
                 <p class='promo_desc_short'>{{description}}</p>

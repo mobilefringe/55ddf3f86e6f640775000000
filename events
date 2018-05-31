@@ -45,21 +45,19 @@
 <script>
     $(document).ready(function() {
         function renderAll(){
-            all_promos = getPromotionsList();
-            all_promos = all_promos.reverse();
+            var events_list = getEventsList();
+            events_list = events_list.reverse();
             promo_array = []
-             $.each( all_promos , function( key, val ){
+             $.each( events_list , function( key, val ){
                 if (val.description.length > 110) {
-                   val.description =  val.description.substring(0,100)+'...';
+                    val.description =  val.description.substring(0,100)+'...';
                 } 
-                //  today = new Date();
-                //  webDate = new Date(val.show_on_web_date);
-                
+
                 today = moment();
                 webDate = moment(val.show_on_web_date);
                 if (today >= webDate) {
                     val.date_string = get_date_string(val.start_date, val.end_date)
-                    if (val.promotionable_type == 'Store'){
+                    if (val.eventable_type == 'Store'){
                         var store_details = getStoreDetailsByID(val.promotionable_id)
                         val.store_slug = 'stores/'+store_details.slug
                         val.store_name = store_details.name
@@ -67,8 +65,9 @@
                         val.store_name = "Heartland Town Centre"
                         val.store_slug = 'home'
                     }
+                    
                     if (val.promotionable_type == 'Store'){
-                       if(!store_details.store_front_url_abs ||  store_details.store_front_url_abs.indexOf('missing.png') > -1 || store_details.store_front_url_abs.length === 0){
+                        if(!store_details.store_front_url_abs ||  store_details.store_front_url_abs.indexOf('missing.png') > -1 || store_details.store_front_url_abs.length === 0){
                         val.promo_img = '//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/a22fcf023d728855c6f575ba100806d7/default.jpg'
                         } else {
                             val.promo_img = store_details.store_front_url_abs
@@ -78,18 +77,20 @@
                         val.promo_img = '//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/a22fcf023d728855c6f575ba100806d7/default.jpg'
                     }
                     promo_array.push(val)
-                 } 
-             });
+                } 
+            });
+             
             if (promo_array.length > 0){
                 renderPageData("#promo_container", "#promo_template", promo_array, "all_promos")
             } else {
                 $(".no_promos").show();
             }
+            
             $.getScript("//cdn.jsdelivr.net/slimbox/2.0.5/js/slimbox2.js");
             $('head').append('<link rel="stylesheet" href="//cdn.jsdelivr.net/slimbox/2.0.5/css/slimbox2.css" type="text/css" media="screen" />');
             $(".loading_overlay").hide();    
         }
+        
         loadMallDataCached(renderAll); 
-        // loadMallData(renderAll);
     })
 </script>

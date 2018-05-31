@@ -47,7 +47,7 @@
         function renderAll(){
             var events_list = getEventsList();
             events_list = events_list.reverse();
-            promo_array = []
+            event_array = []
              $.each( events_list , function( key, val ){
                 if (val.description.length > 110) {
                     val.description =  val.description.substring(0,100)+'...';

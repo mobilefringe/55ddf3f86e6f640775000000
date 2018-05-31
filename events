@@ -76,12 +76,12 @@
                         
                         val.promo_img = '//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/a22fcf023d728855c6f575ba100806d7/default.jpg'
                     }
-                    promo_array.push(val)
+                    event_array.push(val)
                 } 
             });
              
-            if (promo_array.length > 0){
-                renderPageData("#promo_container", "#promo_template", promo_array, "all_promos")
+            if (event_array.length > 0){
+                renderPageData("#promo_container", "#promo_template", event_array, "all_promos")
             } else {
                 $(".no_promos").show();
             }

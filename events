@@ -19,9 +19,10 @@
 <div id='promo_container'>
     <script id="promo_template" type="x-tmpl-mustache/text">
         <div class='promo_div'>
-            <div class='promo_left_block promo_center mobile_block'>
+            {{#promo_img}}<div class='promo_left_block promo_center mobile_block'>
                 <a href='/events/{{slug}}'><img alt="photo_{{name}}" src="{{promo_img}}"/></a>
             </div>
+            {{/promo_img}}
             <div class="promo_right_block">
                 <a class='promo_name' href='/events/{{slug}}'>{{name}}</a>
                 <p class='promotionable_name'>{{store_name}}</p>

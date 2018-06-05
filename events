@@ -61,7 +61,7 @@
                         val.store_slug = 'home'
                     }
                     val.promo_img = val.event_image_url_abs;
-                    if (val.eventable_type == 'Store' && val.promo_imgstore_front_url_abs.indexOf('missing.png') > -1){
+                    if (val.eventable_type == 'Store' && val.promo_imgs.indexOf('missing.png') > -1){
                         if(!store_details.store_front_url_abs ||  store_details.store_front_url_abs.indexOf('missing.png') > -1 || store_details.store_front_url_abs.length === 0){
                         val.promo_img = '';
                         /*//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/a22fcf023d728855c6f575ba100806d7/default.jpg*/

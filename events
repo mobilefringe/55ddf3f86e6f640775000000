@@ -1,0 +1,95 @@
+<style>
+    .promotionable_name{
+        border-bottom: 1px solid black;
+        display:table;
+    }
+    .promo_name{
+        font-weight:bold;
+    }
+    @media (max-width: 767px) {
+        #promo_header{
+            width:95%;
+            margin-left:auto;
+            margin-right:auto;
+        }
+    }
+</style>
+
+<h1 id="promo_header">Events</h1>
+<div id='promo_container'>
+    <script id="promo_template" type="x-tmpl-mustache/text">
+        <div class='promo_div'>
+            {{#promo_img}}<div class='promo_left_block promo_center mobile_block'>
+                <a href='/events/{{slug}}'><img alt="photo_{{name}}" src="{{promo_img}}"/></a>
+            </div>
+            {{/promo_img}}
+            <div class="promo_right_block">
+                <a class='promo_name' href='/events/{{slug}}'>{{name}}</a>
+                <p class='promotionable_name'>{{store_name}}</p>
+                <p class='promo_date_string'>{{date_string}}</p>
+                <p class='promo_desc_short'>{{description}}</p>
+            </div>
+        </div>
+    </script>
+</div>
+
+<div class="no_promos">
+    <p>There are currently no Events. Please check back at a later date!</p>
+</div>
+
+<script>
+    $(document).ready(function() {
+        function renderAll(){
+            var events_list = getEventsList();
+            events_list = events_list.reverse();
+            event_array = []
+            $.each( events_list , function( key, val ){
+                if (val.description.length > 110) {
+                    val.description =  val.description.substring(0,100)+'...';
+                } 
+
+                today = moment();
+                webDate = moment(val.show_on_web_date);
+                if (today >= webDate) {
+                    val.date_string = get_date_string(val.start_date, val.end_date)
+                    if (val.eventable_type == 'Store'){
+                        var store_details = getStoreDetailsByID(val.promotionable_id)
+                        val.store_slug = 'stores/'+store_details.slug
+                        val.store_name = store_details.name
+                    } else {
+                        val.store_name = "Heartland Town Centre"
+                        val.store_slug = 'home'
+                    }
+                    val.promo_img = val.event_image_url_abs;
+                    if(val.promo_img.indexOf('missing.png') > -1) {
+                        if (val.eventable_type == 'Store'){
+                            if(!store_details.store_front_url_abs ||  store_details.store_front_url_abs.indexOf('missing.png') > -1 || store_details.store_front_url_abs.length === 0){
+                            val.promo_img = '';
+                            /*//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/a22fcf023d728855c6f575ba100806d7/default.jpg*/
+                            } else {
+                                val.promo_img = store_details.store_front_url_abs
+                            }   
+                        } else {
+                            
+                            val.promo_img = '';
+                            // '//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/a22fcf023d728855c6f575ba100806d7/default.jpg'
+                        }
+                    }
+                    event_array.push(val)
+                } 
+            });
+             
+            if (event_array.length > 0){
+                renderPageData("#promo_container", "#promo_template", event_array, "all_promos")
+            } else {
+                $(".no_promos").show();
+            }
+            
+            $.getScript("//cdn.jsdelivr.net/slimbox/2.0.5/js/slimbox2.js");
+            $('head').append('<link rel="stylesheet" href="//cdn.jsdelivr.net/slimbox/2.0.5/css/slimbox2.css" type="text/css" media="screen" />');
+            $(".loading_overlay").hide();    
+        }
+        
+        loadMallDataCached(renderAll); 
+    })
+</script>

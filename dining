@@ -23,7 +23,8 @@
 <div id="bakery_list_container" class="store_lists">
     <script id="bakery_list_template" type="x-tmpl-mustache/text">
         <div class="col-sm-6">
-            <div style="background-image:url({{store_image_url}})" class="dinning_logo_image"></div>
+            <div style="background-image:url({{store_image_url}})" class="dinning_logo_image hidden_phone"></div>
+            
             <div class="dinning_dets text-center">
                 <div class="dinning_store_name">{{name}}</div>
                 <div class="dinning_store_dets">{{description_short}}</div>

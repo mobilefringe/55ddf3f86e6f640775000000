@@ -134,7 +134,7 @@ $(document).ready(function() {
         else {
             $("#custom_page_header").html("")
             $("#custom_page_img").hide();
-            $("#page_img").attr("src","")
+            $("#page_img").hide();
         }
 
 

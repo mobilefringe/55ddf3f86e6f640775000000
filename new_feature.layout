@@ -123,7 +123,7 @@
                     <h1 class="newsletter_text">Sign up and Save!</h1>
                     <form id='popup_form' action="//mobilefringe.createsend.com/t/d/s/dljtlh" post="method">
                         <label for="fieldEmail">Please confirm your email :</label><br>
-                        <input id="fieldEmail" name="cm-dljtlh-dljtlh" type="text" required placeholder="example@email.com"/>
+                        <input id="fieldEmail" name="cm-dljtlh-dljtlh" type="email" required placeholder="example@email.com"/>
                         <div class="aggree_div">
                         <input type="checkbox" class="info_check" id="agree_terms" required value='I agree to receive emails from Heartland Town Centre.'/><label for="agree_terms" class="checkbox_lbl">I agree to receive emails from Heartland Town Centre.</label>
                         <input type="hidden" id="fieldtydytu" name="cm-f-tydytu" />

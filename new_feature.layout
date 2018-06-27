@@ -121,7 +121,7 @@
                 <p class='close_form' onclick="javascript:close_form()" onkeypress="javascript:close_form()" tabindex='9'>X</p>
                 <div class="form_div">
                     <h1 class="newsletter_text">Sign up and Save!</h1>
-                    <form id='popup_form' action="//mobilefringe.createsend.com/t/d/s/dljtlh">
+                    <form id='popup_form' action="//mobilefringe.createsend.com/t/d/s/dljtlh" post="method">
                         <label for="fieldEmail">Please confirm your email :</label><br>
                         <input id="fieldEmail" name="cm-dljtlh-dljtlh" type="text" required placeholder="example@email.com"/>
                         <div class="aggree_div">

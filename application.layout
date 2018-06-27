@@ -413,9 +413,7 @@
             </div>
         </div>
     </body>
-</html>
-
-<script>
+    <script>
     var current_year = moment().year();
     $("#current_year").text(current_year);
 
@@ -509,3 +507,6 @@
        
    }
 </script>
+</html>
+
+

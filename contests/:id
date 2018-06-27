@@ -11,7 +11,7 @@
 </style>
 <div id="form_div">
     <p id="contest_ended">This contest has ended. Good luck to the participants.<br />  Check back soon for future contests.</p>
-    <form id="contest_form">
+    <form id="contest_form" action="//mobilefringe.createsend.com/t/d/s/dljtlh/">
         <div id="contest_container" class="row">
             <script id="contest_template" type="x-tmpl-mustache/text">
                 <input id="property_id" name="contest[property_id]" type="hidden" value="{{property_id}}"/>

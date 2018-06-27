@@ -150,7 +150,7 @@
         $(container).html(item_rendered.join(''));
     }
     
-    function submit_contest(data) {
+    function submit_contest(data, e) {
         var propertyDetails = getPropertyDetails();
         var host = propertyDetails.mm_host;
         var email = $("#email").val();

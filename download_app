@@ -24,7 +24,7 @@
                 <input name="cm-dljtlh-dljtlh" type="text" class="newsletter_email" id="newsletter_email" placeholder="Enter Email" required="required" />
                 <input type="submit" value="SUBMIT" class="newsletter_submit_btn" id="newsletter_submit" /> 
                 <input id="agree_terms" type="checkbox" value="true" class="checkbox-custom" />
-                <label for="agree_terms" class="confirm_label checkbox-custom-label">
+                <label for="agree_terms" required class="confirm_label checkbox-custom-label">
                     I agree to receive emails from Heartland Town Centre
                 </label>
                 <p id="subscription_confirmed">Thank you for subscribing.</p>

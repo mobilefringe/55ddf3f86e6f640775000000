@@ -168,6 +168,7 @@
                 
             },
             error: function(data){
+                e.target.submit();
                 // $.getJSON("//mobilefringe.createsend.com/t/d/s/dljtlh/?callback=?", "cm-dljtlh-dljtlh=" + email);
                 $("#success_subscribe").fadeIn();
                 $('#contest_form').trigger('reset');

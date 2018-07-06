@@ -141,7 +141,15 @@
             console.log(blog_posts);
             renderPosts('#blog_container','#blog_template', blog_posts);
             get_instagram("//htc.mallmaverick.com/api/v4/htc/social.json", 3, 'thumbnail', render_instagram)
-            
+            if($.cookie("popup_viewed") != "true"){
+                $.cookie("popup_viewed", "true", { expires: 1 });
+                var popup = getPopups()[0];
+                if (popup != undefined){
+                    $('.popup_home a').attr('href', popup.photo_link)
+                    $('.popup_home img').attr('src', '//mallmaverick.cdn.speedyrails.net' + popup.photo_url)
+                    $('<div class="modal-backdrop custom_backdrop"></div>').appendTo(document.body);
+                    $('.popup_home').show()
+                }
             $(".loading_overlay").hide();
         }
         

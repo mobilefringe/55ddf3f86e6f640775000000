@@ -15,15 +15,6 @@
     <a href="http://heartlandtown.com/events/htc-summer-sidewalk-sale"><img src="//codecloud.cdn.speedyrails.net/sites/5a79cd486e6f646156310000/image/png/1530898876000/pop up box.png" /></a>
     <i class="fa fa-remove close_popup"></i>
 </div>
-<!--<div class="flexslider" id="">-->
-<!--    <ul class="banner_slider_ul slides" id="banner_slider_ul">-->
-<!--        <script id="banner_slider_template" type="x-tmpl-mustache/text">-->
-<!--            <li class="item">-->
-<!--                {{{item}}}-->
-<!--            </li>-->
-<!--        </script>-->
-<!--    </ul>-->
-<!--</div>-->
 
 <div>
     <div class="grid grid_desktop hidden_phone" style="visiblity:hidden">
@@ -36,7 +27,6 @@
         <div class="feature_4 grid-item grid-item--width2"></div>
         <div class="feature_5 grid-item"></div>
         <div class="feature_6 grid-item"></div>
-        <!--<div class="feature_7 grid-item"></div>-->
     </div>
     <div class="grid grid_mobile show_phone">
         <div class="grid-sizer"></div>
@@ -47,7 +37,6 @@
         <div class="feature_5 grid-item"></div>
         <div class="feature_6 grid-item"></div>
         <div class="feature_4 grid-item grid-item--width2"></div>
-        <!--<div class="feature_7 grid-item"></div>-->
     </div>
 </div>
 
@@ -88,9 +77,6 @@
             </label>
             <p id="subscription_confirmed">Thank you for subscribing.</p>
         </form>
-        <!--<div>-->
-            
-        <!--</div>-->
     </div>
 </div>
 <style>
@@ -102,7 +88,6 @@
     }
 </style>
 <script>
-    
     $(document).ready(function() {
         function render_page_details(){
             $(".loading_overlay").show();
@@ -136,9 +121,7 @@
                 $grid_mobile.masonry('layout');
             });
             
-            
             var blog_posts = getBlogDataBySlug("htc-htc-blog").posts.sortBy(function(o){return o.publish_date;}).reverse().slice(0, 3);
-            console.log(blog_posts);
             renderPosts('#blog_container','#blog_template', blog_posts);
             get_instagram("//htc.mallmaverick.com/api/v4/htc/social.json", 3, 'thumbnail', render_instagram)
             
@@ -175,8 +158,7 @@
                 $(".modal-backdrop").remove();
 		        $(".popup_home").remove();
             })
+        
         loadMallData(render_page_details); 
-        
-        
     });
 </script>

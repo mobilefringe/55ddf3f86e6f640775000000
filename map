@@ -23,7 +23,7 @@
 
 <h1 class="pull-left">Centre Map</h1>
 
-<a class="pull-right visible-md-block visible-lg-block" href="//codecloud.cdn.speedyrails.net/sites/5a79cd486e6f646156310000/application/pdf/1532367789000/HTC - Map -Jul-23-2018.pdf" target="_blank">Download Map</a>
+<a class="pull-right visible-md-block visible-lg-block" href="//codecloud.cdn.speedyrails.net/sites/5a79cd486e6f646156310000/application/pdf/1534366714000/HTC - Map -Aug-15-2018.pdf" target="_blank">Download Map</a>
 
 <div class="store_select">
     <select id="store_select_container" onchange="javascript:map_pin(this.value)">

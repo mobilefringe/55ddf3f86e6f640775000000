@@ -96,28 +96,7 @@
 <script>
     $(document).ready(function() {
         loadMallDataCached(renderAll); 
-        
-        // $('#contest_form').submit(function (e) {
-        //     e.preventDefault();
-        //     data = $(this).serialize();
-        //     if($('#first_name').val() != "" && $('#last_name').val() != "" && $('#email').val() !=""){
-        //         if ($('#agree_contest').prop('checked') == true){
-        //             if($('#add_to_newsletter').prop('checked') == true){
-        //                 submit_contest(data, e);
-        //             } else {
-        //                 alert("Please agree to receive emails from Heartland Town Centre.");
-        //                 $('#add_to_newsletter').focus();    
-        //             }
-        //         } else {
-        //             alert("Please agree to rules and regulations.");
-        //             $('#agree_contest').focus();
-        //         }
-        //     } else {
-        //         alert("Please fill out the required fields.");
-        //     }
-        // });
-    })
-    
+    });
     
     function renderAll(){
         $(".right_block, .bottom_block").show();
@@ -132,7 +111,7 @@
         
         $(".loading_overlay").hide();   
         
-        // $.validate();
+        $.validate();
         $('#contest_form').submit(function(e){
             e.preventDefault();
             $('#contest_btn').prop('disabled', true);
@@ -165,6 +144,7 @@
         contest_data.postal_code = $('#postal_code').val();
         contest_data.age = $('#age').val();
         contest_data.gender = $('#gender').val();
+        contest_data.province = $('#province').val();
         contest_data.newsletter = $('#newsletter_signup').prop("checked");
         
         contest_entry.contest = contest_data;
@@ -185,31 +165,5 @@
                 alert('An error occured while processing your request. Please try again later!')
             }
         });
-        
     }
-
-    // function submit_contest(data, e) {
-    //     var propertyDetails = getPropertyDetails();
-    //     var host = propertyDetails.mm_host;
-    //     var email = $("#email").val();
-    //     var name = $("#first_name").val() + " " + $("#last_name").val();
-    //     $.ajax({
-    //         url: host + "/newsletter_no_captcha",
-    //         type: "POST",
-    //         dataType: "json",
-    //         data: data,
-    //         success: function(data) {
-    //             // $.getJSON("//mobilefringe.createsend.com/t/d/s/dljtlh/?callback=?", "cm-dljtlh-dljtlh=" + email);
-    //             e.target.submit();
-    //             $("#success_subscribe").fadeIn();
-    //             $('#contest_form').trigger('reset');
-    //         },
-    //         error: function(data){
-    //             e.target.submit();
-    //             // $.getJSON("//mobilefringe.createsend.com/t/d/s/dljtlh/?callback=?", "cm-dljtlh-dljtlh=" + email);
-    //             $("#success_subscribe").fadeIn();
-    //             $('#contest_form').trigger('reset');
-    //         }
-    //     });
-    // }
 </script>

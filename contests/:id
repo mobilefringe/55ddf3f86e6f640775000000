@@ -11,7 +11,7 @@
 </style>
 <div id="form_div">
     <p id="contest_ended">This contest has ended. Good luck to the participants.<br />  Check back soon for future contests.</p>
-    <form id="contest_form"> <!-- action="//mobilefringe.createsend.com/t/d/s/dljtlh/" method="post" -->
+    <form id="contest_form">
         <div id="contest_container" class="row">
             <script id="contest_template" type="x-tmpl-mustache/text">
                 <input id="property_id" name="contest[property_id]" type="hidden" value="{{property_id}}"/>
@@ -96,25 +96,25 @@
     $(document).ready(function() {
         loadMallDataCached(renderAll); 
         
-        $('#contest_form').submit(function (e) {
-            e.preventDefault();
-            data = $(this).serialize();
-            if($('#first_name').val() != "" && $('#last_name').val() != "" && $('#email').val() !=""){
-                if ($('#agree_contest').prop('checked') == true){
-                    if($('#add_to_newsletter').prop('checked') == true){
-                        submit_contest(data, e);
-                    } else {
-                        alert("Please agree to receive emails from Heartland Town Centre.");
-                        $('#add_to_newsletter').focus();    
-                    }
-                } else {
-                    alert("Please agree to rules and regulations.");
-                    $('#agree_contest').focus();
-                }
-            } else {
-                alert("Please fill out the required fields.");
-            }
-        });
+        // $('#contest_form').submit(function (e) {
+        //     e.preventDefault();
+        //     data = $(this).serialize();
+        //     if($('#first_name').val() != "" && $('#last_name').val() != "" && $('#email').val() !=""){
+        //         if ($('#agree_contest').prop('checked') == true){
+        //             if($('#add_to_newsletter').prop('checked') == true){
+        //                 submit_contest(data, e);
+        //             } else {
+        //                 alert("Please agree to receive emails from Heartland Town Centre.");
+        //                 $('#add_to_newsletter').focus();    
+        //             }
+        //         } else {
+        //             alert("Please agree to rules and regulations.");
+        //             $('#agree_contest').focus();
+        //         }
+        //     } else {
+        //         alert("Please fill out the required fields.");
+        //     }
+        // });
     })
     
     
@@ -129,7 +129,14 @@
             $('#contest_ended').show()
         }
         
-        $(".loading_overlay").hide();    
+        $(".loading_overlay").hide();   
+        
+        $.validate();
+        $('#contest_form').submit(function(e){
+            e.preventDefault();
+            $('.contest_btn').prop('disabled', true);
+            submit_contest(slug);
+        });
     }
     
     function renderContest(container, template, collection){
@@ -147,38 +154,61 @@
         $(container).html(item_rendered.join(''));
     }
     
-    function submit_contest(data, e) {
+    function submit_contest(slug) {
+        var contest_entry = {};
+        var contest_data = {};
+        contest_data.first_name = $('#first_name').val();
+        contest_data.last_name = $('#last_name').val();
+        contest_data.email = $('#email').val();
+        contest_data.phone = $('#phone_number').val();
+        contest_data.postal_code = $('#postal_code').val();
+        contest_data.age = $('#age').val();
+        contest_data.gender = $('#gender').val();
+        contest_data.newsletter = $('#newsletter_signup').prop("checked");
+        
+        contest_entry.contest = contest_data;
+        
         var propertyDetails = getPropertyDetails();
-        var host = propertyDetails.mm_host;
-        var email = $("#email").val();
-        var name = $("#first_name").val() + " " + $("#last_name").val();
+        var host = propertyDetails.mm_host.replace("http:", "");
+        var action = host + "/contests/" + slug + "/create_js_entry"
         $.ajax({
-            url: host + "/newsletter_no_captcha",
+            url : action,
             type: "POST",
-            dataType: "json",
-            data: data,
-            success: function(data) {
-                // $.getJSON("//mobilefringe.createsend.com/t/d/s/dljtlh/?callback=?", "cm-dljtlh-dljtlh=" + email);
-                e.target.submit();
-                $("#success_subscribe").fadeIn();
-                $('#contest_form').trigger('reset');
+            data : contest_entry,
+            success: function(data){
+               $('#succes_msg').show();
+               $('.contest_btn').prop('disabled', false);
+               $('#contest_form').trigger('reset');
             },
-            error: function(data){
-                e.target.submit();
-                // $.getJSON("//mobilefringe.createsend.com/t/d/s/dljtlh/?callback=?", "cm-dljtlh-dljtlh=" + email);
-                $("#success_subscribe").fadeIn();
-                $('#contest_form').trigger('reset');
+            error: function (data){
+                alert('An error occured while processing your request. Please try again later!')
             }
         });
+        
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+    // function submit_contest(data, e) {
+    //     var propertyDetails = getPropertyDetails();
+    //     var host = propertyDetails.mm_host;
+    //     var email = $("#email").val();
+    //     var name = $("#first_name").val() + " " + $("#last_name").val();
+    //     $.ajax({
+    //         url: host + "/newsletter_no_captcha",
+    //         type: "POST",
+    //         dataType: "json",
+    //         data: data,
+    //         success: function(data) {
+    //             // $.getJSON("//mobilefringe.createsend.com/t/d/s/dljtlh/?callback=?", "cm-dljtlh-dljtlh=" + email);
+    //             e.target.submit();
+    //             $("#success_subscribe").fadeIn();
+    //             $('#contest_form').trigger('reset');
+    //         },
+    //         error: function(data){
+    //             e.target.submit();
+    //             // $.getJSON("//mobilefringe.createsend.com/t/d/s/dljtlh/?callback=?", "cm-dljtlh-dljtlh=" + email);
+    //             $("#success_subscribe").fadeIn();
+    //             $('#contest_form').trigger('reset');
+    //         }
+    //     });
+    // }
 </script>

@@ -81,7 +81,7 @@
                     <br /><br />
                 </div>
                 <div class="col-md-2">
-                    <input type="submit" value="Submit" class="btn btn-primary" />
+                    <input id="contest_btn" type="submit" value="Submit" class="btn btn-primary" />
                 </div>
                 <div class="col-md-10">
                     <div id="success_subscribe" style="display:none; margin-top:5px">
@@ -135,7 +135,7 @@
         // $.validate();
         $('#contest_form').submit(function(e){
             e.preventDefault();
-            $('.contest_btn').prop('disabled', true);
+            $('#contest_btn').prop('disabled', true);
             submit_contest(slug);
         });
     }
@@ -177,9 +177,9 @@
             type: "POST",
             data : contest_entry,
             success: function(data){
-               $('#succes_msg').show();
-               $('.contest_btn').prop('disabled', false);
-               $('#contest_form').trigger('reset');
+                $("#success_subscribe").fadeIn();
+                $('#contest_form').trigger('reset');
+                $('#contest_btn').prop('disabled', false);
             },
             error: function (data){
                 alert('An error occured while processing your request. Please try again later!')

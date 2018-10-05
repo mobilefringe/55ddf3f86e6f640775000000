@@ -72,11 +72,11 @@
                 <div class="col-md-12">
                     <label>
                         <input type="checkbox" id="add_to_newsletter" required />
-                        *I agree to receive emails from Heartland Town Centre.
+                        I agree to receive emails from Heartland Town Centre. *
                     </label>
                     <label>
                         <input type="checkbox" id="agree_contest" required />
-                        I have read and am in full compliance with the official contest <a href="//codecloud.cdn.speedyrails.net/sites/5a79cd486e6f646156310000/application/pdf/1538762016000/Bath & Body Works Rules and Regulations.pdf" target="_blank"><u>rules and regulations.</a></u>
+                        I have read and am in full compliance with the official contest <a href="//codecloud.cdn.speedyrails.net/sites/5a79cd486e6f646156310000/application/pdf/1538762016000/Bath & Body Works Rules and Regulations.pdf" target="_blank"><u>rules and regulations. *</a></u>
                     </label>
                     <br /><br />
                 </div>

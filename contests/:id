@@ -131,7 +131,7 @@
         
         $(".loading_overlay").hide();   
         
-        $.validate();
+        // $.validate();
         $('#contest_form').submit(function(e){
             e.preventDefault();
             $('.contest_btn').prop('disabled', true);

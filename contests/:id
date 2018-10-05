@@ -103,17 +103,15 @@
                 if ($('#agree_contest').prop('checked') == true){
                     if($('#add_to_newsletter').prop('checked') == true){
                         submit_contest(data, e);
-                    }
-                    else{
+                    } else {
                         alert("Please agree to receive emails from Heartland Town Centre.");
                         $('#add_to_newsletter').focus();    
                     }
-                }
-                else{
+                } else {
                     alert("Please agree to rules and regulations.");
                     $('#agree_contest').focus();
                 }
-            }else{
+            } else {
                 alert("Please fill out the required fields.");
             }
         });
@@ -127,8 +125,7 @@
         contest_details = getContestBySlug(slug);
         if(contest_details != undefined){
             renderContest('#contest_container','#contest_template', contest_details);
-        }
-        else{
+        } else {
             $('#contest_ended').show()
         }
         
@@ -165,7 +162,6 @@
                 e.target.submit();
                 $("#success_subscribe").fadeIn();
                 $('#contest_form').trigger('reset');
-                
             },
             error: function(data){
                 e.target.submit();

@@ -71,7 +71,7 @@
                 </div>
                 <div class="col-md-12">
                     <label>
-                        <input type="checkbox" id="newsletter_signup" name="contest[newsletter]" />
+                        <input type="checkbox" id="newsletter_signup" name="contest[newsletter]" required />
                         I agree to receive emails from Heartland Town Centre. *
                     </label>
                     <label>

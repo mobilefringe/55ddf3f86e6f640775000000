@@ -309,7 +309,7 @@
                         </button>
                         <form id="mobile_newsletter_form">
                             <button type="submit">
-                                <img src="//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/ca1169dc611d37b7f705509f3b934a89/subscribe.png" alt="">
+                                <img src="//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/ca1169dc611d37b7f705509f3b934a89/subscribe.png" alt="Subscribe to our Newsletter">
                             </button>
                             <label for="mobile_email" style="display:none">Email</label>
                             <input type="text" id="mobile_email" placeholder="Subscribe to Newsletter" required/>

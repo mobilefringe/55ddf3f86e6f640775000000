@@ -202,6 +202,7 @@
                         </button>
                         <form id="newsletter_form">
                             <button class="news_btn" type="submit">
+                                <p class="accessibility">Subscribe to our Newsletter</p>
                                 <img src="//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/ca1169dc611d37b7f705509f3b934a89/subscribe.png" alt="Subscribe to our Newsletter" />
                             </button>
                             <label for="desktop_email" style="display:none">Email</label>

@@ -212,7 +212,7 @@
                 <div id="logo_container">
                     <script id="header_template" type="x-tmpl-mustache/text">
                         {% raw %}
-                        <a href="/home"><img alt="logo" class="site_logo" src="{{site_logo}}"/></a>
+                        <a href="/home"><img class="site_logo" src="{{site_logo}}" alt="Heartland Town Centre Logo" /></a>
                         {% endraw %}
                     </script>
                 </div>

@@ -51,6 +51,7 @@
             <script id="blog_template" type="x-tmpl-mustache/text">
                 <div class="col-md-4 col-sm-6 col-xs-6 no_padding_left">
                     <a href="/posts/{{slug}}">
+                        <p class="accessibility">{{title}}</p>
                         <div style="background-image:url({{image_url}})" class="blog_image_div"></div>
                     </a>
                     <a href="/posts/{{slug}}">

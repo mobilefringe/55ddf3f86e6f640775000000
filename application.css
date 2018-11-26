@@ -1446,73 +1446,71 @@ textarea:focus, input:focus {
 /* *** HOVER EFFECTS *** */
 
 .ih-item.circle {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  border-radius: 0;
-  &.effect19 {
-    .info {
-        background: transparent;
-        
-    //   outline: 2px solid #007CBA;
-    //   outline-offset: -10px;
-      transition: all 0.35s linear;
-      border-radius: 0;
-      opacity: 1;
-        transform: scale(1);
-      .content {
-        margin: auto;
-        height: 40px;
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-      }
-      h3 {
-        margin: 0 15px;
-        padding: 0;
-        height: auto;
-        position: relative;
-        visibility: visible;
-        opacity: 1;
-        border-top: none;
-        color: #FFF;
-        text-align: center;
-        font-size: 17px;
-        line-height: 28px;
-        vertical-align: middle;
-        transition: opacity 0.2s ease-in;
-        transition-delay: 0.35s;
-        font-smoothing: antialiased;
-        -webkit-font-smoothing: antialiased;
-        -moz-font-smoothing: antialiased;
-        -o-font-smoothing: antialiased;
-        &:after{
-            content: " ";
-            width: 60px;
-            height: 2px;
-            position: absolute;
-            left: 50%;
-            bottom: -5px;
-            -webkit-transform: translateX(0%);
-            -ms-transform: translateX(0%);
-            transform: translateX(-50%);
-            background-color: #FFF;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    background-color: grey;
+    &.effect19 {
+        .info {
+            background: transparent;
+            transition: all 0.35s linear;
+            border-radius: 0;
+            opacity: 1;
+            transform: scale(1);
+            .content {
+                margin: auto;
+                height: 40px;
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+            }
+            h3 {
+                margin: 0 15px;
+                padding: 0;
+                height: auto;
+                position: relative;
+                visibility: visible;
+                opacity: 1;
+                border-top: none;
+                color: #FFF;
+                text-align: center;
+                font-size: 17px;
+                line-height: 28px;
+                vertical-align: middle;
+                transition: opacity 0.2s ease-in;
+                transition-delay: 0.35s;
+                font-smoothing: antialiased;
+                -webkit-font-smoothing: antialiased;
+                -moz-font-smoothing: antialiased;
+                -o-font-smoothing: antialiased;
+                &:after{
+                    content: " ";
+                    width: 60px;
+                    height: 2px;
+                    position: absolute;
+                    left: 50%;
+                    bottom: -5px;
+                    -webkit-transform: translateX(0%);
+                    -ms-transform: translateX(0%);
+                    transform: translateX(-50%);
+                    background-color: #FFF;
+                }
+            }
         }
-      }
+        a:hover .info {
+            background: rgba(0, 0, 0, 0.35);
+        }
+        .info hr {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            width: 58px;
+            height: 3px;
+            color: #FFF;
+        }
     }
-    a:hover .info{
-      background: rgba(0, 0, 0, 0.35);
-    }
-    .info hr {
-      margin-top: 10px;
-      margin-bottom: 10px;
-      width: 58px;
-      height: 3px;
-      color: #FFF;
-    }
-  }
 }
 
 @media (max-width: 768px) {

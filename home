@@ -1,0 +1,170 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+<style>
+    .row {
+        margin: auto;
+    }
+    @media (max-width: 767px) {
+        .main_content{
+            height:auto;
+        }  
+    }
+   
+
+</style>
+<div class="popup_home hidden_now">
+    <a href="/contests/htc-bath-body-works-grand-reopening-contest--2">
+        <img src="//codecloud.cdn.speedyrails.net/sites/5bfc4c8f6e6f644801390000/image/jpeg/1538770544000/GrandReopening_HTC_500x500 NEW (1).jpg" alt=""/>
+    </a>
+    <i class="fa fa-remove close_popup"></i>
+</div>
+
+<div>
+    <div class="grid grid_desktop hidden_phone" style="visiblity:hidden">
+        <div class="grid-sizer"></div>
+        <div class="gutter-sizer"></div>
+        <div class="feature_0 grid-item grid-item--height2"></div>
+        <div class="feature_1 grid-item"></div>
+        <div class="feature_2 grid-item grid-item--width2"></div>
+        <div class="feature_3 grid-item"></div>
+        <div class="feature_4 grid-item grid-item--width2"></div>
+        <div class="feature_5 grid-item"></div>
+        <div class="feature_6 grid-item"></div>
+    </div>
+    <div class="grid grid_mobile show_phone">
+        <div class="grid-sizer"></div>
+        <div class="feature_0 grid-item grid-item--height2"></div>
+        <div class="feature_1 grid-item"></div>
+        <div class="feature_3 grid-item"></div>
+        <div class="feature_2 grid-item grid-item--width2"></div>
+        <div class="feature_5 grid-item"></div>
+        <div class="feature_6 grid-item"></div>
+        <div class="feature_4 grid-item grid-item--width2"></div>
+    </div>
+</div>
+
+<hr>
+
+<div class="featured_items">
+    <div class="col-sm-6 text-center no_padding_left">
+        <h3 class="caps">Blog</h3>
+        <div class="" id="blog_container">
+            <script id="blog_template" type="x-tmpl-mustache/text">
+                <div class="col-md-4 col-sm-6 col-xs-6 no_padding_left">
+                    <a href="/posts/{{slug}}">
+                        <div style="background-image:url({{image_url}})" class="blog_image_div"></div>
+                    </a>
+                    <a href="/posts/{{slug}}">
+                        <h4 class="blog_title">{{title_short}}</h4>
+                    </a>
+                </div>
+            </script>
+        </div>
+    </div>
+    <div class="col-sm-6 text-center no_padding_left">
+        <h3 class="caps">Instagram</h3>
+        <div id="instafeed"></div>
+    </div>
+</div>
+
+<hr>
+
+<div class="home_subscription">
+    <div class="col-sm-6 text-left no_padding_left">
+        <h2 class="caps">Subscribe to Our Newsletter</h2>
+        <h4>Blog Updates, Promotions, Events & Contests!</h4>
+    </div>
+    <div class="col-sm-6 text-center no_padding_right">
+        <form action="//mobilefringe.createsend.com/t/d/s/dljtlh/" id="home_newsletter_form">
+            <input name="cm-dljtlh-dljtlh" type="text" class="col-xs-8 newsletter_email" id="newsletter_email" placeholder="Your Email" required="required" />
+            <input type="submit" value="Subscribe" class="col-xs-4 newsletter_submit_btn" id="newsletter_submit" /> 
+            <input id="agree_terms" type="checkbox" required class="checkbox-custom col-xs-1" />
+            <label for="agree_terms" class="confirm_label checkbox-custom-label col-xs-11">
+                I agree to receive emails from Heartland Town Centre
+            </label>
+            <p id="subscription_confirmed">Thank you for subscribing.</p>
+        </form>
+    </div>
+</div>
+<style>
+    .grid-item--height2 img {
+        width: 100%;
+    }
+    .feature_0.grid-item.grid-item--height2 .ih-item.circle {
+        width: 103%;
+    }
+</style>
+<script>
+    $(document).ready(function() {
+        function render_page_details(){
+            $(".loading_overlay").show();
+            $("#main_content").addClass("main_content_full_width");
+            $(".right_block, .bottom_block").hide();
+            renderFeatureItems();
+            
+            // init Masonry
+            var $grid_desktop = $('.grid_desktop').masonry({
+                columnWidth: '.grid-sizer',
+                itemSelector: '.grid-item',
+                percentPosition: true,
+                gutter: '.gutter-sizer',
+                initLayout: false,
+            });
+            // layout Masonry after each image loads
+            $grid_desktop.imagesLoaded().done( function() {
+                $grid_desktop.masonry('layout');
+                $(".grid_desktop").css("visibility","visible");
+            });
+            
+            //init Masonry
+            var $grid_mobile = $('.grid_mobile').masonry({
+                columnWidth: '.grid-sizer',
+                itemSelector: '.grid-item',
+                originLeft: false,
+                percentPosition: true
+            });
+            // layout Masonry after each image loads
+            $grid_mobile.imagesLoaded().done( function() {
+                $grid_mobile.masonry('layout');
+            });
+            
+            var blog_posts = getBlogDataBySlug("htc-htc-blog").posts.sortBy(function(o){return o.publish_date;}).reverse().slice(0, 3);
+            renderPosts('#blog_container','#blog_template', blog_posts);
+            get_instagram("//htc.mallmaverick.com/api/v4/htc/social.json", 3, 'thumbnail', render_instagram)
+            
+            $(".loading_overlay").hide();
+        }
+        
+        // $('#home_newsletter_form').submit(function(e){
+        //   e.preventDefault();
+        //   console.log($('#agree_terms').prop('checked'));
+        // //   if($('#agree_terms').prop('checked') == false){
+        // //         $('#agree_terms').focus();
+        // //         alert("Please agree to receieve newsletters from Heartland Town Centre.")
+        // //   }
+        // //   else{
+        //   $.getJSON(
+        //         this.action + "?callback=?",
+        //         $(this).serialize(),
+        //         function (data) {
+        //             if (data.Status === 400) {
+        //                 alert("Please try again later.");
+        //             } else { // 200
+        //                 $("#subscription_confirmed").fadeIn();
+        //             }
+        //     });
+        // //   }
+        // });
+        
+        //     if($.cookie("popup_viewed") != "true"){
+        //         $.cookie("popup_viewed", "true", { expires: 1 });
+        //         $('<div class="modal-backdrop custom_backdrop"></div>').appendTo(document.body);
+        //         $('.popup_home').show()
+        //     }
+        //     $('.close_popup, .custom_backdrop').click(function(){
+        //         $(".modal-backdrop").remove();
+		      //  $(".popup_home").remove();
+        //     })
+        
+        loadMallData(render_page_details); 
+    });
+</script>

@@ -95,50 +95,46 @@ function show_results(id) {
 }
 
 function showSearchResults(){
-        $('#search_results').show();
-        if($('#search_input').val().length === 0){
-            $('#search_results').hide();
-        }else{
-            var search_results = getSearchResults($('#search_input').val(),10,100);
-            $('.search-results-count').html("Total Results : "+search_results.summary.count);
-            renderSearchResultsTemplate('#search_results_template','#search_results_items',search_results);
-            if (search_results["stores"]){
-                if (search_results["stores"].length > 0){
-                    $("#store_results_header").html(search_results["stores"].length+" Stores <i id='store_arrow' class='fa fa-chevron-right pull-right search_arrow'></i>") ;
-                    $("#store_results_header").show();
-                }
-                
-            } else {
-                $("#store_results_header").hide();
+    $('#search_results').show();
+    if ($('#search_input').val().length === 0) {
+        $('#search_results').hide();
+    } else {
+        var search_results = getSearchResults($('#search_input').val(),10,100);
+        $('.search-results-count').html("Total Results : "+search_results.summary.count);
+        renderSearchResultsTemplate('#search_results_template','#search_results_items',search_results);
+        if (search_results["stores"]) {
+            if (search_results["stores"].length > 0) {
+                $("#store_results_header").html(search_results["stores"].length+" Stores <i id='store_arrow' class='fa fa-chevron-right pull-right search_arrow'></i>") ;
+                $("#store_results_header").show();
             }
-            if (search_results["promotions"]){
-                if (search_results["promotions"].length > 0){
-                    $("#promotions_results_header").html(search_results["promotions"].length+" Promotions <i id='promo_arrow' class='fa fa-chevron-right search_arrow pull-right'></i>")    ;
-                    $("#promotions_results_header").show();
-                }
-                
-            } else {
-                $("#promotions_results_header").hide();
+        } else {
+            $("#store_results_header").hide();
+        }
+        if (search_results["promotions"]) {
+            if (search_results["promotions"].length > 0) {
+                $("#promotions_results_header").html(search_results["promotions"].length+" Promotions <i id='promo_arrow' class='fa fa-chevron-right search_arrow pull-right'></i>")    ;
+                $("#promotions_results_header").show();
             }
-            if (search_results["events"]){
-                if (search_results["events"].length > 0) {
-                    $("#events_results_header").html(search_results["events"].length+" Events <i id='event_arrow' class='fa fa-chevron-right pull-right search_arrow'></i>")    
-                    $("#events_results_header").show();
-                }
-                
-            } else {
-                $("#events_results_header").hide();
+        } else {
+            $("#promotions_results_header").hide();
+        }
+        if (search_results["events"]) {
+            if (search_results["events"].length > 0) {
+                $("#events_results_header").html(search_results["events"].length+" Events <i id='event_arrow' class='fa fa-chevron-right pull-right search_arrow'></i>")    
+                $("#events_results_header").show();
             }
-            // $(document).i18n();
+        } else {
+            $("#events_results_header").hide();
         }
     }
+}
     
     
-    $('.close-search').click(function(){
-        $('#search_results').hide();
-    });
+$('.close-search').click(function(){
+    $('#search_results').hide();
+});
     
-    
+
 function toggle_mobile_menu(){
     if ($(".mobile_menu").is(":visible")){
         $(".mobile_menu").slideUp();

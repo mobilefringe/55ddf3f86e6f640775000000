@@ -1162,17 +1162,20 @@ textarea:focus, input:focus {
 }
 
 .tab_title_content {
-  a {
+    p {
+        color: black !important;
+        margin-right: 15px;
+        line-height: 39px;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    background: #f3f3f3;
     color: black !important;
-    margin-right: 15px;
-    line-height: 39px;
-  }
-  background: #f3f3f3;
-  color: black !important;
-  border: 1px solid #e2e2e2;
-  padding-left: 15px;
-  padding-right: 15px;
-  display: none;
+    border: 1px solid #e2e2e2;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: none;
 }
 
 .tab_content {}

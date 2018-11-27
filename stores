@@ -43,9 +43,6 @@
     </div>
 </div>
 
-
-
-
 <script>
     $(document).ready(function() {
         $("#alpha_tab").click(function() {

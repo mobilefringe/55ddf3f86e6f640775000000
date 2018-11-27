@@ -33,7 +33,9 @@
     <div id='alpha_content'>
         <script id="alpha_content_template" type="x-tmpl-mustache/text">
             <div class='alpha_content_header' id='{{id}}'>
-                <p class='content_header'>{{id}}<a href='#top'><span class="accessibility">Scroll to Top</span><i class="fa fa-arrow-up up_arrow"></i></a></p>
+                <p class='content_header'>
+                    {{id}}<a href='#top'><span class="accessibility">Scroll to Top</span><i class="fa fa-arrow-up up_arrow"></i></a>
+                </p>
                 <table class='content_table' id='{{id}}_table'>
                 </table>
             </div>

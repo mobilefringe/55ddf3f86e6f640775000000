@@ -1162,7 +1162,7 @@ textarea:focus, input:focus {
 }
 
 .tab_title_content {
-    p {
+    a, p {
         color: black !important;
         margin-right: 15px;
         line-height: 39px;

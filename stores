@@ -16,7 +16,7 @@
     </div>
     <div class="tab_title_content" id="cat_tab_title_content_container">
         <script id="cat_tab_title_content_template" type="x-tmpl-mustache/text">
-            <a data-filter="{{id}}">{{name}}</a> <!-- href="#cat_{{id}}" -->
+            <p data-filter="{{id}}">{{name}}</p> <!-- href="#cat_{{id}}" -->
         </script>
     </div>
 </div>
@@ -129,7 +129,7 @@
     }
 
     function cat_toggler() {
-        $('#cat_tab_title_content_container a').click(function() {
+        $('#cat_tab_title_content_container p').click(function() {
             var cats = $(this).attr('data-filter')
             console.log(cats)
             $('.data-rows').hide();

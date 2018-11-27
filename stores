@@ -76,7 +76,7 @@
                 jobs_icon = $('<img>').attr({
                     'src' : "//codecloud.cdn.speedyrails.net/sites/57f5246e6e6f644418020000/image/png/1446665017000/jobs.png",
                     'class' : 'icon-jobs',
-                    'alt' : 'Job Posting'
+                    'alt' : 'Job Posting Available'
                 }).prop('outerHTML');
             }
             

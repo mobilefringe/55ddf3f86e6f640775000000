@@ -410,6 +410,7 @@ function load_more(num) {
 }
 
 function get_instagram(url, total, size, callback) {
+    console.log("hello")
     var html = '<div class="col-md-4 col-sm-6 col-xs-6 no_padding_left"><a href="{{link}}" target="_blank"><div style="background-image:url({{image}})" class="blog_image_div"></div><h4 class="blog_title">{{caption}}</h4></a></div>';
     console.log(html)
     var item_rendered = [];

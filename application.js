@@ -409,35 +409,35 @@ function load_more(num) {
     $('#num_loaded').val(i);
 }
 
-function get_instagram(url, total, size, callback) {
-    console.log("hello")
-    var html = '<div class="col-md-4 col-sm-6 col-xs-6 no_padding_left"><a href="{{link}}" target="_blank"><div style="background-image:url({{image}})" class="blog_image_div"></div><h4 class="blog_title">{{caption}}</h4></a></div>';
-    console.log(html)
-    var item_rendered = [];
-    Mustache.parse(html); 
-    log('fetching instagram data from: ' + url);
-    $.getJSON(url).done(function(data) {
-        var insta_feed = data.social.instagram;
-        if (insta_feed != null) {
-            main_feed = insta_feed.splice(0, total);
-            $.each(main_feed, function(i,v) {
-                var feed_obj = {};
-                feed_obj.image = v.images[size].url;
-                feed_obj.link = v.link;
-                if (v.caption.text.length > 30) {
-                    feed_obj.caption = v.caption.text.substring(0, 30) + "...";
-                } else {
-                    feed_obj.caption = v.caption.text;
-                }
-                if (i < total) {
-                    var ig_rendered =  Mustache.render(html,feed_obj);
-                    item_rendered.push(ig_rendered.trim());
-                }
-            });
-            callback(item_rendered.join(''));
-        }
-    });
-}
+// function get_instagram(url, total, size, callback) {
+//     console.log("hello")
+//     var html = '<div class="col-md-4 col-sm-6 col-xs-6 no_padding_left"><a href="{{link}}" target="_blank"><div style="background-image:url({{image}})" class="blog_image_div"></div><h4 class="blog_title">{{caption}}</h4></a></div>';
+//     console.log(html)
+//     var item_rendered = [];
+//     Mustache.parse(html); 
+//     log('fetching instagram data from: ' + url);
+//     $.getJSON(url).done(function(data) {
+//         var insta_feed = data.social.instagram;
+//         if (insta_feed != null) {
+//             main_feed = insta_feed.splice(0, total);
+//             $.each(main_feed, function(i,v) {
+//                 var feed_obj = {};
+//                 feed_obj.image = v.images[size].url;
+//                 feed_obj.link = v.link;
+//                 if (v.caption.text.length > 30) {
+//                     feed_obj.caption = v.caption.text.substring(0, 30) + "...";
+//                 } else {
+//                     feed_obj.caption = v.caption.text;
+//                 }
+//                 if (i < total) {
+//                     var ig_rendered =  Mustache.render(html,feed_obj);
+//                     item_rendered.push(ig_rendered.trim());
+//                 }
+//             });
+//             callback(item_rendered.join(''));
+//         }
+//     });
+// }
 
 function render_instagram(data) {
     $('#instafeed').html(data);

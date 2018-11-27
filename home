@@ -53,8 +53,6 @@
                     <a href="/posts/{{slug}}">
                         <p class="accessibility">{{title}}</p>
                         <div style="background-image:url({{image_url}})" class="blog_image_div"></div>
-                    </a>
-                    <a href="/posts/{{slug}}">
                         <h4 class="blog_title">{{title_short}}</h4>
                     </a>
                 </div>

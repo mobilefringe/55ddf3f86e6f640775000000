@@ -107,8 +107,8 @@
                         <label for="fieldEmail">Please confirm your email :</label><br>
                         <input id="fieldEmail" name="cm-dljtlh-dljtlh" type="text" required placeholder="example@email.com"/>
                         <div class="aggree_div">
-                            <input type="checkbox" class="info_check" id="agree_terms" required value="I agree to receive emails from Heartland Town Centre."/>
-                            <label for="agree_terms" class="checkbox_lbl">I agree to receive emails from Heartland Town Centre.</label>
+                            <input type="checkbox" class="info_check" id="popup_agree_terms" required value="I agree to receive emails from Heartland Town Centre."/>
+                            <label for="popup_agree_terms" class="checkbox_lbl">I agree to receive emails from Heartland Town Centre.</label>
                             <input type="hidden" id="fieldtydytu" name="cm-f-tydytu" />
                         </div>
                         <button type="submit" id="form_sub">Submit</button>
@@ -391,9 +391,9 @@
     var current_year = moment().year();
     $("#current_year").text(current_year);
 
-    $("#popup_form").submit(function(e){
+    $("#popup_form").submit(function(e) {
         e.preventDefault();
-        if ($("#agree_terms").is(":checked")) {
+        if ($("#popup_agree_terms").is(":checked")) {
             if (check_email("fieldEmail") == true) {
                 $("#fieldtydytu").val($("#agree_terms").attr("value"));
                 $.getJSON("//mobilefringe.createsend.com/t/d/s/dljtlh/?callback=?", $(this).serialize(), function (data) {

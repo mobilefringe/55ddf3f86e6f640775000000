@@ -11,45 +11,40 @@ function check_email (id){
 }
 
 function validateEmail($email) {
-  var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-  if( !emailReg.test( $email ) ) {
-    return false;
-  } else {
-    return true;
-  }
+    var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+    if( !emailReg.test( $email ) ) {
+        return false;
+    } else {
+        return true;
+    }
 }
     
-
-
-
-function map_pin(value){
-        map.marksHide();
-        value = value.split('/')
-        if (value[0] != null){
-            drop_pin(value[0]);    
-        }
-        
+function map_pin(value) {
+    map.marksHide();
+    value = value.split('/')
+    if (value[0] != null) {
+        drop_pin(value[0]);    
     }
+}
 
-
-
-
-function drop_pin(id){
-
+function drop_pin(id) {
     var coords = map.get_coords(id);
     var height = parseInt(coords["height"])
     var width = parseInt(coords["width"])
     var x_offset = (parseInt(width) / 2);
     var y_offset = (parseInt(height) /2);
     
-    map.setMarks([{ xy: [coords["x"] - 15 + x_offset, coords["y"] - 55 + y_offset],
-              attrs: {
-                        src:  '//codecloud.cdn.speedyrails.net/sites/57f5246e6e6f644418020000/image/png/1446761110000/pin.png'     // image for marker
-                      }
-            }
-            ])
+    map.setMarks([
+        { 
+            xy: [coords["x"] - 15 + x_offset, coords["y"] - 55 + y_offset],
+            attrs: { src:  '//codecloud.cdn.speedyrails.net/sites/57f5246e6e6f644418020000/image/png/1446761110000/pin.png' }
+        }
+    ]);
 }
 
+$("#close_form").click(function() {
+    close_form();
+});
 
 function close_form(){
     $(".newsletter_container").fadeOut();
@@ -60,7 +55,7 @@ function close_form(){
 }
 
 function load_slider(slider){
-    $('.'+slider).flexslider({
+    $('.' + slider).flexslider({
         animation: "slide",
         controlNav: true,
         directionNav: true,    
@@ -73,42 +68,31 @@ function load_slider(slider){
     });
 }
 
-
-function get_date_string(start_date, end_date){
+function get_date_string(start_date, end_date) {
     var start = moment(start_date).tz(getPropertyTimeZone());
     var end = moment(end_date).tz(getPropertyTimeZone());
-    
-    if (start.format("DMY") == end.format("DMY")){
+    if (start.format("DMY") == end.format("DMY")) {
         date_string = start.format("MMM D");
-    }
-    else{
+    } else {
         date_string = start.format("MMM D") + " - " + end.format("MMM D");
     }
-    
     return date_string
 }
 
-
-
-
-function show_results(id){
-    if ( $("#"+id+"_results").is(":visible")){
-        $("#"+id+"_results").slideUp();
-        $("#"+id+"_arrow").removeClass("fa-chevron-down", 1000);
-        $("#"+id+"_arrow").addClass("fa-chevron-right", 1000);
+function show_results(id) {
+    if ($("#" + id + "_results").is(":visible")) {
+        $("#" + id + "_results").slideUp();
+        $("#" + id + "_arrow").removeClass("fa-chevron-down", 1000);
+        $("#" + id + "_arrow").addClass("fa-chevron-right", 1000);
     } else {
         $(".results_div").slideUp();
         $(".search_arrow").removeClass("fa-chevron-down", 1000);
         $(".search_arrow").addClass("fa-chevron-right", 1000);
-        $("#"+id+"_results").slideDown();   
-        $("#"+id+"_arrow").removeClass("fa-chevron-right", 1000);
-        $("#"+id+"_arrow").addClass("fa-chevron-down", 1000);
+        $("#" + id + "_results").slideDown();   
+        $("#" + id + "_arrow").removeClass("fa-chevron-right", 1000);
+        $("#" + id + "_arrow").addClass("fa-chevron-down", 1000);
     }
-    
 }
-
-
-
 
 function showSearchResults(){
         $('#search_results').show();

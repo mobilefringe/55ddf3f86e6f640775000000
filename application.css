@@ -795,7 +795,7 @@ textarea:focus, input:focus {
         height:100%;
         width: 100%;
         background:transparent;
-        input{
+        input[type="text"], input[type="submit"] {
             border: none;
             height: 50px;
         }

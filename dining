@@ -37,36 +37,36 @@
             $(".right_block, .bottom_block").hide();
             
             $("#dinning_banner").show();
-            renderFeatureItems();
+            // renderFeatureItems();
             
             // init Masonry
-            var $grid_desktop = $('.grid_desktop').masonry({
-                columnWidth: '.grid-sizer',
-                itemSelector: '.grid-item',
-                percentPosition: true
-            });
+            // var $grid_desktop = $('.grid_desktop').masonry({
+            //     columnWidth: '.grid-sizer',
+            //     itemSelector: '.grid-item',
+            //     percentPosition: true
+            // });
             // layout Masonry after each image loads
-            $grid_desktop.imagesLoaded().progress( function() {
-                $grid_desktop.masonry('layout');
-            });
+            // $grid_desktop.imagesLoaded().progress( function() {
+            //     $grid_desktop.masonry('layout');
+            // });
             
             //init Masonry
-            var $grid_mobile = $('.grid_mobile').masonry({
-                columnWidth: '.grid-sizer',
-                itemSelector: '.grid-item',
-                originLeft: false,
-                percentPosition: true
-            });
+            // var $grid_mobile = $('.grid_mobile').masonry({
+            //     columnWidth: '.grid-sizer',
+            //     itemSelector: '.grid-item',
+            //     originLeft: false,
+            //     percentPosition: true
+            // });
             // layout Masonry after each image loads
-            $grid_mobile.imagesLoaded().progress( function() {
-                $grid_mobile.masonry('layout');
-            });
+            // $grid_mobile.imagesLoaded().progress( function() {
+            //     $grid_mobile.masonry('layout');
+            // });
             
             
-            var blog_posts = getBlogDataBySlug("htc-htc-blog").posts.sortBy(function(o){return o.publish_date;}).reverse().slice(0, 3);
-            console.log(blog_posts);
-            renderPosts('#blog_container','#blog_template', blog_posts);
-            get_instagram("//htc.mallmaverick.com/api/v4/htc/social.json", 3, 'thumbnail', render_instagram)
+            // var blog_posts = getBlogDataBySlug("htc-htc-blog").posts.sortBy(function(o){return o.publish_date;}).reverse().slice(0, 3);
+            // console.log(blog_posts);
+            // renderPosts('#blog_container','#blog_template', blog_posts);
+            // get_instagram("//htc.mallmaverick.com/api/v4/htc/social.json", 3, 'thumbnail', render_instagram)
             
             
             
@@ -149,27 +149,27 @@
         loadMallData(render_page_details); 
     })
     
-    function renderFeatureItems(){
-        var items = getFeatureList();
-        var temp_features = [];
-        for (var i = 0; i < 7; i++ ) {
-            var temp_val = {};
-            temp_val.name = "Stores"
-            if( i == 0) {
-                temp_val.image_url = "//codecloud.cdn.speedyrails.net/sites/5bfc4c8f6e6f644801390000/image/png/1517932473306/height2x.png";
-            }
-            else if(i == 2 || i== 3 || i == 4|| i == 6) {
-                temp_val.image_url = "//codecloud.cdn.speedyrails.net/sites/5bfc4c8f6e6f644801390000/image/png/1517932491460/square.png";
-            }
-            else {
-                 temp_val.image_url = "//codecloud.cdn.speedyrails.net/sites/5bfc4c8f6e6f644801390000/image/png/1517937829931/width2x.png";
-            }
-            // temp_val.image_url = ""
-            temp_features.push(temp_val);
-        }
-        console.log(temp_features);
-        $.each(temp_features, function(i, val){
-            $('.feature_' + i).html('<div class="ih-item circle effect19"><a href="'+ val.url +'"><img src="'+ val.image_url +'"alt="'+ val.name +'"><div class="info"><div class="content"><h3>'+ val.name +'</h3></div></div></a></div>')
-        })
-    }
+    // function renderFeatureItems(){
+    //     var items = getFeatureList();
+    //     var temp_features = [];
+    //     for (var i = 0; i < 7; i++ ) {
+    //         var temp_val = {};
+    //         temp_val.name = "Stores"
+    //         if( i == 0) {
+    //             temp_val.image_url = "//codecloud.cdn.speedyrails.net/sites/5bfc4c8f6e6f644801390000/image/png/1517932473306/height2x.png";
+    //         }
+    //         else if(i == 2 || i== 3 || i == 4|| i == 6) {
+    //             temp_val.image_url = "//codecloud.cdn.speedyrails.net/sites/5bfc4c8f6e6f644801390000/image/png/1517932491460/square.png";
+    //         }
+    //         else {
+    //              temp_val.image_url = "//codecloud.cdn.speedyrails.net/sites/5bfc4c8f6e6f644801390000/image/png/1517937829931/width2x.png";
+    //         }
+    //         // temp_val.image_url = ""
+    //         temp_features.push(temp_val);
+    //     }
+    //     console.log(temp_features);
+    //     $.each(temp_features, function(i, val){
+    //         $('.feature_' + i).html('<div class="ih-item circle effect19"><a href="'+ val.url +'"><img src="'+ val.image_url +'"alt="'+ val.name +'"><div class="info"><div class="content"><h3>'+ val.name +'</h3></div></div></a></div>')
+    //     })
+    // }
 </script>

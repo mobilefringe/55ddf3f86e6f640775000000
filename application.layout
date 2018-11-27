@@ -117,7 +117,7 @@
                 <div class="thank_you_div">
                     <h1>Thank you!</h1>
                     <p>We'd like to welcome you - and thank you for subscribing to the Heartland Town Centre newsletter.</p>
-                    <button class="back_btn">BACK TO CENTRE</button> <!-- onclick="javascript:close_form()" -->
+                    <button id="close_popup" class="back_btn">BACK TO CENTRE</button> <!-- onclick="javascript:close_form()" -->
                 </div>
             </div>
         </div>
@@ -394,7 +394,11 @@
     $("#close_form").click(function() {
         close_form();
     });
-
+    
+    $("#close_popup").click(function() {
+        close_form();    
+    });
+    
     $("#popup_form").submit(function(e) {
         e.preventDefault();
         if ($("#popup_agree_terms").is(":checked")) {

@@ -100,7 +100,7 @@
         <div class="newsletter_overlay">&nbsp;</div>    
         <div class="newsletter_container">
             <div class="newsletter_popup">
-                <p class="close_form" onclick="javascript:close_form()" onkeypress="javascript:close_form()" tabindex="9">X</p>
+                <p id="close_form" class="close_form">X</p> <!-- onclick="javascript:close_form()" onkeypress="javascript:close_form()" -->
                 <div class="form_div">
                     <h1 class="newsletter_text">Sign up and Save!</h1>
                     <form id="popup_form">
@@ -117,7 +117,7 @@
                 <div class="thank_you_div">
                     <h1>Thank you!</h1>
                     <p>We'd like to welcome you - and thank you for subscribing to the Heartland Town Centre newsletter.</p>
-                    <button class="back_btn" onclick="javascript:close_form()">BACK TO CENTRE</button>
+                    <button class="back_btn">BACK TO CENTRE</button> <!-- onclick="javascript:close_form()" -->
                 </div>
             </div>
         </div>

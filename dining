@@ -13,7 +13,7 @@
             <div class="dinning_dets text-center">
                 <div class="dinning_store_name">{{name}}</div>
                 <div class="dinning_store_dets">{{description_short}}</div>
-                <a href="/stores/{{slug}}" class="dinning_read_more">More Details &gt;</a>
+                <a href="/stores/{{slug}}" class="dinning_read_more" aria-label="{{name}} Restaurant Details">More Details &gt;</a>
             </div>
         </div>
     </script>

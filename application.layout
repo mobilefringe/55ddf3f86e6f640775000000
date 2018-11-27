@@ -390,6 +390,10 @@
 <script>
     var current_year = moment().year();
     $("#current_year").text(current_year);
+    
+    $("#close_form").click(function() {
+        close_form();
+    });
 
     $("#popup_form").submit(function(e) {
         e.preventDefault();

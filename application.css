@@ -796,7 +796,7 @@ textarea:focus, input:focus {
         width: 100%;
         background:transparent;
         input[type="text"], input[type="submit"] {
-            // border: none;
+            border: none;
             height: 50px;
         }
         .newsletter_email {

@@ -1168,6 +1168,7 @@ textarea:focus, input:focus {
         line-height: 39px;
         &:hover {
             cursor: pointer;
+            text-decoration: underline;
         }
     }
     span {

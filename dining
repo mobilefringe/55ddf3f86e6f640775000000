@@ -36,7 +36,7 @@
             $("#main_content").addClass("main_content_full_width");
             $(".right_block, .bottom_block").hide();
             
-            // $("#dinning_banner").show();
+            $("#dinning_banner").show();
             // renderFeatureItems();
             
             // init Masonry

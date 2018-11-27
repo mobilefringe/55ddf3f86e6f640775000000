@@ -792,24 +792,23 @@ textarea:focus, input:focus {
     	margin: 15px auto;
     }
     #home_newsletter_form {
-        height:100%;
+        height: 100%;
         width: 100%;
-        background:transparent;
+        background: transparent;
         input[type="text"], input[type="submit"] {
-            // border: none;
             height: 50px;
         }
         .newsletter_email {
             border: 1px solid #000;
             color:black;
-            // text-align: center;
         }
         .newsletter_submit_btn{
+            border: none;
             background-color: #ed1d25;
-            color:#fff;
-            text-align: center;
             font-size: 18px;
-            letter-spacing:0.7px;
+            letter-spacing: 0.7px;
+            color: #fff;
+            text-align: center;
         }
         .confirm_label {
             height: 50px;

@@ -21,8 +21,8 @@
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
         <link href="//cdnjs.cloudflare.com/ajax/libs/flexslider/2.5.0/flexslider.css" rel="stylesheet">
         <link href="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/text/css/1438916432000/ihover.css" rel="stylesheet">
-        <link rel="stylesheet" href="//cdn.jsdelivr.net/icheck/1.0.2/skins/all.min.css">
-        <link rel="stylesheet" href="//cdn.jsdelivr.net/icheck/1.0.2/skins/square/square.min.css">
+        <link href="//cdn.jsdelivr.net/icheck/1.0.2/skins/all.min.css" rel="stylesheet">
+        <link href="//cdn.jsdelivr.net/icheck/1.0.2/skins/square/square.min.css" rel="stylesheet">
         <link href="/application.css" rel="stylesheet">
         
         <!-- CUSTOM JS -->
@@ -33,10 +33,9 @@
         <script src="//codecloud.cdn.speedyrails.net/sites/579231876e6f6467cf000000/application/x-javascript/1468507661000/moment-timezone-with-data.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/flexslider/2.5.0/jquery.flexslider.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
         <script src="//unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
         <script src="//unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.5/lodash.min.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/lodash@4.17.5/lodash.min.js"></script>
         
         
         <!-- MALL MAVERICK -->

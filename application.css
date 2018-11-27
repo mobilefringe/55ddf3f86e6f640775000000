@@ -820,8 +820,8 @@ textarea:focus, input:focus {
             text-align: left;
             font-weight: normal;
         }
-        #agree_terms{ 
-            // margin: 0;
+        #agree_terms { 
+            margin: 4px 0;
             width: 30px;
         }
         

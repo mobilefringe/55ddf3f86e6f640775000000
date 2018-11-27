@@ -811,9 +811,12 @@ textarea:focus, input:focus {
             text-align: center;
         }
         .confirm_label {
-            height: 50px;
-            line-height: 50px;
+            margin-top: 20px;
             padding: 0;
+            
+            // height: 50px;
+            // line-height: 50px;
+            
             text-align: left;
             font-weight: normal;
         }

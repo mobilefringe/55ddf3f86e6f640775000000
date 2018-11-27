@@ -331,10 +331,10 @@
                 <script id="right_block_template" type="x-tmpl-mustache/text">
                     {% raw %}
                         {{#url}}
-                            <a href="{{url}}"><img alt="feature_item" src="{{image_url}}"/></a>
+                            <a href="{{url}}"><img src="{{image_url}}" alt="{{name}}" /></a>
                         {{/url}}
                         {{^url}}
-                            <img alt="feature_item" src="{{image_url}}"/>
+                            <img src="{{image_url}}" alt="{{name}}" />
                         {{/url}}
                     {% endraw %}
                 </script>

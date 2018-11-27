@@ -342,7 +342,7 @@
             <div class="bottom_block" id="bottom_block_container">
                 <script id="bottom_block_template" type="x-tmpl-mustache/text">
                     {% raw %}
-                        <a href="{{url}}"><img alt="feature_item" class="bottom_block_img" src="{{image_url}}"/></a>
+                        <a href="{{url}}"><img class="bottom_block_img" src="{{image_url}}" alt="{{name}}" /></a>
                     {% endraw %}
                 </script>
             </div>

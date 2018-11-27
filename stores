@@ -1,17 +1,17 @@
 <style>
-    .main_content{
-        padding-right:15px;
-        margin-top:20px;
+    .main_content {
+        margin-top: 20px;
+        padding-right: 15px;
     }
 </style>
 <div class="tabs" id='top'>
-    <div class="tab_title" id="alpha_tab" onclick="javascript:toggle_tabs('alpha')" tabindex='10' onkeypress='javascript:toggle_tabs("alpha")'>
+    <div class="tab_title" id="alpha_tab"> <!-- onclick="javascript:toggle_tabs('alpha')" tabindex='10' onkeypress='javascript:toggle_tabs("alpha")' -->
         Alphabetical
     </div>
     <div class="tab_triangle" id="alpha_triangle">
         &nbsp;
     </div>
-    <div class="tab_title" id="cat_tab" onclick="javascript:toggle_tabs('cat')" tabindex=11 onkeypress='javascript:toggle_tabs("cat")'>
+    <div class="tab_title" id="cat_tab"> <!-- onclick="javascript:toggle_tabs('cat')" tabindex=11 onkeypress='javascript:toggle_tabs("cat")' -->
         Categories
     </div>
     <div class="tab_triangle" id="cat_triangle">
@@ -28,7 +28,7 @@
         </script>
     </div>
 </div>
-<div class='tab_content' >
+<div class='tab_content'>
     <p class='' id="cat_name"><a href='#top'><span class="accessibility">Scroll to Top</span><i class="fa fa-arrow-up up_arrow"></i></a></p>
     <div id='alpha_content'>
         <script id="alpha_content_template" type="x-tmpl-mustache/text">
@@ -48,6 +48,14 @@
 
 <script>
     $(document).ready(function() {
+        $("#alpha_tab").click(function() {
+            toggle_tabs();        
+        });
+        
+        $("#cat_tab").click(function() {
+            toggle_tabs(); 
+        });
+        
         loadMallDataCached(renderAll); 
     });
         

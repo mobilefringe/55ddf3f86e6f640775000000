@@ -333,7 +333,7 @@
                         {{#url}}
                             <a href="{{url}}"><img alt="feature_item" src="{{image_url}}"/></a>
                         {{/url}}
-                        {{#url}}
+                        {{^url}}
                             <img alt="feature_item" src="{{image_url}}"/>
                         {{/url}}
                     {% endraw %}

@@ -29,7 +29,7 @@
     </div>
 </div>
 <div class='tab_content' >
-    <p class='' id="cat_name"><a href='#top'><i class="fa fa-arrow-up up_arrow"></i></a></p>
+    <p class='' id="cat_name"><a href='#top'><span class="accessibility">Scroll to Top</span><i class="fa fa-arrow-up up_arrow"></i></a></p>
     <div id='alpha_content'>
         <script id="alpha_content_template" type="x-tmpl-mustache/text">
             <div class='alpha_content_header' id='{{id}}'>

@@ -821,7 +821,7 @@ textarea:focus, input:focus {
             font-weight: normal;
         }
         #agree_terms{ 
-            margin:0;
+            // margin: 0;
             width: 30px;
         }
         

@@ -42,9 +42,9 @@ function drop_pin(id) {
     ]);
 }
 
-$("#close_form").click(function() {
-    close_form();
-});
+// $("#close_form").click(function() {
+//     close_form();
+// });
 
 function close_form(){
     $(".newsletter_container").fadeOut();

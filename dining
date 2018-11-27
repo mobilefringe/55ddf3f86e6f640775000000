@@ -71,8 +71,7 @@
             
             
             var stores = getStoresList();
-            rest_cat_id = _.filter(getStoreCategories(), function(o) { return _.includes(o.name,'Restaurant')})[0].id;
-            console.log(rest_cat_id);
+            var rest_cat_id = _.filter(getStoreCategories(), function(o) { return _.includes(o.name,'Restaurant')})[0].id;
             var restaurants = stores.filter(function(val) {
                 return _.includes(val.categories, _.toNumber(rest_cat_id));
             });
@@ -87,89 +86,48 @@
                     if(store_front_image.indexOf('missing') > -1) {
                         value.store_image_url = "//mallmaverick.com"+value.store_front_url;
                         console.log(store_front_image,  store_front_image.indexOf('missing') > -1)
-                    }
-                    else {
+                    } else {
                         value.store_image_url = "//mallmaverick.com"+store_front_image;
                     }
-                }
-                else {
+                } else {
                     value.store_image_url = "//mallmaverick.com"+value.store_front_url;
                 }
-                
             });
-            console.log(restaurants);
             renderPageData("#restaurant_list_container", "#restaurant_list_template", restaurants, "directory");
             
-            bakery_cat_id = _.filter(getStoreCategories(), function(o) { return _.includes(o.name,'Bakeries')})[0].id;
-            console.log(bakery_cat_id);
-            var bakeries = stores.filter(function(val) {
-                return _.includes(val.categories, _.toNumber(bakery_cat_id));
-            });
+            // bakery_cat_id = _.filter(getStoreCategories(), function(o) { return _.includes(o.name,'Bakeries')})[0].id;
+            // console.log(bakery_cat_id);
+            // var bakeries = stores.filter(function(val) {
+            //     return _.includes(val.categories, _.toNumber(bakery_cat_id));
+            // });
             
-            _.forEach(bakeries, function(value) {
-                var store_front_image = null;
-                if(value.assets != null ) {
-                    store_front_image = getAssetURL(value.id);
-                }
+            // _.forEach(bakeries, function(value) {
+            //     var store_front_image = null;
+            //     if(value.assets != null ) {
+            //         store_front_image = getAssetURL(value.id);
+            //     }
                 
-                if(store_front_image !== null && store_front_image !== undefined) {
-                    if(store_front_image.indexOf('missing') > -1) {
-                        value.store_image_url = "//mallmaverick.com"+value.store_front_url;
-                        console.log(store_front_image,  store_front_image.indexOf('missing') > -1)
-                    }
-                    else {
-                        value.store_image_url = "//mallmaverick.com"+store_front_image;
-                    }
-                }
-                else {
-                    value.store_image_url = "//mallmaverick.com"+value.store_front_url;
-                }
+            //     if(store_front_image !== null && store_front_image !== undefined) {
+            //         if(store_front_image.indexOf('missing') > -1) {
+            //             value.store_image_url = "//mallmaverick.com"+value.store_front_url;
+            //             console.log(store_front_image,  store_front_image.indexOf('missing') > -1)
+            //         }
+            //         else {
+            //             value.store_image_url = "//mallmaverick.com"+store_front_image;
+            //         }
+            //     }
+            //     else {
+            //         value.store_image_url = "//mallmaverick.com"+value.store_front_url;
+            //     }
                 
-            });
-            console.log(bakeries);
-            renderPageData("#bakery_list_container", "#bakery_list_template", bakeries, "directory");
+            // });
+            // console.log(bakeries);
+            // renderPageData("#bakery_list_container", "#bakery_list_template", bakeries, "directory");
             
             $("#restaurant_list_container").show();
             $(".loading_overlay").hide();
         }
-        $(".sort_cat").click(function(){
-            // value
-            $(".sort_cat").removeClass("active");
-            $(this).addClass("active");
-            
-            $(".store_lists").hide();
-            if($(this).attr("value") == "restaurant") {
-                $("#restaurant_list_container").show();
-            }
-            else {
-                $("#bakery_list_container").show();
-            }
-        });
         
         loadMallData(render_page_details); 
-    })
-    
-    // function renderFeatureItems(){
-    //     var items = getFeatureList();
-    //     var temp_features = [];
-    //     for (var i = 0; i < 7; i++ ) {
-    //         var temp_val = {};
-    //         temp_val.name = "Stores"
-    //         if( i == 0) {
-    //             temp_val.image_url = "//codecloud.cdn.speedyrails.net/sites/5bfc4c8f6e6f644801390000/image/png/1517932473306/height2x.png";
-    //         }
-    //         else if(i == 2 || i== 3 || i == 4|| i == 6) {
-    //             temp_val.image_url = "//codecloud.cdn.speedyrails.net/sites/5bfc4c8f6e6f644801390000/image/png/1517932491460/square.png";
-    //         }
-    //         else {
-    //              temp_val.image_url = "//codecloud.cdn.speedyrails.net/sites/5bfc4c8f6e6f644801390000/image/png/1517937829931/width2x.png";
-    //         }
-    //         // temp_val.image_url = ""
-    //         temp_features.push(temp_val);
-    //     }
-    //     console.log(temp_features);
-    //     $.each(temp_features, function(i, val){
-    //         $('.feature_' + i).html('<div class="ih-item circle effect19"><a href="'+ val.url +'"><img src="'+ val.image_url +'"alt="'+ val.name +'"><div class="info"><div class="content"><h3>'+ val.name +'</h3></div></div></a></div>')
-    //     })
-    // }
+    });
 </script>

@@ -1164,7 +1164,7 @@ textarea:focus, input:focus {
 .tab_title_content {
     a, span {
         color: black !important;
-        margin-right: 15px;
+        margin-right: 14px;
         line-height: 39px;
         &:hover {
             cursor: pointer;

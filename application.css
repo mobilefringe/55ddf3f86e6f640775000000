@@ -1171,6 +1171,9 @@ textarea:focus, input:focus {
             text-decoration: underline;
         }
     }
+    a:last-of-type {
+        margin-right: 0;
+    }
     span {
         white-space: nowrap;
     }

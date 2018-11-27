@@ -5,18 +5,10 @@
     }
 </style>
 <div class="tabs" id='top'>
-    <div class="tab_title" id="alpha_tab"> <!-- onclick="javascript:toggle_tabs('alpha')" tabindex='10' onkeypress='javascript:toggle_tabs("alpha")' -->
-        Alphabetical
-    </div>
-    <div class="tab_triangle" id="alpha_triangle">
-        &nbsp;
-    </div>
-    <div class="tab_title" id="cat_tab"> <!-- onclick="javascript:toggle_tabs('cat')" tabindex=11 onkeypress='javascript:toggle_tabs("cat")' -->
-        Categories
-    </div>
-    <div class="tab_triangle" id="cat_triangle">
-        &nbsp;
-    </div>
+    <div class="tab_title" id="alpha_tab">Alphabetical</div>
+    <div class="tab_triangle" id="alpha_triangle">&nbsp;</div>
+    <div class="tab_title" id="cat_tab">Categories</div>
+    <div class="tab_triangle" id="cat_triangle">&nbsp;</div>
     <div class="tab_title_content" id="alpha_tab_title_content_container">
         <script id="alpha_tab_title_content_template" type="x-tmpl-mustache/text">
             <a href="#{{id}}">{{id}}</a>

@@ -46,11 +46,11 @@
 <script>
     $(document).ready(function() {
         $("#alpha_tab").click(function() {
-            toggle_tabs();        
+            toggle_tabs("alpha");        
         });
         
         $("#cat_tab").click(function() {
-            toggle_tabs(); 
+            toggle_tabs("cats"); 
         });
         
         loadMallDataCached(renderAll); 

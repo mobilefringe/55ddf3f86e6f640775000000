@@ -20,10 +20,7 @@
     <script id="promo_template" type="x-tmpl-mustache/text">
         <div class="promo_div">
             <div class="promo_left_block promo_center mobile_block">
-                <a href="{{promo_img}}" target="_blank" rel="lightbox">
-                    <img alt="photo_{{name}}" src="{{promo_img}}"/>
-                </a>
-                
+                <img alt="photo_{{name}}" src="{{promo_img}}"/>
             </div>
             <div class="promo_right_block">
                 <a class="promo_name" href="/employment/{{slug}}">{{name}}</a>

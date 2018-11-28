@@ -31,10 +31,8 @@
         </div>
     </script>
 </div>
-
-
 <div class="no_promos">
-    There are currently no employment opportunities available. Please check back at a later date!
+    <p>There are currently no employment opportunities available. Please check back at a later date!</p>
 </div>
 
 <script>
@@ -59,23 +57,20 @@
                         var store_details = getStoreDetailsByID(val.jobable_id)
                         val.store_slug = "stores/"+store_details.slug
                         val.store_name = store_details.name
-                    } else {
-                        val.store_name = "Heartland Town Centre"
-                        val.store_slug = "home"
-                    }
-                        if (val.jobable_type == "Store"){
-                           if(!store_details.store_front_url_abs ||  store_details.store_front_url_abs.indexOf("missing.png") > -1 || store_details.store_front_url_abs.length === 0){
-                            val.promo_img = "//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/a22fcf023d728855c6f575ba100806d7/default.jpg"
-                            } else {
-                                val.promo_img = store_details.store_front_url_abs
-                            }   
+                        if (!store_details.store_front_url_abs ||  store_details.store_front_url_abs.indexOf("missing.png") > -1) {
+                            val.promo_img = "//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/a22fcf023d728855c6f575ba100806d7/default.jpg";
                         } else {
-                            
-                            val.promo_img = "//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/a22fcf023d728855c6f575ba100806d7/default.jpg"
+                            val.promo_img = store_details.store_front_url_abs;
                         }
-                     promo_array.push(val)
-                 } 
-             });
+                    } else {
+                        val.store_name = "Heartland Town Centre";
+                        val.store_slug = "home";
+                        val.promo_img = "//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/a22fcf023d728855c6f575ba100806d7/default.jpg";
+                    }
+
+                    promo_array.push(val)
+                } 
+            });
              
             if (promo_array.length > 0) {
                 renderPageData("#promo_container", "#promo_template", promo_array, "all_promos");

@@ -44,31 +44,29 @@
             all_promos = all_promos.reverse();
             promo_array = []
             $.each(all_promos, function(key, val) {
-                if (val.description.length > 110) {
-                    val.description =  val.description.substring(0, 100) + "...";
-                } 
-
-                today = moment();
-                webDate = moment(val.show_on_web_date);
+                var today = moment();
+                var webDate = moment(val.show_on_web_date);
                 if (today >= webDate) {
-                    val.date_string = get_date_string(val.start_date, val.end_date)
+                    val.date_string = get_date_string(val.start_date, val.end_date);
+                    if (val.description.length > 110) {
+                        val.description =  val.description.substring(0, 100) + "...";
+                    } 
+                
                     if (val.promotionable_type == "Store") {
                         var store_details = getStoreDetailsByID(val.promotionable_id);
                         val.store_slug = "stores/" + store_details.slug;
                         val.store_name = store_details.name;
-                    } else {
-                        val.store_name = "Heartland Town Centre"
-                        val.store_slug = "home"
-                    }
-                    if (val.promotionable_type == "Store") {
-                        if (!store_details.store_front_url_abs ||  store_details.store_front_url_abs.indexOf("missing.png") > -1 || store_details.store_front_url_abs.length === 0) {
-                            val.promo_img = "//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/a22fcf023d728855c6f575ba100806d7/default.jpg"
+                        if (!store_details.store_front_url_abs ||  store_details.store_front_url_abs.indexOf("missing.png") > -1) {
+                            val.promo_img = "//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/a22fcf023d728855c6f575ba100806d7/default.jpg";
                         } else {
-                            val.promo_img = store_details.store_front_url_abs
-                        }   
+                            val.promo_img = store_details.store_front_url_abs;
+                        } 
                     } else {
-                        val.promo_img = "//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/a22fcf023d728855c6f575ba100806d7/default.jpg"
+                        val.store_name = "Heartland Town Centre";
+                        val.store_slug = "home";
+                        val.promo_img = "//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/a22fcf023d728855c6f575ba100806d7/default.jpg";
                     }
+
                     promo_array.push(val)
                 } 
             });

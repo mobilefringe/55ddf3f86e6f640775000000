@@ -6,6 +6,11 @@
         .mobile_search {
             display: block;
         }
+        #mobile_search_input {
+            padding: 5px;
+            border: 1px solid #000;
+            text-align: center;
+        }
         .list-group {
             background: black;
         }

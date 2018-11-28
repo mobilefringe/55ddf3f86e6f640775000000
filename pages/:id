@@ -31,7 +31,7 @@
 <div class="basic_content_box" id="page_content">
     <img id="page_img" src="//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/df4ca5d08c4181ab1efb76fa1dee30b0/default_pages.jpg" alt="">
     <div class="basic_content_right">
-        <h2 id="page_title" class="hidden_now"></h2>
+        <!--<h2 id="page_title" class="hidden_now"></h2>-->
         <div id="page_body"></div>
     </div>
 </div>

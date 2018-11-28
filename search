@@ -110,7 +110,7 @@
             
             if (search_results["stores"]) {
                 if (search_results["stores"].length > 0) {
-                    $("#mobile_stores_results_header").html(search_results["stores"].length + " Stores <i id='mobile_store_arrow' class='fa fa-chevron-right pull-right search_arrow'></i>");
+                    $("#mobile_stores_results_header").html(search_results["stores"].length + " Stores <span id='mobile_store_arrow' class='fa fa-chevron-right pull-right search_arrow'></span>");
                     $("#mobile_stores_results_header").show();
                 }
             } else {
@@ -119,7 +119,7 @@
             
             if (search_results["promotions"]) {
                 if (search_results["promotions"].length > 0) {
-                    $("#mobile_promotions_results_header").html(search_results["promotions"].length + " Promotions <i id='promo_arrow' class='fa fa-chevron-right search_arrow pull-right'></i>");
+                    $("#mobile_promotions_results_header").html(search_results["promotions"].length + " Promotions <span id='promo_arrow' class='fa fa-chevron-right search_arrow pull-right'></span>");
                     $("#mobile_promotions_results_header").show();
                 }
             } else {
@@ -128,7 +128,7 @@
                 
             if (search_results["events"]) {
                 if (search_results["events"].length > 0) {
-                    $("#mobile_events_results_header").html(search_results["events"].length + " Events <i id='event_arrow' class='fa fa-chevron-right pull-right search_arrow'></i>");   
+                    $("#mobile_events_results_header").html(search_results["events"].length + " Events <span id='event_arrow' class='fa fa-chevron-right pull-right search_arrow'></span>");   
                     $("#mobile_events_results_header").show();
                 }
             } else {

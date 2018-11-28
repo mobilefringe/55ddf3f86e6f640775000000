@@ -100,7 +100,7 @@
     });
 
     function showMobileSearchResults() {
-        $("#mobile_search_results").show();
+        $("#mobile_search_results").fadeIn();
         if ($("#mobile_search_input").val().length === 0) {
             $("#mobile_search_results").hide();
         } else {

@@ -59,8 +59,8 @@
                         val.store_name = "Heartland Town Centre"
                         val.store_slug = "home"
                     }
-                    var promo_img = val.event_image_url_abs;
-                    if (promo_img.indexOf("missing.png") > -1) {
+                    val.promo_img = val.event_image_url_abs;
+                    if (val.promo_img.indexOf("missing.png") > -1) {
                         if (val.eventable_type == "Store") {
                             if(!store_details.store_front_url_abs ||  store_details.store_front_url_abs.indexOf("missing.png") > -1) {
                                 val.promo_img = "";

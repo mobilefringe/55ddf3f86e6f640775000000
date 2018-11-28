@@ -23,7 +23,8 @@
         }
     }
 </style>
-<h1 id="custom_page_header"></h1>
+<!--<h1 id="custom_page_header"></h1>-->
+<h1 id="page_title"></h1>
 <div class="google_map_div" id="canvas_1">
     <img id="custom_page_img" src="" alt="">
 </div>

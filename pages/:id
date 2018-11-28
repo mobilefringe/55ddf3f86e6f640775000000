@@ -103,7 +103,7 @@
             } else if (slug == "htc-gift-cards") {
                 $("#custom_page_header").html("Gift Cards");
                 $("#custom_page_img").attr("src", "//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/image/jpeg/1444149882000/Banner_gift_and_services.jpg");
-            } else if (slug == "htc-contact-us" {
+            } else if (slug == "htc-contact-us") {
                 $("#custom_page_header").html("Contact Us");
                 $("#custom_page_img").attr("src", "//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/image/jpeg/1444148784000/Banner_Contact.jpg");
             } else if (slug == "htc-hours") {

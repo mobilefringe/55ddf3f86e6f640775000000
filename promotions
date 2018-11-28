@@ -6,13 +6,13 @@
     .promo_name{
         font-weight :bold;
     }
-     @media (max-width: 767px) {
-         #promo_header{
-             width:95%;
-             margin-left:auto;
-             margin-right:auto;
-         }
-     }
+    @media (max-width: 767px) {
+        #promo_header{
+            width: 95%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
 </style>
 <h1 id="promo_header">Promotions</h1>
 <div id="promo_container">
@@ -34,7 +34,6 @@
 <div class="no_promos">
     There are currently no promotions. Please check back at a later date!
 </div>
-
 
 <script>
     $(document).ready(function() {

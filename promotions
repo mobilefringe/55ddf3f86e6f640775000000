@@ -14,17 +14,12 @@
          }
      }
 </style>
-
-
-
 <h1 id="promo_header">Promotions</h1>
 <div id='promo_container'>
     <script id="promo_template" type="x-tmpl-mustache/text">
         <div class='promo_div'>
             <div class='promo_left_block promo_center mobile_block'>
-               
-                <a href='/promotions/{{slug}}'><img alt="photo_{{name}}" src="{{promo_img}}"/></a>
-             
+                <img src="{{promo_img}}" alt="{{name}}" />
             </div>
             <div class="promo_right_block">
                 <a class='promo_name' href='/promotions/{{slug}}'>{{name}}</a>

@@ -52,6 +52,18 @@
             prefix = get_prefix();
             var pages_json = prefix + "/pages/" + slug + ".json";
             
+            $.getJSON(pages_json).done(function(data) {
+                document.title = data.title;
+                $("#page_title").html(data.title);
+                $("#page_body").html(data.body);
+                
+            }).fail(function(jqXHR) {
+                if (jqXHR.status == 404) {
+                    // $("#404_msg").fadeIn("fast");
+                    window.location = "/";
+                }
+            });
+            
             if (slug == "htc-centre-information") {
                 $("#custom_page_header").html("Location");
                 $("#custom_page_img").remove();
@@ -68,7 +80,7 @@
                     $("#getting_here_map").addClass("scrolloff"); // set the pointer events to none when mouse leaves the map area
                 });    
             } else if (slug == "htc-heartland-town-centre-apps") {
-                $("#custom_page_header").html("Download our App!");
+                $("#page_title").html("Download our App!");
                 $("#custom_page_img").attr("src", "//codecloud.cdn.speedyrails.net/sites/57f5246e6e6f644418020000/image/jpeg/1448656005000/app_banner.jpg");
             } else if (slug == "htc-leasing") {
                 $("#custom_page_header").html("Leasing");
@@ -114,16 +126,7 @@
                 $("#page_img").hide();
             }
     
-            $.getJSON(pages_json).done(function(data) {
-                document.title = data.title;
-                $("#page_title").html(data.title)
-                $("#page_body").html(data.body);
-                
-            }).fail(function(jqXHR) {
-                if (jqXHR.status == 404) {
-                    $("#404_msg").fadeIn("fast");
-                }
-            }); 
+             
         }
     
         loadMallData(renderAll); 

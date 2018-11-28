@@ -6,10 +6,10 @@
                     <div class="main_post_image_container" style="background-image: url({{post_image}});"></div>
                 </div>
                 <div class="main_post_content col-sm-4">
-                    <a href="{{slug}}"><h4 class="main_post_header caps">{{title_short}}</h4></a>
+                    <h4 class="main_post_header caps">{{title_short}}</h4>
                     <div class="blog_date">{{publish_date}}</div>
                     <div class="post_text">{{description_short}}</div>
-                    </div>
+                </div>
                 <div class="col-sm-8 main_post_image_wrapper hidden_phone">
                     <div class="main_post_image_container" style="background-image: url({{post_image}});"></div>
                 </div>
@@ -19,9 +19,11 @@
                 <div class="col-sm-8 hidden_phone">
                     <div class="main_post_share_icons  text-center"">
                         <a href="https://twitter.com/home?status={{twitter_title}} https://www.heartlandtown.com/posts/{{slug}}" target="_blank">
+                            <p class="accessibility">Share on Twitter</p>
                             <i class="fa fa-twitter"></i>
                         </a>
                         <a href="https://www.facebook.com/sharer.php?u=https://www.heartlandtown.com/posts/{{slug}}" target="_blank">
+                            <p class="accessibility">Share on Facebook</p>
                             <i class="fa fa-facebook-f"></i>
                         </a>
                     </div>
@@ -54,7 +56,6 @@
                             </a>
                         </div>
                     </div>
-                    
                 </div>
             </div>
         </script>

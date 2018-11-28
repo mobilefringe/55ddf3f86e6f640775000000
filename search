@@ -64,20 +64,20 @@
                 {{/events}}
             </div>
         </script>
-        <!--<ul class="list-group">-->
-        <!--    <li>-->
-        <!--        <a class="close-search list-group-item">-->
-        <!--            <small>-->
-        <!--                <span class="search-results-count">{{count}} results found.</span>&nbsp;<span data-i18n="general.results"></span> -->
-        <!--            </small>-->
-        <!--        </a>-->
-        <!--    </li>-->
-        <!--    <li>-->
-        <!--        <div id="mobie_search_results_items" class="search-results-items" style="">-->
-                    <!--RENDERED BY renderSearchResultsTemplate(..) -->
-        <!--        </div>-->
-        <!--    </li>-->
-        <!--</ul>-->
+        <ul class="list-group">
+            <li>
+                <a class="close-search list-group-item">
+                    <small>
+                        <span class="search-results-count">{{count}} results found.</span>&nbsp;<span data-i18n="general.results"></span> 
+                    </small>
+                </a>
+            </li>
+            <li>
+                <div id="mobie_search_results_items" class="search-results-items" style="">
+                    RENDERED BY renderSearchResultsTemplate(..) 
+                </div>
+            </li>
+        </ul>
     </div>
 </div>
 

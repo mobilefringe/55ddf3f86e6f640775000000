@@ -20,8 +20,8 @@
 </style>
 <h1 id="custom_page_header">Thank you!</h1>
 <div class="basic_content_box" id="page_content">
-    <div class='basic_content_right'>
-        <div id='page_body'>Thank you for filling out our leasing application. We will contact you shortly.</div>
+    <div class="basic_content_right">
+        <div id="page_body">Thank you for filling out our leasing application. We will contact you shortly.</div>
     </div>
 </div>
 <script>

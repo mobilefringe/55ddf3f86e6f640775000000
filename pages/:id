@@ -56,12 +56,12 @@
                 document.title = data.title;
                 $("#page_title").html(data.title);
                 $("#page_body").html(data.body);
-                
             }).fail(function(jqXHR) {
-                if (jqXHR.status == 404) {
+                window.location = "/";
+                // if (jqXHR.status == 404) {
                     // $("#404_msg").fadeIn("fast");
-                    window.location = "/";
-                }
+                    
+                // }
             });
             
             if (slug == "htc-centre-information") {

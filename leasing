@@ -119,8 +119,14 @@
     </form>
 </div>
 <script>
-
-    $(".right_block, .bottom_block").show();
+    $(document).ready(function() {
+        function renderAll (){
+            $(".right_block, .bottom_block").show();
+            $(".loading_overlay").hide();   
+        }
+        loadMallData(renderAll);  
+    });
+    
     $('#contact_form').submit(function(e) {
         $("#subject").val($("#company_name").val() + " Leasing Form")
         values = [];
@@ -131,21 +137,12 @@
             type: "POST",
             data : {authenticity_token: '<%=form_authenticity_token%>' ,
             form_data:values},
-            success: function(data, textStatus, jqXHR)
-            {
+            success: function(data, textStatus, jqXHR) {
                 window.location.href="/thank_you"
             },
-            error: function (jqXHR, textStatus, errorThrown)
-            {
+            error: function (jqXHR, textStatus, errorThrown) {
                 window.location.href="/thank_you"
             }
         });
 	});
-    $(document).ready(function() {
-        function renderAll (){
-            $(".loading_overlay").hide();   
-        }
-        loadMallData(renderAll);  
-    });
-    
 </script>

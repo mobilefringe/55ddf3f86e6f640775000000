@@ -271,7 +271,7 @@
                             <button onclick="window.location.href='/map'">centre map</button>
                         </li>
                         <li>
-                            <button onclick="toggle_mobile_submenu('promos_dd2')">promotions <i id="promos_dd2_icon" class="fa fa-plus"></i></button>
+                            <button onclick="toggle_mobile_submenu('promos_dd2')">promotions <span id="promos_dd2_icon" class="fa fa-plus"></span></button>
                             <ul class="mobile_submenu" id="promos_dd2">
                                 <li><a href="/promotions">promotions</a></li>
                                 <li><a href="/events">events</a></li>
@@ -282,7 +282,7 @@
                             <button onclick="window.location.href='/posts'">Blog </button>
                         </li>
                         <li>
-                            <button onclick="toggle_mobile_submenu('about2')">about us <i id="about2_icon" class="fa fa-plus"></i></button>
+                            <button onclick="toggle_mobile_submenu('about2')">about us <span id="about2_icon" class="fa fa-plus"></span></button>
                             <ul class="mobile_submenu" id="about2">
                                 <li><a href="/pages/htc-hours">shopping hours</a></li>
                                 <li><a href="/leasing">Leasing</a></li>

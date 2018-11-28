@@ -1,0 +1,30 @@
+<style>
+    .basic_content_right {
+        width: 100%;
+        margin-left: 0;
+    }
+    @media (max-width: 767px) {
+        #page_img {
+            display: none;
+        }  
+        h1 {
+            width: 95%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #custom_page_img {
+            height: auto;
+        }
+    }
+</style>
+<h1 id="custom_page_header">Thank you!</h1>
+<div class="basic_content_box" id="page_content">
+    <div class='basic_content_right'>
+        <h2 id="page_title"></h2>
+        <div id='page_body'>Thank you for filling out our leasing application. We will contact you shortly.</div>
+    </div>
+</div>
+<script>
+    $(".loading_overlay").hide();
+</script>

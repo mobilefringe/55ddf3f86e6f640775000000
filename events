@@ -71,6 +71,7 @@
                             val.promo_img = "";
                         }
                     }
+                    console.log("val.promo_img", val.promo_img)
                     event_array.push(val)
                 } 
             });

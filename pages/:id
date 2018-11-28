@@ -25,14 +25,14 @@
 </style>
 
 <h1 id="custom_page_header"></h1>
-<div class="google_map_div" id='canvas_1'>
+<div class="google_map_div" id="canvas_1">
     <img id="custom_page_img" src="" alt="">
 </div>
 <div class="basic_content_box" id="page_content">
     <img id="page_img" src="//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/df4ca5d08c4181ab1efb76fa1dee30b0/default_pages.jpg" alt="">
-    <div class='basic_content_right'>
+    <div class="basic_content_right">
         <!--<h2 id="page_title"></h2>-->
-        <div id='page_body'></div>
+        <div id="page_body"></div>
     </div>
 </div>
 <div id="404_msg" style="display:none">
@@ -48,15 +48,14 @@
     
         function renderpageHTML(){
             $(".right_block, .bottom_block").show();
-            var pathArray = window.location.pathname.split( '/' );
+            var pathArray = window.location.pathname.split( "/" );
             var slug = pathArray[pathArray.length-1];
             prefix = get_prefix();
             var pages_json = prefix+"/pages/" + slug + ".json"
             $.getJSON(pages_json).done(function(data) {
                 document.title = data.title;
                 $("#page_title").html(data.title)
-                $('#page_body').html(data.body);
-                
+                $("#page_body").html(data.body);
             }).fail(function(jqXHR) {
                 if (jqXHR.status == 404) {
                     $("#404_msg").fadeIn("fast");
@@ -68,62 +67,62 @@
                 $("#custom_page_img").remove();
                 $(".google_map_div").css("height","347px");
                 $("#canvas_1").html('<iframe id="getting_here_map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2888.7657106705838!2d-79.6935115!3d43.6114196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x57e177a0206eaca1!2sHeartland+Town+Centre!5e0!3m2!1sen!2sca!4v1440791190857" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>')
-                $('#getting_here_map').addClass('scrolloff'); // set the pointer events to none on doc ready
-                $('#canvas_1').on('click', function () {
-                    $('#getting_here_map').removeClass('scrolloff'); // set the pointer events true on click
+                $("#getting_here_map").addClass("scrolloff"); // set the pointer events to none on doc ready
+                $("#canvas_1").on("click", function () {
+                    $("#getting_here_map").removeClass("scrolloff"); // set the pointer events true on click
                 });
         
                 // you want to disable pointer events when the mouse leave the canvas area;
         
                 $("#getting_here_map").mouseleave(function () {
-                    $('#getting_here_map').addClass('scrolloff'); // set the pointer events to none when mouse leaves the map area
+                    $("#getting_here_map").addClass("scrolloff"); // set the pointer events to none when mouse leaves the map area
                 });    
-            } else if (slug == 'htc-heartland-town-centre-apps') {
+            } else if (slug == "htc-heartland-town-centre-apps") {
                 $("#custom_page_header").html("Download our App!");
                 $("#custom_page_img").attr("src", "//codecloud.cdn.speedyrails.net/sites/57f5246e6e6f644418020000/image/jpeg/1448656005000/app_banner.jpg");
                 // $("#page_img").hide();
-            } else if (slug == 'htc-leasing') {
+            } else if (slug == "htc-leasing") {
                 $("#custom_page_header").html("Leasing")
                 $("#custom_page_img").attr("src", "//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/14dae680c402975cb3909282b7f8b424/default.jpg");
                 $("#page_img").attr("src","")
                 // $("#page_img").hide();
-            } else if (slug == 'htc-accessibility'){
+            } else if (slug == "htc-accessibility"){
                 $("#custom_page_header").html("Accessibility")
                 $("#custom_page_img").attr("src", "//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/image/jpeg/1444148732000/Banner_Accessibility.jpg");
                 $("#page_img").attr("src","//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/df4ca5d08c4181ab1efb76fa1dee30b0/default_pages.jpg")
-            } else if (slug == 'htc-electric-vehicle-charging-stations'){
+            } else if (slug == "htc-electric-vehicle-charging-stations"){
                 $("#custom_page_header").html("Electric Vehicle Charging Stations")
                 $("#custom_page_img").attr("src", "//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/image/png/1445361559000/chargingbanner.png");
                 $("#page_img").attr("src","//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/df4ca5d08c4181ab1efb76fa1dee30b0/default_pages.jpg")
                    
-            } else if (slug == 'htc-terms-and-conditions'){
+            } else if (slug == "htc-terms-and-conditions"){
                 $("#custom_page_header").html("Terms & Conditions")
                 $("#custom_page_img").attr("src", "//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/image/jpeg/1444148712000/Banner_Terms.jpg");
                 $("#page_img").attr("src","//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/df4ca5d08c4181ab1efb76fa1dee30b0/default_pages.jpg")
-            } else if (slug == 'htc-privacy-policy'){
+            } else if (slug == "htc-privacy-policy"){
                 $("#custom_page_header").html("Privacy Policy")
                 $("#custom_page_img").attr("src", "//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/image/jpeg/1444148748000/Banner_Privacy.jpg");
                 $("#page_img").attr("src","//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/df4ca5d08c4181ab1efb76fa1dee30b0/default_pages.jpg")
-            } else if (slug == 'htc-services'){
+            } else if (slug == "htc-services"){
                 $("#custom_page_header").html("Guest Services")
                 $("#custom_page_img").attr("src", "//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/image/jpeg/1444149882000/Banner_gift_and_services.jpg");
                 $("#page_img").attr("src","//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/df4ca5d08c4181ab1efb76fa1dee30b0/default_pages.jpg")
-            } else if (slug == 'htc-gift-cards'){
+            } else if (slug == "htc-gift-cards"){
                 $("#custom_page_header").html("Gift Cards")
                 $("#custom_page_img").attr("src", "//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/image/jpeg/1444149882000/Banner_gift_and_services.jpg");
                 $("#page_img").attr("src","//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/df4ca5d08c4181ab1efb76fa1dee30b0/default_pages.jpg")
-            } else if (slug == 'htc-contact-us'){
+            } else if (slug == "htc-contact-us"){
                 $("#custom_page_header").html("Contact Us")
                 $("#custom_page_img").attr("src", "//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/image/jpeg/1444148784000/Banner_Contact.jpg");
                 $("#page_img").attr("src","//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/df4ca5d08c4181ab1efb76fa1dee30b0/default_pages.jpg")
-            } else if (slug == 'htc-hours'){
+            } else if (slug == "htc-hours"){
                 $("#custom_page_header").html("Shopping Hours")
                 $("#custom_page_img").attr("src", "//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/14dae680c402975cb3909282b7f8b424/default.jpg");
                 $("#page_img").attr("src","//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/df4ca5d08c4181ab1efb76fa1dee30b0/default_pages.jpg")  
             
             }
             
-               else if (slug == 'htc-summer-sidewalk-sale'){
+               else if (slug == "htc-summer-sidewalk-sale"){
                 $("#custom_page_header").html("Summer Sidewalk Sale")    
                $("#custom_page_img").attr("src", "//codecloud.cdn.speedyrails.net/sites/59401f726e6f6461641d0000/image/png/1498486837000/Sidewalk Sale Banner 60off.png");
                }

@@ -1,0 +1,151 @@
+<div class="leasing_form_div">
+    <h1>Leasing</h1>
+    <p>As part of the application process, we ask that you complete this form as fully as possible.</p>
+    <form name="contact_form" id="contact_form" method="post" class="contact_form">
+        <input name="subject" id="subject" class="form-control" type="hidden">
+        <div class="form_section">
+            <h2>Business Detail</h2>
+            <div class='two_col_container'>
+                <div class="two_col_input">
+                    <label for="company_name" >Company Name*</label>
+                    <input name="company_name" id="company_name" class="form-control" type="text" value="" required>    
+                </div>
+                <div class="two_col_input">
+                    <label for="company_address" >Company Address*</label>
+                    <input name="company_address" id="company_address" class="form-control" type="text" value="" required>    
+                </div>
+            </div>
+            <div class='two_col_container'>
+                <div class="two_col_input">
+                    <label for="contact_name" >Contact Name*</label>
+                    <input name="contact_name" id="contact_name" class="form-control" type="text" value="" required>    
+                </div>
+                <div class="two_col_input">
+                    <label for="telephone" >Telephone*</label>
+                    <input name="telephone" id="telephone" class="form-control" type="text" value="" required>        
+                </div>
+            </div>
+            <div class='two_col_container'>
+                <div class="two_col_input">
+                    <label for="email" >E-mail Address*</label>
+                    <input name="email" id="email" class="form-control" type="text" value="" required>        
+                </div>
+                <div class="two_col_input">
+                    <label for="website" >Website</label>
+                    <input name="website" id="website" class="form-control" type="text" value="">
+                </div>
+            </div>
+            <div class='two_col_container'>
+                <div class="two_col_input">
+                    <label for="trade_name" >Trade Name (if different from above): </label>
+                    <input name="trade_name" id="trade_name" class="form-control" type="text" value="">
+                </div>
+                <div class="two_col_input">
+                    <label for="product_price_point" >Product Price Point</label>
+                    <input name="product_price_point" id="product_price_point" class="form-control" type="text" value="">
+                </div>
+            </div>
+            <div class='two_col_container'>
+                <div class="two_col_input">
+                    <label for="principal_use" >Principal Use</label>
+                    <input name="principal_use" id="principal_use" class="form-control" type="text" value="">
+                </div>
+                <div class="two_col_input">
+                    <label for="target_customer" >Target Customer (age, gender, income etc.)</label>
+                    <input name="target_customer" id="target_customer" class="form-control" type="text" value="">
+                </div>
+            </div>
+            <div class="separator_div">&nbsp;</div>
+        </div>
+        <div class="form_section">
+            <h2>Current Stores</h2>
+            <div class="three_col_container">
+                <div class='three_col_input'>
+                    <label for="total_stores" >Total Number of Existing Stores</label>
+                    <input name="total_stores" id="total_stores" class="form-control" type="text" value="">    
+                </div>
+            </div>
+            <label for="existing_stores" >List of Existing Locations & YTD Sales (for each)</label>
+            <textarea name="existing_stores" id="existing_stores" class="form-control " type="text" value=""></textarea>    
+            <div class="separator_div">&nbsp;</div>
+        </div>
+        <div class="form_section">
+            <h2>Requirements</h2>
+            <div class="three_col_container">
+                <div class='three_col_input'>
+                    <label for="store_size" >Store Size Minimum (s.f.)</label>
+                    <input name="store_size" id="store_size" class="form-control" type="text" value="">    
+                </div>
+                <div class='three_col_input'>
+                    <label for="desired_move_in_earliest" >Desired Move-in Earliest</label>
+                    <input name="desired_move_in_earliest" id="desired_move_in_earliest" class="form-control" type="date">    
+                </div>
+                <div class='three_col_input'>
+                    <label for="desired_move_in_latest" >Desired Move in Latest</label>
+                    <input name="desired_move_in_latest" id="desired_move_in_latest" class="form-control" type="date">    
+                </div>
+            </div>
+            <div class='two_col_container'>
+                <div class="two_col_input">
+                    <label for="budget" >Total Budget for Store Construction</label>
+                    <input name="budget" id="budget" class="form-control" type="text" value="">
+                </div>
+                <div class="two_col_input">
+                    <label for="designer" >Name of Retail Store Designer</label>
+                    <input name="designer" id="designer" class="form-control" type="text" value="">
+                </div>
+            </div>
+            <label for="menu" >If your application is for a Restaurant, please include a menu</label>
+            <textarea name="menu" id="menu" class="form-control" type="text" value=""></textarea>    
+            <div class="separator_div">&nbsp;</div>
+        </div>
+        <div class="form_section">
+            <h2>Source of Business</h2>
+            <label for="source_of_business" >Provide a detailed and complete breakdown of where your business comes from</label>
+            <textarea name="source_of_business" id="source_of_business" class="form-control" type="text" value=""></textarea>
+            <div class="separator_div">&nbsp;</div>
+        </div>
+        <div class="form_section">
+            <h2>Future Growth</h2>
+            <label for="future_growth" >Provide details of your Business Plan for the next 3-5 years including locations and timelines</label>
+            <textarea name="future_growth" id="future_growth" class="form-control" type="text" value=""></textarea>   
+            <div class="separator_div">&nbsp;</div>
+        </div>
+        <div class="form_section">
+            <h2>Business Plan</h2>
+            <p>If you are a new business we require a complete Business Plan:<br>The Business Plan must include financial data and budgets, anticipated start up fees, construction costs and associated fees and a five (5) year Sales Forecast and Cash Flow analysis.<br>If you are an existing business, we require Financial Statements for the last two (2) calendar years, anticipated construction costs and associated fees and a five (5) year Sales Forecast and Cash Flow analysis.</p>
+        </div>
+        <button type='submit' class='leasing_submit'>submit</button>    
+    </form>
+</div>
+<script>
+
+    $(".right_block, .bottom_block").show();
+    $('#contact_form').submit(function(e) {
+        $("#subject").val($("#company_name").val() + " Leasing Form")
+        values = [];
+        values = JSON.stringify($('#contact_form').serializeArray());
+        e.preventDefault();
+        $.ajax({
+            url : "/api/v1/contact_us",
+            type: "POST",
+            data : {authenticity_token: '<%=form_authenticity_token%>' ,
+            form_data:values},
+            success: function(data, textStatus, jqXHR)
+            {
+                window.location.href="/thank_you"
+            },
+            error: function (jqXHR, textStatus, errorThrown)
+            {
+                window.location.href="/thank_you"
+            }
+        });
+	});
+    $(document).ready(function() {
+        function renderAll (){
+            $(".loading_overlay").hide();   
+        }
+        loadMallData(renderAll);  
+    });
+    
+</script>

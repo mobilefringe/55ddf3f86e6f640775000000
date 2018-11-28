@@ -52,26 +52,23 @@
                         val.description =  val.description.substring(0, 100) + "...";
                     } 
                     if (val.eventable_type == "Store"){
-                        var store_details = getStoreDetailsByID(val.promotionable_id)
-                        val.store_slug = "stores/"+store_details.slug
+                        var store_details = getStoreDetailsByID(val.promotionable_id);
+                        val.store_slug = "stores/" + store_details.slug;
                         val.store_name = store_details.name
                     } else {
                         val.store_name = "Heartland Town Centre"
                         val.store_slug = "home"
                     }
-                    val.promo_img = val.event_image_url_abs;
-                    if(val.promo_img.indexOf("missing.png") > -1) {
-                        if (val.eventable_type == "Store"){
-                            if(!store_details.store_front_url_abs ||  store_details.store_front_url_abs.indexOf("missing.png") > -1 || store_details.store_front_url_abs.length === 0){
-                            val.promo_img = "";
-                            /*//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/a22fcf023d728855c6f575ba100806d7/default.jpg*/
+                    var promo_img = val.event_image_url_abs;
+                    if (promo_img.indexOf("missing.png") > -1) {
+                        if (val.eventable_type == "Store") {
+                            if(!store_details.store_front_url_abs ||  store_details.store_front_url_abs.indexOf("missing.png") > -1) {
+                                val.promo_img = "";
                             } else {
-                                val.promo_img = store_details.store_front_url_abs
+                                val.promo_img = store_details.store_front_url_abs;
                             }   
                         } else {
-                            
                             val.promo_img = "";
-                            // "//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/a22fcf023d728855c6f575ba100806d7/default.jpg"
                         }
                     }
                     event_array.push(val)

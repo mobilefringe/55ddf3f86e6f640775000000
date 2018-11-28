@@ -54,8 +54,10 @@
             prependDefaultToStoreSelect()
             $(".loading_overlay").hide();    
             load_map(regions)
-            $("#btnZoomIn").attr("src","//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/d265a41a593cf1363245cc6f49efd06b/zoom in.png")
-            $("#btnZoomOut").attr("src","//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/d265a41a593cf1363245cc6f49efd06b/zoom out.png")
+            $("#btnZoomIn").attr("src", "//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/d265a41a593cf1363245cc6f49efd06b/zoom in.png");
+            $("#btnZoomIn").attr("alt", "Zoom In");
+            $("#btnZoomOut").attr("src", "//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/d265a41a593cf1363245cc6f49efd06b/zoom out.png");
+            $("#btnZoomOut").attr("alt", "Zoom Out");
         }
         
         function prependDefaultToStoreSelect (){

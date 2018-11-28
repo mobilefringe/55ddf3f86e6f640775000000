@@ -1,0 +1,100 @@
+<style>
+    .main_content {
+        padding-right: 15px;
+    }
+    #btnZoomIn, #btnZoomOut {
+        height: 40px;
+    }
+    @media (max-width: 767px) {
+        .main_content {
+            width: 95%;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+    }
+</style>
+
+<h1 class="pull-left">Centre Map</h1>
+
+<a class="pull-right visible-md-block visible-lg-block" href="//codecloud.cdn.speedyrails.net/sites/5bfc4c8f6e6f644801390000/application/pdf/1539963944000/HTC - Map -Oct-19-2018.pdf" target="_blank">Download Map</a>
+
+<div class="store_select">
+    <label class="accessibility" for="store_select_container">Select a Store</label>
+    <select id="store_select_container" onchange="javascript:map_pin(this.value)">
+        <option default selected>test</option>
+        <script id="store_select_template" type="x-tmpl-mustache/text">
+            <option value='{{svgmap_region}}/{{slug}}'>{{name}}</option>
+        </script>
+    </select>
+</div>
+
+
+
+
+<div class="map_container" id="mapsvg"></div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.4/raphael-min.js"></script>
+<script type="text/javascript" src="//codecloud.cdn.speedyrails.net/sites/556628266e6f640eb3000000/138b043444ee6b5e381a27b2103d101a/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/d8c14ddd5ad7b16b08a457f92431c96c/heartland_svgmap.js"></script>
+
+
+<script>
+    $(document).ready(function() {
+        
+        
+        function renderAll(){
+            $(".right_block, .bottom_block").show();
+            var stores = getStoresList();
+            var regions = {}
+            $.each( stores , function( key, val ) {
+                if(val.svgmap_region != null && typeof(val.svgmap_region)  != 'undefined'){
+                    if(!val.store_front_url_abs ||  val.store_front_url_abs.indexOf('missing.png') > -1 || val.store_front_url_abs.length === 0){
+                        val.store_front_url_abs = '//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/a22fcf023d728855c6f575ba100806d7/default.jpg'
+                    } 
+                    obj = {};
+                    obj["popover"] = "<img src='"+val.store_front_url_abs+"'/><p class='tooltip_name'>"+val.name+"</p> <a href='/stores/"+val.slug+"'>View Details</a>"
+                    obj["attr"] = {}
+                    // obj["attr"]["href"] = "/stores/"+val.slug
+                    regions[val.svgmap_region] = obj
+                }
+            });
+            renderPageData("#store_select_container","#store_select_template",stores, "stores")
+            prependDefaultToStoreSelect()
+            $(".loading_overlay").hide();    
+            load_map(regions)
+            $("#btnZoomIn").attr("src","//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/d265a41a593cf1363245cc6f49efd06b/zoom in.png")
+            $("#btnZoomOut").attr("src","//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/d265a41a593cf1363245cc6f49efd06b/zoom out.png")
+        }
+        
+        
+        
+        function prependDefaultToStoreSelect (){
+            $("#store_select_container").prepend("<option default selected disabled>Select a Store</option>")
+        }
+        
+        function load_map(reg){
+            map = $('#mapsvg').mapSvg({
+                source: getSVGMapURL(),    // Path to SVG map
+                colors: {stroke: '#aaaaaa', selected: "#CC00CC", hover: "#CC00CC"},
+                // viewBox: [3000,0,6000,6000],
+                disableAll: true,
+                height:800,
+                width:1193,
+                regions: reg,
+                tooltipsMode:'custom',
+                loadingText: "loading...",
+                zoom: true,
+                zoomButtons: {'show': true,'location': 'left' },
+                pan:true,
+                cursor:'pointer',
+                responsive:true,
+                zoomLimit: [0,10]
+            });
+        }
+            
+        
+        loadMallDataCached(renderAll);  
+    })
+    
+</script>

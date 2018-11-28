@@ -64,20 +64,20 @@
                 {{/events}}
             </div>
         </script>
-        <ul class="list-group">
-            <li>
-                <a  class="close-search list-group-item">
-                    <small>
-                        <span class="search-results-count">{{count}} results found.</span>&nbsp;<span data-i18n="general.results"></span> 
-                    </small>
-                </a>
-            </li>
-            <li>
-                <div id="mobie_search_results_items" class="search-results-items" style="">
+        <!--<ul class="list-group">-->
+        <!--    <li>-->
+        <!--        <a class="close-search list-group-item">-->
+        <!--            <small>-->
+        <!--                <span class="search-results-count">{{count}} results found.</span>&nbsp;<span data-i18n="general.results"></span> -->
+        <!--            </small>-->
+        <!--        </a>-->
+        <!--    </li>-->
+        <!--    <li>-->
+        <!--        <div id="mobie_search_results_items" class="search-results-items" style="">-->
                     <!--RENDERED BY renderSearchResultsTemplate(..) -->
-                </div>
-            </li>
-        </ul>
+        <!--        </div>-->
+        <!--    </li>-->
+        <!--</ul>-->
     </div>
 </div>
 
@@ -104,9 +104,10 @@
         if ($("#mobile_search_input").val().length === 0) {
             $("#mobile_search_results").hide();
         } else {
-            var search_results = getSearchResults($("#mobile_search_input").val(),10,100);
-            $(".search-results-count").html("Total Results : "+search_results.summary.count);
-            renderSearchResultsTemplate("#mobile_search_results_template","#mobie_search_results_items",search_results);
+            var search_results = getSearchResults($("#mobile_search_input").val(), 10, 100);
+            $(".search-results-count").html("Total Results : " + search_results.summary.count);
+            renderSearchResultsTemplate("#mobile_search_results_template", "#mobie_search_results_items", search_results);
+            
             if (search_results["stores"]) {
                 if (search_results["stores"].length > 0) {
                     $("#mobile_stores_results_header").html(search_results["stores"].length + " Stores <i id='mobile_store_arrow' class='fa fa-chevron-right pull-right search_arrow'></i>");

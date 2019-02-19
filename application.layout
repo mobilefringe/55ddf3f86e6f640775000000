@@ -31,7 +31,7 @@
         <link rel="stylesheet" href="//cdn.jsdelivr.net/icheck/1.0.2/skins/all.min.css">
         <link rel="stylesheet" href="//cdn.jsdelivr.net/icheck/1.0.2/skins/square/square.min.css">
         
-      <!-- Google Tag Manager -->
+        <!-- Google Tag Manager -->
         <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
         j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=

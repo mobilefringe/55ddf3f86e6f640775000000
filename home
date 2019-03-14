@@ -12,7 +12,7 @@
 
 </style>
 <div class="popup_home hidden_now">
-    <a href="/contests/htc-bath-body-works-grand-reopening-contest--2"><img src="//codecloud.cdn.speedyrails.net/sites/5a79cd486e6f646156310000/image/jpeg/1538770544000/GrandReopening_HTC_500x500 NEW (1).jpg" /></a>
+    <a href="/contests/htc-edo-japan-grand-opening"><img src="//codecloud.cdn.speedyrails.net/sites/5a79cd486e6f646156310000/image/jpeg/1552572649000/Edo Japan Heartland Website (1).jpg" /></a>
     <i class="fa fa-remove close_popup"></i>
 </div>
 
@@ -149,15 +149,15 @@
         // //   }
         // });
         
-        //     if($.cookie("popup_viewed") != "true"){
-        //         $.cookie("popup_viewed", "true", { expires: 1 });
-        //         $('<div class="modal-backdrop custom_backdrop"></div>').appendTo(document.body);
-        //         $('.popup_home').show()
-        //     }
-        //     $('.close_popup, .custom_backdrop').click(function(){
-        //         $(".modal-backdrop").remove();
-		      //  $(".popup_home").remove();
-        //     })
+            if($.cookie("popup_viewed") != "true"){
+                $.cookie("popup_viewed", "true", { expires: 1 });
+                $('<div class="modal-backdrop custom_backdrop"></div>').appendTo(document.body);
+                $('.popup_home').show()
+            }
+            $('.close_popup, .custom_backdrop').click(function(){
+                $(".modal-backdrop").remove();
+		        $(".popup_home").remove();
+            })
         
         loadMallData(render_page_details); 
     });

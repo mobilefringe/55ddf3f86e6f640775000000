@@ -152,6 +152,7 @@
         var popup = getPopups();
         if(popup && popup.length > 0){
             $(".popup_image").attr("src", "//mallmaverick.com"+ popup.photo_url)
+            $(".popup_image").attr("href", popup.photo_link)
             if($.cookie("popup_viewed") != "true"){
                 $.cookie("popup_viewed", "true", { expires: 1 });
                 $('<div class="modal-backdrop custom_backdrop"></div>').appendTo(document.body);

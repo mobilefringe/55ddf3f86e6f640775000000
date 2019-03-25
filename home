@@ -12,7 +12,7 @@
 
 </style>
 <div class="popup_home hidden_now">
-    <a href="/contests/htc-edo-japan-grand-opening"><img class="popup_image" src="//codecloud.cdn.speedyrails.net/sites/5a79cd486e6f646156310000/image/jpeg/1552572649000/Edo Japan Heartland Website (1).jpg" /></a>
+    <a class="popup_url" href="/contests/htc-edo-japan-grand-opening"><img class="popup_image" src="//codecloud.cdn.speedyrails.net/sites/5a79cd486e6f646156310000/image/jpeg/1552572649000/Edo Japan Heartland Website (1).jpg" /></a>
     <i class="fa fa-remove close_popup"></i>
 </div>
 

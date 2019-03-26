@@ -126,6 +126,20 @@
             get_instagram("//htc.mallmaverick.com/api/v4/htc/social.json", 3, 'thumbnail', render_instagram)
             
             $(".loading_overlay").hide();
+             var popup = getPopups();
+        if(popup && popup.length > 0){
+            $(".popup_image").attr("src", "//mallmaverick.com"+ popup.photo_url)
+            $(".popup_url").attr("href", popup.photo_link)
+            if($.cookie("popup_viewed") != "true"){
+                $.cookie("popup_viewed", "true", { expires: 1 });
+                $('<div class="modal-backdrop custom_backdrop"></div>').appendTo(document.body);
+                $('.popup_home').show()
+            }
+            $('.close_popup, .custom_backdrop').click(function(){
+                $(".modal-backdrop").remove();
+    	        $(".popup_home").remove();
+            })
+        }
         }
         
         // $('#home_newsletter_form').submit(function(e){

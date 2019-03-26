@@ -149,7 +149,7 @@
         // //   }
         // });
         // console.log("getPopups()", getPopups());
-        var popup = getPopups();
+        var popup = null;// getPopups();
         if(popup && popup.length > 0){
             $(".popup_image").attr("src", "//mallmaverick.com"+ popup.photo_url)
             $(".popup_url").attr("href", popup.photo_link)

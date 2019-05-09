@@ -612,8 +612,9 @@ textarea:focus, input:focus {
 }
 
 .bottom_nav_address {
-  display: inline-block;
-  vertical-align: top;
+    margin-bottom: 20px;
+    display: inline-block;
+    vertical-align: top;
 }
 
 .bottom_nav_pin {

@@ -393,14 +393,12 @@
                         <img alt='pin' class='bottom_nav_pin' src='//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/d0af6b40cbc5a16b65d2614ff1f1744c/map25.png'/>
                         <p class="bottom_nav_address">Corner of Mavis and Britannia,<br>Mississauga, ON L5R 4G6</p>
                     </a>
-                    
-                    <br>
+                    <div class="margin_20"></div>
                     <p class="bottom_nav_column_header">Charge While You Shop!</p>
                     <a href="/pages/htc-electric-vehicle-charging-stations">
                         <p>28 EV Charging Stations Throughout the Centre</p>
                     </a>
                 </div>
-                
                 <div class='bottom_nav_column'>
                     <p class="bottom_nav_column_header">Explore</p>
                     <table role='presentation'>

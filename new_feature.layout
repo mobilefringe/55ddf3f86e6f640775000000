@@ -357,46 +357,26 @@
             </div>
         </div>
         <div class='page_content'>
-        
-
-            
-            
             <div class='main_content' id='main_content'>{{yield}}</div>
-            
-            <!--<div class="right_block hidden_now" id="right_block_container">-->
-            <!--    <script id="right_block_template" type="x-tmpl-mustache/text">-->
-            <!--        {% raw %}-->
-            <!--            {{#url}}-->
-            <!--                <a href='{{url}}'><img alt='feature_item' src='{{image_url}}'/></a>-->
-            <!--            {{/url}}-->
-            <!--            {{^url}}-->
-            <!--                <img alt='feature_item' src='{{image_url}}'/>-->
-            <!--            {{/url}}-->
-            <!--        {% endraw %}-->
-            <!--    </script>-->
-            <!--</div>-->
-            
-            <!--<div class="bottom_block hidden_now" id="bottom_block_container">-->
-            <!--    <script id="bottom_block_template" type="x-tmpl-mustache/text">-->
-            <!--        {% raw %}-->
-            <!--            <a href='{{url}}'><img alt='feature_item' class='bottom_block_img' src='{{image_url}}'/></a>-->
-            <!--        {% endraw %}-->
-            <!--    </script>-->
-            <!--</div>-->
         </div>
         <div class='bottom_nav'>
             <div class='trim_screen'>
-                
                 <div class='bottom_nav_column'>
                     <p class="bottom_nav_column_header">About Us</p>
                     <p>Heartland Town Centre, one of Canada’s largest and most successful Power Centres offers over 180 stores and services for the ultimate shopping experience.</p>
                 </div>
                 <div class='bottom_nav_column'>
                     <p class="bottom_nav_column_header">Location</p>
-                    <a href="https://www.google.com/maps/place/Heartland+Town+Centre,+6075+Mavis+Rd,+Mississauga,+ON+L5R+4G6/@43.6129381,-79.6973997,16z/data=!4m13!1m7!3m6!1s0x882b4061e70901d9:0x61718c68f9882235!2sHeartland+Town+Centre,+6075+Mavis+Rd,+Mississauga,+ON+L5R+4G6!3b1!8m2!3d43.6102178!4d-79.6937075!3m4!1s0x882b4061e70901d9:0x61718c68f9882235!8m2!3d43.6102178!4d-79.6937075" target="_blank"><img alt='pin' class='bottom_nav_pin' src='//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/d0af6b40cbc5a16b65d2614ff1f1744c/map25.png'/>
-                    <p class="bottom_nav_address">Corner of Mavis and Britannia,<br>Mississauga, ON L5R 4G6</p></a>
+                    <a href="https://www.google.com/maps/place/Heartland+Town+Centre,+6075+Mavis+Rd,+Mississauga,+ON+L5R+4G6/@43.6129381,-79.6973997,16z/data=!4m13!1m7!3m6!1s0x882b4061e70901d9:0x61718c68f9882235!2sHeartland+Town+Centre,+6075+Mavis+Rd,+Mississauga,+ON+L5R+4G6!3b1!8m2!3d43.6102178!4d-79.6937075!3m4!1s0x882b4061e70901d9:0x61718c68f9882235!8m2!3d43.6102178!4d-79.6937075" target="_blank">
+                        <img alt='pin' class='bottom_nav_pin' src='//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/d0af6b40cbc5a16b65d2614ff1f1744c/map25.png'/>
+                        <p class="bottom_nav_address">Corner of Mavis and Britannia,<br>Mississauga, ON L5R 4G6</p>
+                    </a>
+                    <div class="margin_20"></div>
+                    <p class="bottom_nav_column_header">Charge While You Shop!</p>
+                    <a href="/pages/htc-electric-vehicle-charging-stations">
+                        <p>28 EV Charging Stations Throughout the Centre</p>
+                    </a>
                 </div>
-                
                 <div class='bottom_nav_column'>
                     <p class="bottom_nav_column_header">Explore</p>
                     <table role='presentation'>
@@ -421,7 +401,6 @@
                 <a class="accessible" href="#main_content">[Skip]</a>
                 <p class="trim_left">&copy;<span id="current_year"></span> Heartland Town Centre All rights reserved. <a href="/pages/htc-privacy-policy">Privacy Policy</a> | <a href="/pages/htc-accessibility">Accessibility</a> | <a href="/pages/htc-terms-and-conditions">Terms & Conditions</a> | <a href="/employment">Employment</a></p>
                 <p class='trim_right'>Powered by <a href="//mallmaverick.com" target='_blank'>Mall Maverick</a></p>
-                
             </div>
         </div>
     </body>

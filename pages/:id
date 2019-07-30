@@ -121,7 +121,7 @@ $(document).ready(function() {
             $("#page_img").attr("src","//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/df4ca5d08c4181ab1efb76fa1dee30b0/default_pages.jpg")
         } else if (slug == 'htc-hours'){
             $("#custom_page_header").html("Shopping Hours")
-            $("#custom_page_img").attr("src", "//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/14dae680c402975cb3909282b7f8b424/default.jpg");
+            $("#custom_page_img").attr("src", "//codecloud.cdn.speedyrails.net/sites/5a79cd486e6f646156310000/image/jpeg/1564521721000/_MG_9482_Lg.jpg");
             $("#page_img").attr("src","//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/df4ca5d08c4181ab1efb76fa1dee30b0/default_pages.jpg")  
         
         }

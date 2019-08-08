@@ -162,7 +162,7 @@
         //     });
         // //   }
         // });
-        console.log("getPopups()", getPopups());
+        // console.log("getPopups()", getPopups());
        
         
         loadMallData(render_page_details); 

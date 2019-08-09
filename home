@@ -126,7 +126,7 @@
             get_instagram("//htc.mallmaverick.com/api/v4/htc/social.json", 3, 'thumbnail', render_instagram)
             
             $(".loading_overlay").hide();
-             var popup = getPopups();
+             var popup = getPopups()[0];
              console.log('popup', popup)
             if(popup && popup.length > 0){
                 console.log(' popup.photo_url',  popup.photo_url)

@@ -136,7 +136,7 @@
                         <label for="fieldEmail">Please confirm your email :</label><br>
                         <input id="fieldEmail" name="cm-dljtlh-dljtlh" type="email" required placeholder="example@email.com"/>
                         <div class="aggree_div">
-                        <input type="checkbox" class="info_check" id="agree_terms_pop" required value='I agree to receive emails from Heartland Town Centre.'/><label for="agree_terms2" class="checkbox_lbl">I agree to receive emails from Heartland Town Centre.</label>
+                        <input type="checkbox" class="info_check" id="agree_terms_pop" required value='I agree to receive emails from Heartland Town Centre.'/><label for="agree_terms_pop" class="checkbox_lbl">I agree to receive emails from Heartland Town Centre.</label>
                         <input type="hidden" id="fieldtydytu" name="cm-f-tydytu" />
                         </div>
                         

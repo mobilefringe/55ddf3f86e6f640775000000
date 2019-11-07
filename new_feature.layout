@@ -252,7 +252,9 @@
                     <div class="desktop_menu">
                         <ul class="desktop_menu_ul">
                             <li>
-                                <button onclick="window.location.href='/home'">Home</button>
+                                <!--<button onclick="window.location.href='/home'">Home</button>-->
+                                <a href="/home">Home</a>
+                                
                             </li>
                             <li>
                                 <!--<button onclick="window.location.href='/stores'">Directory </button>-->

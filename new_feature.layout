@@ -410,32 +410,7 @@
     var current_year = moment().year();
     $("#current_year").text(current_year);
 
-    // $("#popup_form").submit(function(e){
-    //     e.preventDefault();
-    //     if ($("#agree_terms").is(":checked")){
-    //         if (check_email("fieldEmail") == true){
-    //             $("#fieldtydytu").val($("#agree_terms").attr("value"));
-    //             $.getJSON(
-    //                 "//mobilefringe.createsend.com/t/d/s/dljtlh/?callback=?",
-    //               $(this).serialize(),
-    //                 function (data) {
-    //                     if (data.Status === 400) {
-    //                         e.preventDefault();
-    //                         alert("Please try again later.");
-    //                     } else {
-    //                         $(".form_div").hide();
-    //                         $(".thank_you_div").fadeIn();
-    //                     }
-    //             }); 
-    //         } else {
-    //             alert("Please enter a valid email address")
-    //         }
-    //     } else {
-    //         alert("Please aggree to receive emails from Heartland Town Centre.")
-    //     }
-            
-
-    // });
+    
 
 
 

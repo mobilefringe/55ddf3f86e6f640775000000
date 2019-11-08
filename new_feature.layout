@@ -268,12 +268,12 @@
                                 <button onclick="window.location.href='/map'">centre map</button>
                             </li>
                             <li>
-                                <button >promotions</button>
-                                <ul class="submenu" >
-                                    <li><a href="/promotions">promotions</a></li>
-                                    <li><a href="/events">events</a></li>
-                                    <li><a href="/contests/htc-bath-body-works-grand-reopening-contest--2">Contest</a></li>
-                                </ul>
+                                <!--<button >promotions</button>-->
+                                <!--<ul class="submenu" >-->
+                                <!--    <li><a href="/promotions">promotions</a></li>-->
+                                <!--    <li><a href="/events">events</a></li>-->
+                                <!--    <li><a href="/contests/htc-bath-body-works-grand-reopening-contest--2">Contest</a></li>-->
+                                <!--</ul>-->
                                 
                                 
                                     <a href="#"  class="submenu_expander">

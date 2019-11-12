@@ -110,8 +110,7 @@
                 });  
             });
         
-            // setEndPoint('//htc.mallmaverick.com/api/v4/htc/all.json');
-            setEndPoint('//halifaxcentre.mallmaverick.com/api/v4/halifaxcentre/all.json');
+            setEndPoint('//htc.mallmaverick.com/api/v4/htc/all.json');
             
             
         </script>

@@ -110,7 +110,7 @@
                     }
                 }
                 else {
-                    value.store_image_url = "//mallmaverick.com"+value.store_front_url;
+                    value.store_image_url = "//assets.mallmaverick.com"+value.store_front_url;
                 }
                 
             });

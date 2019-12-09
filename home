@@ -131,7 +131,7 @@
             if(popup && popup.length > 0){
                 popup = popup[0]
                 console.log(' popup.photo_url',  popup.photo_url)
-                $(".popup_image").attr("src", "//mallmaverick.com"+ popup.photo_url)
+                $(".popup_image").attr("src", "//assets.mallmaverick.com"+ popup.photo_url)
                 $(".popup_url").attr("href", popup.photo_link)
                 if($.cookie("popup_viewed") != "true"){
                     $.cookie("popup_viewed", "true", { expires: 1 });

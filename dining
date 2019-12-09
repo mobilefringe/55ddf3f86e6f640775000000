@@ -106,7 +106,7 @@
                         console.log(store_front_image,  store_front_image.indexOf('missing') > -1)
                     }
                     else {
-                        value.store_image_url = "//mallmaverick.com"+store_front_image;
+                        value.store_image_url = "//assets.mallmaverick.com"+store_front_image;
                     }
                 }
                 else {

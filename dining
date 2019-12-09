@@ -131,15 +131,15 @@
                 
                 if(store_front_image !== null && store_front_image !== undefined) {
                     if(store_front_image.indexOf('missing') > -1) {
-                        value.store_image_url = "//mallmaverick.com"+value.store_front_url;
+                        value.store_image_url = "//assets.mallmaverick.com"+value.store_front_url;
                         console.log(store_front_image,  store_front_image.indexOf('missing') > -1)
                     }
                     else {
-                        value.store_image_url = "//mallmaverick.com"+store_front_image;
+                        value.store_image_url = "//assets.mallmaverick.com"+store_front_image;
                     }
                 }
                 else {
-                    value.store_image_url = "//mallmaverick.com"+value.store_front_url;
+                    value.store_image_url = "//assets.mallmaverick.com"+value.store_front_url;
                 }
                 
             });

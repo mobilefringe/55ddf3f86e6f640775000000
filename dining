@@ -80,8 +80,8 @@
                     store_front_image = getAssetURL(value.id);
                 }
                 
-                if (value.name.length > 20) {
-                    value.name_short = value.name.substring(0, 20) + "...";
+                if (value.name.length > 30) {
+                    value.name_short = value.name.substring(0, 30) + "...";
                 } else {
                     value.name_short = value.name;
                 }

@@ -89,7 +89,6 @@
                 if (store_front_image !== null && store_front_image !== undefined) {
                     if (store_front_image.indexOf('missing') > -1) {
                         value.store_image_url = "//assets.mallmaverick.com"+value.store_front_url;
-                        console.log(store_front_image,  store_front_image.indexOf('missing') > -1)
                     } else {
                         value.store_image_url = "//assets.mallmaverick.com"+store_front_image;
                     }
@@ -98,36 +97,32 @@
                 }
                 
             });
-            console.log(restaurants);
+
             renderPageData("#restaurant_list_container", "#restaurant_list_template", restaurants, "directory");
             
             bakery_cat_id = _.filter(getStoreCategories(), function(o) { return _.includes(o.name,'Bakeries')})[0].id;
-            console.log(bakery_cat_id);
             var bakeries = stores.filter(function(val) {
                 return _.includes(val.categories, _.toNumber(bakery_cat_id));
             });
             
             _.forEach(bakeries, function(value) {
                 var store_front_image = null;
-                if(value.assets != null ) {
+                if (value.assets != null ) {
                     store_front_image = getAssetURL(value.id);
                 }
                 
-                if(store_front_image !== null && store_front_image !== undefined) {
-                    if(store_front_image.indexOf('missing') > -1) {
+                if (store_front_image !== null && store_front_image !== undefined) {
+                    if (store_front_image.indexOf('missing') > -1) {
                         value.store_image_url = "//assets.mallmaverick.com"+value.store_front_url;
                         console.log(store_front_image,  store_front_image.indexOf('missing') > -1)
-                    }
-                    else {
+                    } else {
                         value.store_image_url = "//assets.mallmaverick.com"+store_front_image;
                     }
-                }
-                else {
+                } else {
                     value.store_image_url = "//assets.mallmaverick.com"+value.store_front_url;
                 }
-                
             });
-            console.log(bakeries);
+
             renderPageData("#bakery_list_container", "#bakery_list_template", bakeries, "directory");
             
             $("#restaurant_list_container").show();

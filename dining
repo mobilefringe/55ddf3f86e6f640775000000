@@ -65,15 +65,11 @@
             
             
             var blog_posts = getBlogDataBySlug("htc-htc-blog").posts.sortBy(function(o){return o.publish_date;}).reverse().slice(0, 3);
-            console.log(blog_posts);
             renderPosts('#blog_container','#blog_template', blog_posts);
             get_instagram("//htc.mallmaverick.com/api/v4/htc/social.json", 3, 'thumbnail', render_instagram)
             
-            
-            
             var stores = getStoresList();
             rest_cat_id = _.filter(getStoreCategories(), function(o) { return _.includes(o.name,'Restaurant')})[0].id;
-            console.log(rest_cat_id);
             var restaurants = stores.filter(function(val) {
                 return _.includes(val.categories, _.toNumber(rest_cat_id));
             });
@@ -90,16 +86,14 @@
                     value.name_short = value.name;
                 }
                 
-                if(store_front_image !== null && store_front_image !== undefined) {
-                    if(store_front_image.indexOf('missing') > -1) {
+                if (store_front_image !== null && store_front_image !== undefined) {
+                    if (store_front_image.indexOf('missing') > -1) {
                         value.store_image_url = "//assets.mallmaverick.com"+value.store_front_url;
                         console.log(store_front_image,  store_front_image.indexOf('missing') > -1)
-                    }
-                    else {
+                    } else {
                         value.store_image_url = "//assets.mallmaverick.com"+store_front_image;
                     }
-                }
-                else {
+                } else {
                     value.store_image_url = "//assets.mallmaverick.com"+value.store_front_url;
                 }
                 

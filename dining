@@ -3,9 +3,6 @@
 <div class="sort_bar">
     <div class="row">
         <span value="restaurant" class="sort_cat active"> Restaurants </span> 
-        <!--<span> | </span>-->
-        <!--<span class="sort_cat"> Fast Food</span>-->
-        <!--<span value="bakery" class="sort_cat"> Bakeries</span>-->
     </div>
 </div>
 <div id="restaurant_list_container" class="store_lists">
@@ -21,19 +18,6 @@
         </div>
     </script>
 </div>
-<!--<div id="bakery_list_container" class="store_lists">-->
-<!--    <script id="bakery_list_template" type="x-tmpl-mustache/text">-->
-<!--        <div class="col-sm-6">-->
-<!--            <div style="background-image:url({{store_image_url}})" class="dinning_logo_image hidden_phone"></div>-->
-<!--            <img class="dinning_logo_image show_phone" src="{{store_image_url}}"/>-->
-<!--            <div class="dinning_dets text-center">-->
-<!--                <div class="dinning_store_name">{{name}}</div>-->
-<!--                <div class="dinning_store_dets">{{description_short}}</div>-->
-<!--                <a href="/stores/{{slug}}" class="dinning_read_more">Read More &gt;</a>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </script>-->
-<!--</div>-->
 
 <style>
     .row {

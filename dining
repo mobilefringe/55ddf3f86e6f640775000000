@@ -85,7 +85,7 @@
                 }
                 
                 if (value.name.length > 10) {
-                    value.name_short = val.name.substring(0, 19) + "...";
+                    value.name_short = value.name.substring(0, 19) + "...";
                 } else {
                     value.name_short = value.name;
                 }

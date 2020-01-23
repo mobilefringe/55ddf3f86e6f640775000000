@@ -14,7 +14,7 @@
             <div style="background-image:url({{store_image_url}})" class="dinning_logo_image"></div>
             <img class="dinning_logo_image_mobile hidden_now" src="{{store_image_url}}"/>
             <div class="dinning_dets text-center">
-                <div class="dinning_store_name">{{name}}</div>
+                <div class="dinning_store_name">{{name_short}}</div>
                 <div class="dinning_store_dets">{{description_short}}</div>
                 <a href="/stores/{{slug}}" class="dinning_read_more">Read More &gt;</a>
             </div>
@@ -98,6 +98,12 @@
                 var store_front_image = null;
                 if(value.assets != null ) {
                     store_front_image = getAssetURL(value.id);
+                }
+                
+                if (value.name.length > 50) {
+                    value.name_short = val.name.substring(0, 49) + "...";
+                } else {
+                    value.name_short = value.name;
                 }
                 
                 if(store_front_image !== null && store_front_image !== undefined) {

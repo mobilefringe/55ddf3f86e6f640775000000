@@ -123,7 +123,7 @@
             
             var blog_posts = getBlogDataBySlug("htc-htc-blog").posts.sortBy(function(o){return o.publish_date;}).reverse().slice(0, 3);
             renderPosts('#blog_container','#blog_template', blog_posts);
-            get_instagram("//htc.mallmaverickstaging.com/api/v4/htc/social.json", 3, 'thumbnail', render_instagram)
+            get_instagram("//htc.mallmaverick.com/api/v4/htc/social.json", 3, 'thumbnail', render_instagram)
             
             $(".loading_overlay").hide();
              var popup = getPopups();

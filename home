@@ -94,7 +94,8 @@
                 placeholder="Your Email" 
                 required="" 
                 type="email">
-            <input class="col-xs-4 newsletter_submit_btn"  value="Subscribe" id="newsletter_submit" type="submit" />
+            <!--<input class="col-xs-4 newsletter_submit_btn"  value="Subscribe" id="newsletter_submit" type="submit" />-->
+            <button class="col-xs-4 newsletter_submit_btn" id="newsletter_submit" type="submit">Subscribe</button>
             <input aria-required=""  id="agree_terms"   name="cm-privacy-consent"  required=""  type="checkbox" class="checkbox-custom col-xs-1" >
             <label for="agree_terms" class="confirm_label checkbox-custom-label col-xs-11">I agree to receive emails from Heartland Town Centre</label>
             <p id="subscription_confirmed">Thank you for subscribing.</p>

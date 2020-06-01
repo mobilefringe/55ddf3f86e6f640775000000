@@ -81,7 +81,7 @@
         
         <form 
             action="https://www.createsend.com/t/subscribeerror?description=" 
-            id="subForm home_newsletter_form" 
+            id="home_newsletter_form" 
             class="js-cm-form" 
             method="post" 
             data-id="92D4C54F0FEC16E5ADC2B1904DE9ED1A14A4C52986E6658974AE500073A03E32358092416935E3A6B4E85669E49CE636812E2234481E31AEAAE2E133B72FEF99" >

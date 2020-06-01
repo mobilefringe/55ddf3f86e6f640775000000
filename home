@@ -82,7 +82,7 @@
 
         
         <form class="js-cm-form home_newsletter_form" action="https://www.createsend.com/t/subscribeerror?description=" method="post" data-id="92D4C54F0FEC16E5ADC2B1904DE9ED1A14A4C52986E6658974AE500073A03E32358092416935E3A6B4E85669E49CE636812E2234481E31AEAAE2E133B72FEF99">
-            <input autocomplete="Email" aria-label="Email" class="js-cm-email-input qa-input-email" id="newsletter_email" maxlength="200" name="cm-dljtlh-dljtlh" required="" type="email">
+            <input autocomplete="Email" aria-label="Email" class="js-cm-email-input qa-input-email col-xs-8 newsletter_email" id="newsletter_email" maxlength="200" name="cm-dljtlh-dljtlh" required="" type="email">
             <button class="col-xs-4 newsletter_submit_btn" id="newsletter_submit" type="submit">Subscribe</button>
             <input aria-required="" id="cm-privacy-consent" name="cm-privacy-consent" required="" type="checkbox" class="checkbox-custom col-xs-1">
             <label for="cm-privacy-consent" class="confirm_label checkbox-custom-label col-xs-11">I agree to receive emails from Heartland Town Centre</label>

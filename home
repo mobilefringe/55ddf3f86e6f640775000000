@@ -101,7 +101,7 @@
                 type="submit" />
             <input 
                 aria-required="" 
-                id="agree_terms " 
+                id="agree_terms" 
                 name="cm-privacy-consent" 
                 required="" 
                 type="checkbox" 

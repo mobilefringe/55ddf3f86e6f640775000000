@@ -68,7 +68,7 @@
         <h4>Blog updates, Promotions, Events & Contests!</h4>
     </div>
     <div class="col-sm-6 text-center no_padding_right">
-        <form action="//mobilefringe.createsend.com/t/d/s/dljtlh/" id="home_newsletter_form">
+        <form action="//mobilefringe.createsend.com/t/d/s/dljtlh/" class="home_newsletter_form">
             <input name="cm-dljtlh-dljtlh" type="text" class="col-xs-8 newsletter_email" id="newsletter_email" placeholder="Your Email" required="required" />
             <input type="submit" value="Subscribe" class="col-xs-4 newsletter_submit_btn" id="newsletter_submit" /> 
             <input id="agree_terms" type="checkbox" required class="checkbox-custom col-xs-1" />
